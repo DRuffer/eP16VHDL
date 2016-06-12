@@ -1,0 +1,14 @@
+[Version]
+Version=10.2
+[Designs]
+eP16=eP16.adf
+[Settings]
+Active=eP16
+[Expand]
+ep16=1
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=

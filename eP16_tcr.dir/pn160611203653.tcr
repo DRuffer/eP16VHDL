@@ -1,0 +1,5 @@
+#Start recording tcl command: 6/11/2016 20:11:05
+#Project Location: C:/lscc/eP16VHDL; Project name: eP16
+prj_project open "C:/lscc/eP16VHDL/eP16.ldf"
+prj_src add "C:/lscc/eP16VHDL/eP16/eP16.spf"
+#Stop recording: 6/11/2016 20:36:53

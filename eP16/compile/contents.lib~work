@@ -1,0 +1,12 @@
+5
+~E 1 "./../../ep16.vhd" 28 ep16
+~A 1 "./../../ep16.vhd" 44 behavioral
+~E 1 "./../../ep16_chip.vhd" 33 ep32_chip
+~A 1 "./../../ep16_chip.vhd" 49 behavioral
+~E 1 "./../../gpio16.vhd" 22 gpio
+~A 1 "./../../gpio16.vhd" 40 behavioral
+~E 1 "./../../ram_memory.vhd" 14 ram_memory
+~A 1 "./../../ram_memory.vhd" 25 Structure
+~C 1 "./../../ram_memory.vhd" 953 structure_con
+~E 1 "./../../uart16.vhd" 26 uart
+~A 1 "./../../uart16.vhd" 49 behavioral

@@ -1,0 +1,58 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+[Configurations]
+compile=work
+[Library]
+eP16=.\eP16\eP16.lib
+work=.\work\work.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=pmi_work
+LibNames=ovi_xp2
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+eP16=.
+work=.
+[LocalVerilogDirs]
+Count=0
+[DefineMacro]
+Global=
+[Files]
+/..\..\gpio16.vhd=-1
+/..\..\ram_memory.vhd=-1
+/..\..\uart16.vhd=-1
+/..\..\ep16.vhd=-1
+/..\..\ep16_chip.vhd=-1
+/eP16.asdb=-1
+/eP16.awc=-1
+[Files.Data]
+.\..\gpio16.vhd=VHDL Source Code
+.\..\ram_memory.vhd=VHDL Source Code
+.\..\uart16.vhd=VHDL Source Code
+.\..\ep16.vhd=VHDL Source Code
+.\..\ep16_chip.vhd=VHDL Source Code
+.\src\eP16.asdb=Accelerated Waveform File
+.\src\eP16.awc=Accelerated Waveform Configuration
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=ep32_chip|behavioral|0 
+ShowHide=ShowTopLevel
+Selected=

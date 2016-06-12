@@ -1,0 +1,11 @@
+<BaliSimProject version="1.3" path="." stage="0" language="-1" name="eP16" simType="Active-HDL">
+    <Source worklib="work" path="gpio16.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="ram_memory.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="uart16.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="ep16.vhd" type="VHDL" include="none"/>
+    <Source worklib="work" path="ep16_chip.vhd" type="VHDL" include="none"/>
+    <SimLib value="pmi_work ovi_xp2"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <TopModule instance="" language="VHDL" name="ep32_chip"/>
+</BaliSimProject>

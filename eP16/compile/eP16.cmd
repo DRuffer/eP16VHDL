@@ -1,0 +1,1 @@
+-w -s "C:\lscc\eP16VHDL\eP16\library.cfg"  -j "C:\lscc\eP16VHDL\eP16\projlib.cfg"  -d "C:\lscc\eP16VHDL\eP16\compile"   -work work  -dbg -e 100 "C:/lscc/eP16VHDL/ep16_chip.vhd"

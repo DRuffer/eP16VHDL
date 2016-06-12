@@ -21,6 +21,9 @@
         <Source name="eP16.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
+        <Source name="eP16/eP16.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
     </Implementation>
     <Strategy name="Strategy1" file="eP161.sty"/>
 </BaliProject>

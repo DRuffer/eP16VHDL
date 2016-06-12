@@ -1,0 +1,43 @@
+Active-HDL 10.2.3312.5682  2016-06-11 20:32:43
+
+Elaboration top modules:
+Architecture                  behavioral(ep32_chip)
+
+
+---------------------------------------------------------------------------------------------
+Entity     | Architecture | Library | Info | Compiler Version          | Compilation Options
+---------------------------------------------------------------------------------------------
+ep32_chip  | behavioral   | work    |      | 10.2.3312.5682  (Windows) | -dbg
+ep16       | behavioral   | work    |      | 10.2.3312.5682  (Windows) | -dbg
+uart       | behavioral   | work    |      | 10.2.3312.5682  (Windows) | -dbg
+ram_memory | structure    | work    |      | 10.2.3312.5682  (Windows) | -dbg
+gpio       | behavioral   | work    |      | 10.2.3312.5682  (Windows) | -dbg
+dp16kb     | v            | xp2     |      | 10.2.3312.5682  (Windows) | -vendor lattice
+vhi        | v            | xp2     |      | 10.2.3312.5682  (Windows) | -vendor lattice
+vlo        | v            | xp2     |      | 10.2.3312.5682  (Windows) | -vendor lattice
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+VHDL Package              | Library | Info | Compiler Version          | Compilation Options
+---------------------------------------------------------------------------------------------
+standard                  | std     |      |                           | <unavailable>
+TEXTIO                    | std     |      | 10.2.3312.5682  (Windows) |  -2008
+std_logic_1164            | ieee    |      | 10.2.3312.5682  (Windows) |  -2008
+std_logic_arith           | ieee    |      | 10.2.3312.5682  (Windows) | <unavailable>
+std_logic_misc            | ieee    |      | 10.2.3312.5682  (Windows) |  -2008
+STD_LOGIC_UNSIGNED        | ieee    |      | 10.2.3312.5682  (Windows) | <unavailable>
+components                | xp2     |      | 10.2.3312.5682  (Windows) | -vendor lattice
+VITAL_Timing              | ieee    |      | 10.2.3312.5682  (Windows) | <unavailable>
+global                    | xp2     |      | 10.2.3312.5682  (Windows) | -vendor lattice
+mem3                      | xp2     |      | 10.2.3312.5682  (Windows) | -vendor lattice
+VITAL_Primitives          | ieee    |      | 10.2.3312.5682  (Windows) | <unavailable>
+---------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------
+Library                   | Comment
+---------------------------------------------------------------------------------------------
+ieee                      | Standard IEEE packages library
+std                       | Standard VHDL library
+work                      | None
+xp2                       | LATTICE Diamond 3.7, XP2 VHDL LIBRARY
+---------------------------------------------------------------------------------------------

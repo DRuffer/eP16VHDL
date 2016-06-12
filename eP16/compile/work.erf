@@ -1,0 +1,4 @@
+MESSAGE "File: C:\lscc\eP16VHDL\ep16_chip.vhd" 
+MESSAGE "Compile Entity "ep32_chip"" 
+MESSAGE "Compile Architecture "behavioral" of Entity "ep32_chip"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]" 

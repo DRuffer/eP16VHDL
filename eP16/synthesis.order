@@ -1,0 +1,5 @@
+i<>.\..\gpio16.vhd
+i<>.\..\ram_memory.vhd
+i<>.\..\uart16.vhd
+i<>.\..\ep16.vhd
+i<>.\..\ep16_chip.vhd
