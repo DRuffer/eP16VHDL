@@ -1,0 +1,300 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat Jun 11 13:28:42 2016
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     ep32_chip
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets aclk_N_55]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets aclk_c]
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 18.291ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \cpu1/slot__i0  (from aclk_c +)
+   Destination:    FD1P3AX    D              \cpu1/t__i8  (to aclk_c +)
+
+   Delay:                  23.206ns  (21.2% logic, 78.8% route), 18 logic levels.
+
+ Constraint Details:
+
+     23.206ns data_path \cpu1/slot__i0 to \cpu1/t__i8 violates
+      5.000ns delay constraint less
+      0.085ns L_S requirement (totaling 4.915ns) by 18.291ns
+
+ Path Details: \cpu1/slot__i0 to \cpu1/t__i8
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.478             CK to Q              \cpu1/slot__i0 (from aclk_c)
+Route        18   e 1.698                                  slot[0]
+LUT4        ---     0.302              C to Z              i5_3_lut
+Route         1   e 0.020                                  n1_adj_912
+MUXL5       ---     0.123           ALUT to Z              i6
+Route        26   e 1.671                                  n3
+LUT4        ---     0.302              A to Z              \cpu1/i1_2_lut_3_lut_adj_176
+Route        15   e 1.561                                  \cpu1/n6367
+LUT4        ---     0.302              C to Z              \cpu1/i1_2_lut_rep_257_3_lut_4_lut
+Route        12   e 1.516                                  n8637
+MOFX0       ---     0.316             C0 to Z              i29
+Route         6   e 1.378                                  n18
+LUT4        ---     0.302              A to Z              i1_2_lut
+Route         2   e 1.158                                  n6833
+LUT4        ---     0.302              D to Z              \cpu1/i1_2_lut_4_lut_adj_143
+Route         2   e 1.158                                  n6835
+LUT4        ---     0.302              D to Z              i1_4_lut
+Route        18   e 1.598                                  data_o_15__N_441
+LUT4        ---     0.302              C to Z              mux_595_i8_3_lut
+Route         1   e 1.020                                  n1171
+LUT4        ---     0.302              A to Z              \gpio1/i7239_4_lut
+Route         1   e 0.020                                  \gpio1/n1_adj_900
+MUXL5       ---     0.123           BLUT to Z              \gpio1/addr_1__I_0_Mux_7_i3
+Route         1   e 1.020                                  n1091
+LUT4        ---     0.302              B to Z              mux_470_i8_4_lut
+Route         1   e 1.020                                  system_data_o_15__N_28
+LUT4        ---     0.302              A to Z              i1183_4_lut
+Route         6   e 1.378                                  system_data_o[7]
+LUT4        ---     0.302              A to Z              \cpu1/t_sel_3__I_0_Mux_7_i12_3_lut
+Route         1   e 0.020                                  \cpu1/n12
+MUXL5       ---     0.123           ALUT to Z              \cpu1/i7108
+Route         1   e 0.020                                  \cpu1/n7772
+MUXL5       ---     0.123             D1 to Z              \cpu1/i7110
+Route         1   e 1.020                                  \cpu1/n7774
+LUT4        ---     0.302              C to Z              \cpu1/i7111_3_lut_4_lut
+Route         1   e 1.020                                  \cpu1/t_in[7]
+                  --------
+                   23.206  (21.2% logic, 78.8% route), 18 logic levels.
+
+
+Error:  The following path violates requirements by 18.291ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \cpu1/slot__i0  (from aclk_c +)
+   Destination:    FD1P3AX    D              \cpu1/t__i8  (to aclk_c +)
+
+   Delay:                  23.206ns  (21.2% logic, 78.8% route), 18 logic levels.
+
+ Constraint Details:
+
+     23.206ns data_path \cpu1/slot__i0 to \cpu1/t__i8 violates
+      5.000ns delay constraint less
+      0.085ns L_S requirement (totaling 4.915ns) by 18.291ns
+
+ Path Details: \cpu1/slot__i0 to \cpu1/t__i8
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.478             CK to Q              \cpu1/slot__i0 (from aclk_c)
+Route        18   e 1.698                                  slot[0]
+LUT4        ---     0.302              B to Z              \cpu1/i3419_2_lut
+Route         1   e 0.020                                  n1
+MUXL5       ---     0.123           BLUT to Z              i6
+Route        26   e 1.671                                  n3
+LUT4        ---     0.302              A to Z              \cpu1/i1_2_lut_3_lut_adj_176
+Route        15   e 1.561                                  \cpu1/n6367
+LUT4        ---     0.302              C to Z              \cpu1/i1_2_lut_rep_257_3_lut_4_lut
+Route        12   e 1.516                                  n8637
+MOFX0       ---     0.316             C0 to Z              i29
+Route         6   e 1.378                                  n18
+LUT4        ---     0.302              A to Z              i1_2_lut
+Route         2   e 1.158                                  n6833
+LUT4        ---     0.302              D to Z              \cpu1/i1_2_lut_4_lut_adj_143
+Route         2   e 1.158                                  n6835
+LUT4        ---     0.302              D to Z              i1_4_lut
+Route        18   e 1.598                                  data_o_15__N_441
+LUT4        ---     0.302              C to Z              mux_595_i8_3_lut
+Route         1   e 1.020                                  n1171
+LUT4        ---     0.302              A to Z              \gpio1/i7239_4_lut
+Route         1   e 0.020                                  \gpio1/n1_adj_900
+MUXL5       ---     0.123           BLUT to Z              \gpio1/addr_1__I_0_Mux_7_i3
+Route         1   e 1.020                                  n1091
+LUT4        ---     0.302              B to Z              mux_470_i8_4_lut
+Route         1   e 1.020                                  system_data_o_15__N_28
+LUT4        ---     0.302              A to Z              i1183_4_lut
+Route         6   e 1.378                                  system_data_o[7]
+LUT4        ---     0.302              A to Z              \cpu1/t_sel_3__I_0_Mux_7_i12_3_lut
+Route         1   e 0.020                                  \cpu1/n12
+MUXL5       ---     0.123           ALUT to Z              \cpu1/i7108
+Route         1   e 0.020                                  \cpu1/n7772
+MUXL5       ---     0.123             D1 to Z              \cpu1/i7110
+Route         1   e 1.020                                  \cpu1/n7774
+LUT4        ---     0.302              C to Z              \cpu1/i7111_3_lut_4_lut
+Route         1   e 1.020                                  \cpu1/t_in[7]
+                  --------
+                   23.206  (21.2% logic, 78.8% route), 18 logic levels.
+
+
+Error:  The following path violates requirements by 18.282ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \cpu1/slot__i1  (from aclk_c +)
+   Destination:    FD1P3AX    D              \cpu1/t__i8  (to aclk_c +)
+
+   Delay:                  23.197ns  (21.2% logic, 78.8% route), 18 logic levels.
+
+ Constraint Details:
+
+     23.197ns data_path \cpu1/slot__i1 to \cpu1/t__i8 violates
+      5.000ns delay constraint less
+      0.085ns L_S requirement (totaling 4.915ns) by 18.282ns
+
+ Path Details: \cpu1/slot__i1 to \cpu1/t__i8
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.478             CK to Q              \cpu1/slot__i1 (from aclk_c)
+Route        21   e 1.728                                  slot[1]
+LUT4        ---     0.302              A to Z              \cpu1/i[13]_bdd_2_lut
+Route         1   e 0.020                                  \cpu1/n8255
+MUXL5       ---     0.123           BLUT to Z              \cpu1/i7488
+Route        20   e 1.619                                  \cpu1/n3
+LUT4        ---     0.302              A to Z              \cpu1/i3497_rep_19_2_lut
+Route        16   e 1.574                                  \cpu1/code[3]
+LUT4        ---     0.302              D to Z              \cpu1/i1_2_lut_rep_257_3_lut_4_lut
+Route        12   e 1.516                                  n8637
+MOFX0       ---     0.316             C0 to Z              i29
+Route         6   e 1.378                                  n18
+LUT4        ---     0.302              A to Z              i1_2_lut
+Route         2   e 1.158                                  n6833
+LUT4        ---     0.302              D to Z              \cpu1/i1_2_lut_4_lut_adj_143
+Route         2   e 1.158                                  n6835
+LUT4        ---     0.302              D to Z              i1_4_lut
+Route        18   e 1.598                                  data_o_15__N_441
+LUT4        ---     0.302              C to Z              mux_595_i8_3_lut
+Route         1   e 1.020                                  n1171
+LUT4        ---     0.302              A to Z              \gpio1/i7239_4_lut
+Route         1   e 0.020                                  \gpio1/n1_adj_900
+MUXL5       ---     0.123           BLUT to Z              \gpio1/addr_1__I_0_Mux_7_i3
+Route         1   e 1.020                                  n1091
+LUT4        ---     0.302              B to Z              mux_470_i8_4_lut
+Route         1   e 1.020                                  system_data_o_15__N_28
+LUT4        ---     0.302              A to Z              i1183_4_lut
+Route         6   e 1.378                                  system_data_o[7]
+LUT4        ---     0.302              A to Z              \cpu1/t_sel_3__I_0_Mux_7_i12_3_lut
+Route         1   e 0.020                                  \cpu1/n12
+MUXL5       ---     0.123           ALUT to Z              \cpu1/i7108
+Route         1   e 0.020                                  \cpu1/n7772
+MUXL5       ---     0.123             D1 to Z              \cpu1/i7110
+Route         1   e 1.020                                  \cpu1/n7774
+LUT4        ---     0.302              C to Z              \cpu1/i7111_3_lut_4_lut
+Route         1   e 1.020                                  \cpu1/t_in[7]
+                  --------
+                   23.197  (21.2% logic, 78.8% route), 18 logic levels.
+
+Warning: 23.291 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets aclk_N_55]               |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets aclk_c]                  |     5.000 ns|    23.291 ns|    18 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n6835                                   |       2|    2662|     64.99%
+                                        |        |        |
+n6833                                   |       2|    2640|     64.45%
+                                        |        |        |
+data_o_15__N_441                        |      18|    2100|     51.27%
+                                        |        |        |
+n8637                                   |      12|    1833|     44.75%
+                                        |        |        |
+n18                                     |       6|    1667|     40.70%
+                                        |        |        |
+\cpu1/n6367                             |      15|    1508|     36.82%
+                                        |        |        |
+system_read                             |       3|    1385|     33.81%
+                                        |        |        |
+n1996                                   |       3|    1324|     32.32%
+                                        |        |        |
+slot[1]                                 |      21|    1257|     30.69%
+                                        |        |        |
+\cpu1/n6823                             |       1|    1224|     29.88%
+                                        |        |        |
+n8592                                   |       8|    1162|     28.37%
+                                        |        |        |
+n3                                      |      26|    1070|     26.12%
+                                        |        |        |
+\cpu1/n3                                |      20|    1059|     25.85%
+                                        |        |        |
+slot[0]                                 |      18|     993|     24.24%
+                                        |        |        |
+\cpu1/code[3]                           |      16|     883|     21.56%
+                                        |        |        |
+\cpu1/n3_adj_769                        |      14|     808|     19.73%
+                                        |        |        |
+n7411                                   |       1|     768|     18.75%
+                                        |        |        |
+system_data_o[7]                        |       6|     767|     18.73%
+                                        |        |        |
+system_data_o_15__N_28                  |       1|     758|     18.51%
+                                        |        |        |
+n1091                                   |       1|     716|     17.48%
+                                        |        |        |
+n6537                                   |      16|     672|     16.41%
+                                        |        |        |
+\gpio1/n1_adj_900                       |       1|     582|     14.21%
+                                        |        |        |
+n7025                                   |       2|     556|     13.57%
+                                        |        |        |
+n1_adj_912                              |       1|     520|     12.70%
+                                        |        |        |
+\cpu1/n8254                             |       1|     519|     12.67%
+                                        |        |        |
+\cpu1/n8645                             |      14|     438|     10.69%
+                                        |        |        |
+\cpu1/n12                               |       1|     437|     10.67%
+                                        |        |        |
+\cpu1/n7772                             |       1|     437|     10.67%
+                                        |        |        |
+\cpu1/n7774                             |       1|     437|     10.67%
+                                        |        |        |
+\cpu1/t_in[7]                           |       1|     437|     10.67%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 4096  Score: 61573118
+
+Constraints cover  308361 paths, 1414 nets, and 4208 connections (92.9% coverage)
+
+
+Peak memory: 103907328 bytes, TRCE: 10010624 bytes, DLYMAN: 327680 bytes
+CPU_TIME_REPORT: 0 secs 

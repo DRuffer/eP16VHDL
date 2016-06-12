@@ -1,0 +1,1000 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+          Lattice Mapping Report File for Design Module 'ep32_chip'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a LatticeXP2 -p LFXP2-5E -t TQFP144 -s 5 -oc Commercial
+     eP16_eP16.ngd -o eP16_eP16_map.ncd -pr eP16_eP16.prf -mp eP16_eP16.mrp -lpf
+     C:/lscc/eP16VHDL/eP16/eP16_eP16.lpf -lpf C:/lscc/eP16VHDL/eP16.lpf -gui 
+Target Vendor:  LATTICE
+Target Device:  LFXP2-5ETQFP144
+Target Performance:   5
+Mapper:  mg5a00,  version:  Diamond (64-bit) 3.7.0.96.1
+Mapped on:  06/11/16  13:28:43
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    264 out of  3864 (7%)
+      PFU registers:          264 out of  3564 (7%)
+      PIO registers:            0 out of   300 (0%)
+   Number of SLICEs:       646 out of  2376 (27%)
+      SLICEs as Logic/ROM:    574 out of  2376 (24%)
+      SLICEs as RAM:           72 out of   405 (18%)
+      SLICEs as Carry:         54 out of  2376 (2%)
+   Number of LUT4s:        1102 out of  4752 (23%)
+      Number used as logic LUTs:        850
+      Number used as distributed RAM:   144
+      Number used as ripple logic:      108
+      Number used as shift registers:     0
+   Number of PIO sites used: 26 out of 100 (26%)
+   Number of PIO FIXEDDELAY:    0
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of block RAMs:  4 out of 9 (44%)
+   Number of CLKDIVs:  0 out of 2 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT36X36B          0
+   MULT18X18B          0
+   MULT18X18MACB       0
+   MULT18X18ADDSUBB    0
+   MULT18X18ADDSUBSUMB 0
+   MULT9X9B            0
+   MULT9X9ADDSUBB      0
+   MULT9X9ADDSUBSUMB   0
+   --------------------------------
+   Number of Used DSP Sites:  0 out of 24 (0 %)
+   Number of clocks:  1
+     Net aclk_c: 209 loads, 205 rising, 4 falling (Driver: PIO aclk )
+
+   Number of Clock Enables:  33
+     Net aclk_c_enable_16: 2 loads, 2 LSLICEs
+     Net aclk_c_enable_78: 8 loads, 8 LSLICEs
+     Net aclk_c_enable_21: 2 loads, 2 LSLICEs
+     Net aclk_c_enable_37: 2 loads, 2 LSLICEs
+     Net aclk_c_enable_15: 1 loads, 1 LSLICEs
+     Net aclk_c_enable_18: 1 loads, 1 LSLICEs
+     Net aclk_c_enable_29: 2 loads, 2 LSLICEs
+     Net aclk_c_enable_123: 8 loads, 8 LSLICEs
+     Net gpio1/aclk_c_enable_138: 8 loads, 8 LSLICEs
+     Net uart1/aclk_c_enable_72: 1 loads, 1 LSLICEs
+     Net uart1/aclk_c_enable_69: 4 loads, 4 LSLICEs
+     Net uart1/aclk_c_enable_92: 16 loads, 16 LSLICEs
+     Net uart1/aclk_c_enable_93: 3 loads, 3 LSLICEs
+     Net uart1/rxb_full_N_674: 1 loads, 1 LSLICEs
+     Net uart1/aclk_c_enable_24: 1 loads, 1 LSLICEs
+     Net uart1/aclk_c_enable_108: 8 loads, 8 LSLICEs
+     Net uart1/aclk_c_enable_149: 4 loads, 4 LSLICEs
+     Net uart1/aclk_c_enable_45: 1 loads, 1 LSLICEs
+     Net uart1/aclk_c_enable_76: 1 loads, 1 LSLICEs
+     Net uart1/aclk_c_enable_75: 6 loads, 6 LSLICEs
+     Net uart1/aclk_c_enable_73: 1 loads, 1 LSLICEs
+     Net cpu1/aclk_c_enable_35: 5 loads, 5 LSLICEs
+     Net cpu1/pload: 10 loads, 10 LSLICEs
+     Net cpu1/aclk_c_enable_157: 4 loads, 4 LSLICEs
+     Net cpu1/iload: 8 loads, 8 LSLICEs
+     Net cpu1/tload: 8 loads, 8 LSLICEs
+     Net cpu1/aclk_c_enable_74: 1 loads, 1 LSLICEs
+     Net cpu1/rload: 17 loads, 17 LSLICEs
+     Net cpu1/aload: 17 loads, 17 LSLICEs
+     Net cpu1/aclk_c_enable_31: 1 loads, 1 LSLICEs
+     Net cpu1/aclk_c_enable_153: 6 loads, 6 LSLICEs
+     Net cpu1/intload: 1 loads, 1 LSLICEs
+     Net cpu1/aclk_c_enable_48: 1 loads, 1 LSLICEs
+   Number of LSRs:  13
+     Net n1309: 1 loads, 1 LSLICEs
+     Net n1427: 1 loads, 1 LSLICEs
+     Net n1536: 5 loads, 5 LSLICEs
+     Net n1497: 5 loads, 5 LSLICEs
+     Net n1424: 1 loads, 1 LSLICEs
+     Net n1498: 5 loads, 5 LSLICEs
+     Net n1537: 5 loads, 5 LSLICEs
+     Net n1312: 1 loads, 1 LSLICEs
+     Net uart1/n8643: 1 loads, 1 LSLICEs
+     Net uart1/tx_en_N_534: 1 loads, 1 LSLICEs
+     Net uart1/n6423: 1 loads, 1 LSLICEs
+     Net uart1/n6714: 1 loads, 1 LSLICEs
+     Net cpu1/slot_2__N_318: 3 loads, 3 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net cpu1/t_sel_0: 100 loads
+     Net cpu1/slot_2: 52 loads
+     Net VCC_net: 51 loads
+     Net cpu1/n8593: 49 loads
+     Net sp_0: 49 loads
+     Net rp_0: 48 loads
+
+     Net n8653: 45 loads
+     Net sp_1: 44 loads
+     Net rp_1: 43 loads
+     Net sp_2: 42 loads
+
+
+
+
+   Number of warnings:  28
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(8): Semantic error in "LOCATE COMP
+     "interrupt_i_0" SITE "58" ;": COMP "interrupt_i_0" cannot be found in
+     design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(9): Semantic error in "LOCATE COMP
+     "interrupt_i_1" SITE "57" ;": COMP "interrupt_i_1" cannot be found in
+     design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(10): Semantic error in "LOCATE COMP
+     "interrupt_i_2" SITE "56" ;": COMP "interrupt_i_2" cannot be found in
+     design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(11): Semantic error in "LOCATE COMP
+     "interrupt_i_3" SITE "55" ;": COMP "interrupt_i_3" cannot be found in
+     design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(12): Semantic error in "LOCATE COMP
+     "interrupt_i_4" SITE "54" ;": COMP "interrupt_i_4" cannot be found in
+     design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(13): Semantic error in "LOCATE COMP
+     "ioport_7" SITE "37" ;": COMP "ioport_7" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(14): Semantic error in "LOCATE COMP
+     "ioport_8" SITE "53" ;": COMP "ioport_8" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(15): Semantic error in "LOCATE COMP
+     "ioport_9" SITE "52" ;": COMP "ioport_9" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(16): Semantic error in "LOCATE COMP
+     "ioport_0" SITE "46" ;": COMP "ioport_0" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(17): Semantic error in "LOCATE COMP
+     "ioport_1" SITE "45" ;": COMP "ioport_1" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(18): Semantic error in "LOCATE COMP
+     "ioport_2" SITE "44" ;": COMP "ioport_2" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(19): Semantic error in "LOCATE COMP
+     "ioport_3" SITE "43" ;": COMP "ioport_3" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(20): Semantic error in "LOCATE COMP
+     "ioport_4" SITE "40" ;": COMP "ioport_4" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(21): Semantic error in "LOCATE COMP
+     "ioport_5" SITE "39" ;": COMP "ioport_5" cannot be found in design. This
+
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(22): Semantic error in "LOCATE COMP
+     "ioport_6" SITE "38" ;": COMP "ioport_6" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(23): Semantic error in "LOCATE COMP
+     "ioport_10" SITE "50" ;": COMP "ioport_10" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(25): Semantic error in "LOCATE COMP
+     "ioport_11" SITE "1" ;": COMP "ioport_11" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(26): Semantic error in "LOCATE COMP
+     "ioport_12" SITE "2" ;": COMP "ioport_12" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(27): Semantic error in "LOCATE COMP
+     "ioport_13" SITE "5" ;": COMP "ioport_13" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(28): Semantic error in "LOCATE COMP
+     "ioport_14" SITE "6" ;": COMP "ioport_14" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(29): Semantic error in "LOCATE COMP
+     "ioport_15" SITE "7" ;": COMP "ioport_15" cannot be found in design. This
+     preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(36): Semantic error in "IOBUF PORT
+     "interrupt_i_0" IO_TYPE=LVCMOS33 PULLMODE=DOWN ;": Port "interrupt_i_0"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(37): Semantic error in "IOBUF PORT
+     "interrupt_i_1" IO_TYPE=LVCMOS33 PULLMODE=DOWN ;": Port "interrupt_i_1"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(38): Semantic error in "IOBUF PORT
+     "interrupt_i_2" IO_TYPE=LVCMOS33 PULLMODE=DOWN ;": Port "interrupt_i_2"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(39): Semantic error in "IOBUF PORT
+     "interrupt_i_3" IO_TYPE=LVCMOS33 PULLMODE=DOWN ;": Port "interrupt_i_3"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: C:/lscc/eP16VHDL/eP16.lpf(40): Semantic error in "IOBUF PORT
+     "interrupt_i_4" IO_TYPE=LVCMOS33 PULLMODE=DOWN ;": Port "interrupt_i_4"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: Preference parsing results:  26 semantic errors detected.
+WARNING - map: There are semantic errors in the preference file
+     C:/lscc/eP16VHDL/eP16.lpf.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[15]          | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[14]          | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[13]          | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[12]          | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+| ioport[11]          | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[10]          | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[9]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[8]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[7]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[6]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[5]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[4]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[3]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[2]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[1]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| ioport[0]           | BIDIR     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| uart_o              | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| acknowledge_o       | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| aclk                | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| arst                | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| interrupt_i[4]      | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| interrupt_i[3]      | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| interrupt_i[2]      | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| interrupt_i[1]      | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| interrupt_i[0]      | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+| uart_i              | INPUT     | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block r_stack9/RAM2 undriven or does not drive anything - clipped.
+Block r_stack5/RAM2 undriven or does not drive anything - clipped.
+Block n13160/RAM2 undriven or does not drive anything - clipped.
+Block s_stack9/RAM2 undriven or does not drive anything - clipped.
+Block s_stack5/RAM2 undriven or does not drive anything - clipped.
+Block n14280/RAM2 undriven or does not drive anything - clipped.
+Block n14310/RAM2 undriven or does not drive anything - clipped.
+Block n13130/RAM2 undriven or does not drive anything - clipped.
+
+Signal aclk_N_55 was merged into signal aclk_c
+Signal cpu1/n8684 was merged into signal cpu1/slot_2
+Signal uart1/aclk_c_enable_47 was merged into signal uart1/rxb_full_N_674
+Signal n1853 was merged into signal gpio_dir_15
+Signal n1883 was merged into signal gpio_dir_0
+Signal n1881 was merged into signal gpio_dir_1
+Signal n1879 was merged into signal gpio_dir_2
+Signal n1877 was merged into signal gpio_dir_3
+Signal n1875 was merged into signal gpio_dir_4
+Signal n1873 was merged into signal gpio_dir_5
+Signal n1871 was merged into signal gpio_dir_6
+Signal n1869 was merged into signal gpio_dir_7
+Signal n1867 was merged into signal gpio_dir_8
+Signal n1865 was merged into signal gpio_dir_9
+Signal n1863 was merged into signal gpio_dir_10
+Signal n1861 was merged into signal gpio_dir_11
+Signal n1859 was merged into signal gpio_dir_12
+Signal n1857 was merged into signal gpio_dir_13
+Signal n1855 was merged into signal gpio_dir_14
+Signal cpu1/add_283_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cpu1/add_283_add_4_1/CI undriven or does not drive anything - clipped.
+Signal cpu1/add_283_add_4_17/CO undriven or does not drive anything - clipped.
+Signal cpu1/a_16__I_0_262_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal cpu1/add_282_add_4_17/CO undriven or does not drive anything - clipped.
+Signal cpu1/p_15__I_0_259_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal cpu1/p_15__I_0_259_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal cpu1/a_16__I_0_262_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal cpu1/a_16__I_0_262_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal cpu1/p_15__I_0_259_add_4_17/S1 undriven or does not drive anything -
+     clipped.
+Signal cpu1/p_15__I_0_259_add_4_17/CO undriven or does not drive anything -
+     clipped.
+Signal cpu1/add_282_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal cpu1/add_282_add_4_1/CI undriven or does not drive anything - clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB9 undriven or does not drive anything -
+
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB3 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB2 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB1 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOB0 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_2_1/DOA4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB13 undriven or does not drive anything -
+
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB3 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB2 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB1 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOB0 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_0_3/DOA4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB17 undriven or does not drive anything -
+
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB3 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB2 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB1 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOB0 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA7 undriven or does not drive anything -
+
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_1_2/DOA4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB11 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB4 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB3 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB2 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB1 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOB0 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA17 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA16 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA15 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA14 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA13 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA12 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA11 undriven or does not drive anything -
+
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA10 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA9 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA8 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA7 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA6 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA5 undriven or does not drive anything -
+     clipped.
+Signal ram_memory_0/ram_memory_0_3_0/DOA4 undriven or does not drive anything -
+     clipped.
+Signal uart1/add_180_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal uart1/add_180_add_4_17/CO undriven or does not drive anything - clipped.
+Signal uart1/add_182_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal uart1/add_182_add_4_1/CI undriven or does not drive anything - clipped.
+Signal uart1/add_182_add_4_17/S1 undriven or does not drive anything - clipped.
+Signal uart1/add_182_add_4_17/CO undriven or does not drive anything - clipped.
+Signal uart1/add_180_add_4_1/S0 undriven or does not drive anything - clipped.
+Signal uart1/add_180_add_4_1/CI undriven or does not drive anything - clipped.
+Signal r_stack9/DO2 undriven or does not drive anything - clipped.
+Signal r_stack9/DO3 undriven or does not drive anything - clipped.
+Signal r_stack9/DO1 undriven or does not drive anything - clipped.
+Signal r_stack5/DO2 undriven or does not drive anything - clipped.
+Signal r_stack5/DO3 undriven or does not drive anything - clipped.
+Signal r_stack5/DO1 undriven or does not drive anything - clipped.
+Signal n13160/DO2 undriven or does not drive anything - clipped.
+Signal n13160/DO3 undriven or does not drive anything - clipped.
+Signal n13160/DO1 undriven or does not drive anything - clipped.
+Signal s_stack9/DO2 undriven or does not drive anything - clipped.
+Signal s_stack9/DO3 undriven or does not drive anything - clipped.
+Signal s_stack9/DO1 undriven or does not drive anything - clipped.
+Signal s_stack5/DO2 undriven or does not drive anything - clipped.
+Signal s_stack5/DO3 undriven or does not drive anything - clipped.
+Signal s_stack5/DO1 undriven or does not drive anything - clipped.
+Signal n14280/DO2 undriven or does not drive anything - clipped.
+Signal n14280/DO3 undriven or does not drive anything - clipped.
+Signal n14280/DO1 undriven or does not drive anything - clipped.
+Signal n14310/DO2 undriven or does not drive anything - clipped.
+Signal n14310/DO3 undriven or does not drive anything - clipped.
+Signal n14310/DO1 undriven or does not drive anything - clipped.
+Signal n13130/DO2 undriven or does not drive anything - clipped.
+Signal n13130/DO3 undriven or does not drive anything - clipped.
+Signal n13130/DO1 undriven or does not drive anything - clipped.
+Block i8039 was optimized away.
+Block cpu1/i1_4_lut_then_1_lut was optimized away.
+Block uart1/i340_1_lut was optimized away.
+Block i1160_1_lut was optimized away.
+Block i1175_1_lut was optimized away.
+Block i1174_1_lut was optimized away.
+Block i1173_1_lut was optimized away.
+Block i1172_1_lut was optimized away.
+Block i1171_1_lut was optimized away.
+
+Block i1170_1_lut was optimized away.
+Block i1169_1_lut was optimized away.
+Block i1168_1_lut was optimized away.
+Block i1167_1_lut was optimized away.
+Block i1166_1_lut was optimized away.
+Block i1165_1_lut was optimized away.
+Block i1164_1_lut was optimized away.
+Block i1163_1_lut was optimized away.
+Block i1162_1_lut was optimized away.
+Block i1161_1_lut was optimized away.
+
+
+
+<A name="mrp_mem"></A><B><U><big>Memory Usage</big></U></B>
+
+    
+         
+    INFO: Design contains pre-loadable EBR during configuration that has a
+         requirement:
+    Since the GSR is disabled for the EBR, make sure write enable and chip
+    enable are inactive during wake-up, so that the pre-loaded initialization
+    values will not be corrupted during wake-up state.
+
+
+
+
+/n13130:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n13130/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n13160:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n13160/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n14280:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n14280/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n14310:
+
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/n14310/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack0:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack1:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack2:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack3:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack4:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack5:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack5/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack6:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack7:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack8:
+    EBRs: 0
+
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack9:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/r_stack9/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/ram_memory_0:
+    EBRs: 4
+    RAM SLICEs: 0
+    Logic SLICEs: 0
+    PFU Registers: 0
+    -Contains EBR ram_memory_0_3_0:  TYPE= DP16KB,  Width_A= 4,  Depth_A= 4096,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,  WRITEMODE_A=
+         NORMAL,  WRITEMODE_B= NORMAL,  GSR= DISABLED,  MEM_INIT_FILE= mem.mif,
+         MEM_LPC_FILE= ram_memory.lpc
+    -Contains EBR ram_memory_0_1_2:  TYPE= DP16KB,  Width_A= 4,  Depth_A= 4096,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,  WRITEMODE_A=
+         NORMAL,  WRITEMODE_B= NORMAL,  GSR= DISABLED,  MEM_INIT_FILE= mem.mif,
+         MEM_LPC_FILE= ram_memory.lpc
+    -Contains EBR ram_memory_0_0_3:  TYPE= DP16KB,  Width_A= 4,  Depth_A= 4096,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,  WRITEMODE_A=
+         NORMAL,  WRITEMODE_B= NORMAL,  GSR= DISABLED,  MEM_INIT_FILE= mem.mif,
+         MEM_LPC_FILE= ram_memory.lpc
+    -Contains EBR ram_memory_0_2_1:  TYPE= DP16KB,  Width_A= 4,  Depth_A= 4096,
+         REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,  WRITEMODE_A=
+         NORMAL,  WRITEMODE_B= NORMAL,  GSR= DISABLED,  MEM_INIT_FILE= mem.mif,
+         MEM_LPC_FILE= ram_memory.lpc
+/s_stack0:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack1:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack2:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack3:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack4:
+    EBRs: 0
+
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack5:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack5/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack6:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack7:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack8:
+    EBRs: 0
+    RAM SLICEs: 3
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack9:
+    EBRs: 0
+    RAM SLICEs: 2
+    Logic SLICEs: 0
+    PFU Registers: 0
+/s_stack9/RAMW:
+    EBRs: 0
+    RAM SLICEs: 1
+    Logic SLICEs: 0
+    PFU Registers: 0
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: ram_memory_0/ram_memory_0_3_0
+         Type: DP16KB
+Instance Name: ram_memory_0/ram_memory_0_1_2
+         Type: DP16KB
+Instance Name: ram_memory_0/ram_memory_0_0_3
+         Type: DP16KB
+Instance Name: ram_memory_0/ram_memory_0_2_1
+         Type: DP16KB
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+
+        of the design. The reset signal used for GSR control is 'arst_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'arst_c' via the GSR component.
+
+     Type and number of components of the type: 
+   DP16KB = 4
+
+     Type and instance name of component: 
+   DP16KB : ram_memory_0/ram_memory_0_3_0
+   DP16KB : ram_memory_0/ram_memory_0_1_2
+   DP16KB : ram_memory_0/ram_memory_0_0_3
+   DP16KB : ram_memory_0/ram_memory_0_2_1
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'arst_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 9 
+
+     Type and instance name of component: 
+   Register : uart1/tx_shift_en_144
+   Register : uart1/rx_bitcnt_i0_i2
+   Register : uart1/rx_bitcnt_i0_i1
+   Register : uart1/tx_shift_reg_i0_i0
+   Register : uart1/tx_bitcnt_i2
+   Register : cpu1/slot__i0
+   Register : cpu1/slot__i1
+   Register : cpu1/slot__i2
+   Register : cpu1/slot__i2_rep_303
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 65 MB
+        
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

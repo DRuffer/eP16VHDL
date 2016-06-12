@@ -1,0 +1,385 @@
+<HTML>
+<HEAD><TITLE>Lattice Map TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Map TRACE Report</big></U></B>
+
+Loading design for application trce from file ep16_ep16_map.ncd.
+Design name: ep32_chip
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-5E
+Package:     TQFP144
+Performance: 5
+Loading device for application trce from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.7_x64/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.0.96.1</big></U></B>
+Sat Jun 11 13:28:47 2016
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o eP16_eP16.tw1 -gui eP16_eP16_map.ncd eP16_eP16.prf 
+Design file:     ep16_ep16_map.ncd
+Preference file: ep16_ep16.prf
+Device,speed:    LFXP2-5E,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_0_0' Target='right'>FREQUENCY PORT "aclk" 50.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+Report:   53.265MHz is the maximum frequency for this preference.
+
+<LI><A href='#map_twr_pref_0_1' Target='right'>CLOCK_TO_OUT ALLPORTS 20.000000 ns CLKPORT "aclk" (0 errors)</A></LI>            34 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_0_0"></A>Preference: FREQUENCY PORT "aclk" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.613ns (weighted slack = 1.226ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         DP16KB     Port           ram_memory_0/ram_memory_0_0_3(ASIC)  (from aclk_c -)
+   Destination:    FF         Data in        cpu1/t__i2  (to aclk_c +)
+
+   Delay:               9.294ns  (53.5% logic, 46.5% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.294ns physical path delay ram_memory_0/ram_memory_0_0_3 to cpu1/SLICE_189 meets
+     10.000ns delay constraint less
+      0.093ns DIN_SET requirement (totaling 9.907ns) by 0.613ns
+
+ Physical Path Details:
+
+      Data path ram_memory_0/ram_memory_0_0_3 to cpu1/SLICE_189:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+C2Q_DEL     ---     3.545 *ry_0_0_3.CLKA to *ry_0_0_3.DOA1 ram_memory_0/ram_memory_0_0_3 (from aclk_c)
+ROUTE         1   e 1.081 *ry_0_0_3.DOA1 to   SLICE_533.A1 memory_data_o_1
+CTOF_DEL    ---     0.260   SLICE_533.A1 to   SLICE_533.F1 SLICE_533
+ROUTE         1   e 1.081   SLICE_533.F1 to   SLICE_134.A1 system_data_o_15__N_46
+CTOF_DEL    ---     0.260   SLICE_134.A1 to   SLICE_134.F1 SLICE_134
+ROUTE         6   e 1.081   SLICE_134.F1 to */SLICE_361.B1 system_data_o_1
+CTOOFX_DEL  ---     0.494 */SLICE_361.B1 to *LICE_361.OFX0 cpu1/i6992/SLICE_361
+ROUTE         1   e 0.001 *LICE_361.OFX0 to *SLICE_357.FXB cpu1/n7656
+FXTOOFX_DE  ---     0.149 *SLICE_357.FXB to *LICE_357.OFX1 cpu1/i6991/SLICE_357
+ROUTE         1   e 1.081 *LICE_357.OFX1 to */SLICE_189.C0 cpu1/n7658
+CTOF_DEL    ---     0.260 */SLICE_189.C0 to */SLICE_189.F0 cpu1/SLICE_189
+ROUTE         1   e 0.001 */SLICE_189.F0 to *SLICE_189.DI0 cpu1/t_in_1 (to aclk_c)
+                  --------
+                    9.294   (53.5% logic, 46.5% route), 6 logic levels.
+
+Report:   53.265MHz is the maximum frequency for this preference.
+
+
+================================================================================
+<A name="map_twr_pref_0_1"></A>Preference: CLOCK_TO_OUT ALLPORTS 20.000000 ns CLKPORT "aclk" ;
+            34 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 14.786ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              gpio1/gpio_dir_reg_i0_i1  (from aclk_c +)
+   Destination:    Port       Pad            ioport[1]
+
+   Data Path Delay:     3.275ns  (67.0% logic, 33.0% route), 2 logic levels.
+
+   Clock Path Delay:    1.939ns  (44.2% logic, 55.8% route), 1 logic levels.
+
+ Constraint Details:
+      1.939ns delay aclk to gpio1/SLICE_170 and
+      3.275ns delay gpio1/SLICE_170 to ioport[1] (totaling 5.214ns) meets
+     20.000ns offset aclk to ioport[1] by 14.786ns
+
+ Physical Path Details:
+
+      Clock path aclk to gpio1/SLICE_170:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.858         21.PAD to       21.PADDI aclk
+ROUTE       213   e 1.081       21.PADDI to *SLICE_170.CLK aclk_c
+                  --------
+                    1.939   (44.2% logic, 55.8% route), 1 logic levels.
+
+      Data path gpio1/SLICE_170 to ioport[1]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.383 *SLICE_170.CLK to */SLICE_170.Q1 gpio1/SLICE_170 (from aclk_c)
+ROUTE         2   e 1.081 */SLICE_170.Q1 to *port[1].PADDT gpio_dir_1
+DTPAD_DEL   ---     1.811 *port[1].PADDT to  ioport[1].PAD ioport[1]
+                  --------
+                    3.275   (67.0% logic, 33.0% route), 2 logic levels.
+
+Report:    5.214ns is the minimum offset for this preference.
+
+<A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "aclk" 50.000000 MHz ;   |   50.000 MHz|   53.265 MHz|   6  
+                                        |             |             |
+CLOCK_TO_OUT ALLPORTS 20.000000 ns      |             |             |
+CLKPORT "aclk" ;                        |    20.000 ns|     5.214 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: aclk_c   Source: aclk.PAD   Loads: 213
+   Covered under: FREQUENCY PORT "aclk" 50.000000 MHz ;
+
+
+<A name="mtw1_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 373664 paths, 25 nets, and 4941 connections (99.44% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.0.96.1</big></U></B>
+Sat Jun 11 13:28:48 2016
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o eP16_eP16.tw1 -gui eP16_eP16_map.ncd eP16_eP16.prf 
+Design file:     ep16_ep16_map.ncd
+Preference file: ep16_ep16.prf
+Device,speed:    LFXP2-5E,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+<A name="mtw1_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#map_twr_pref_1_0' Target='right'>FREQUENCY PORT "aclk" 50.000000 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+
+<LI><A href='#map_twr_pref_1_1' Target='right'>CLOCK_TO_OUT ALLPORTS 20.000000 ns CLKPORT "aclk" (0 errors)</A></LI>            34 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+<A name="map_twr_pref_1_0"></A>Preference: FREQUENCY PORT "aclk" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.237ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart1/rx_shift_reg_i0_i1  (from aclk_c +)
+   Destination:    FF         Data in        uart1/rx_shift_reg_i0_i0  (to aclk_c +)
+
+   Delay:               0.223ns  (53.8% logic, 46.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.223ns physical path delay uart1/SLICE_285 to uart1/SLICE_285 meets
+     -0.014ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.014ns) by 0.237ns
+
+ Physical Path Details:
+
+      Data path uart1/SLICE_285 to uart1/SLICE_285:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.120 *SLICE_285.CLK to */SLICE_285.Q1 uart1/SLICE_285 (from aclk_c)
+ROUTE         2   e 0.103 */SLICE_285.Q1 to */SLICE_285.M0 uart1/rx_shift_reg_1 (to aclk_c)
+                  --------
+                    0.223   (53.8% logic, 46.2% route), 1 logic levels.
+
+
+================================================================================
+<A name="map_twr_pref_1_1"></A>Preference: CLOCK_TO_OUT ALLPORTS 20.000000 ns CLKPORT "aclk" ;
+            34 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 2.007ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              gpio1/gpio_reg_i0_i1  (from aclk_c +)
+   Destination:    Port       Pad            ioport[1]
+
+   Data Path Delay:     1.200ns  (62.5% logic, 37.5% route), 2 logic levels.
+
+   Clock Path Delay:    0.807ns  (44.2% logic, 55.8% route), 1 logic levels.
+
+ Constraint Details:
+      0.807ns delay aclk to gpio1/SLICE_178 and
+      1.200ns delay gpio1/SLICE_178 to ioport[1] (totaling 2.007ns) meets
+      0.000ns hold offset aclk to ioport[1] by 2.007ns
+
+ Physical Path Details:
+
+      Clock path aclk to gpio1/SLICE_178:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     0.357         21.PAD to       21.PADDI aclk
+ROUTE       213   e 0.450       21.PADDI to *SLICE_178.CLK aclk_c
+                  --------
+                    0.807   (44.2% logic, 55.8% route), 1 logic levels.
+
+      Data path gpio1/SLICE_178 to ioport[1]:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.120 *SLICE_178.CLK to */SLICE_178.Q1 gpio1/SLICE_178 (from aclk_c)
+ROUTE         2   e 0.450 */SLICE_178.Q1 to *port[1].PADDO gpio_out_1
+DOPAD_DEL   ---     0.630 *port[1].PADDO to  ioport[1].PAD ioport[1]
+                  --------
+                    1.200   (62.5% logic, 37.5% route), 2 logic levels.
+
+Report:    2.007ns is the maximum offset for this preference.
+
+<A name="mtw1_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY PORT "aclk" 50.000000 MHz ;   |            -|            -|   1  
+                                        |             |             |
+CLOCK_TO_OUT ALLPORTS 20.000000 ns      |             |             |
+CLKPORT "aclk" ;                        |     0.000 ns|     2.007 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="mtw1_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 1 clocks:
+
+Clock Domain: aclk_c   Source: aclk.PAD   Loads: 213
+   Covered under: FREQUENCY PORT "aclk" 50.000000 MHz ;
+
+
+<A name="mtw1_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 373616 paths, 25 nets, and 4941 connections (99.44% coverage)
+
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

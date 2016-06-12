@@ -1,0 +1,209 @@
+[ START MERGED ]
+n1853 gpio_dir_15
+uart1/aclk_c_enable_47 uart1/rxb_full_N_674
+n1855 gpio_dir_14
+n1857 gpio_dir_13
+n1859 gpio_dir_12
+n1861 gpio_dir_11
+n1863 gpio_dir_10
+n1865 gpio_dir_9
+n1867 gpio_dir_8
+n1869 gpio_dir_7
+n1871 gpio_dir_6
+n1873 gpio_dir_5
+n1875 gpio_dir_4
+n1877 gpio_dir_3
+n1879 gpio_dir_2
+n1881 gpio_dir_1
+n1883 gpio_dir_0
+aclk_N_55 aclk_c
+cpu1/n8684 cpu1/slot_2
+[ END MERGED ]
+[ START CLIPPED ]
+cpu1/add_283_add_4_1/S0
+cpu1/add_283_add_4_1/CI
+cpu1/add_283_add_4_17/CO
+cpu1/a_16__I_0_262_add_4_17/CO
+cpu1/add_282_add_4_17/CO
+cpu1/p_15__I_0_259_add_4_1/S0
+cpu1/p_15__I_0_259_add_4_1/CI
+cpu1/a_16__I_0_262_add_4_1/S0
+cpu1/a_16__I_0_262_add_4_1/CI
+cpu1/p_15__I_0_259_add_4_17/S1
+cpu1/p_15__I_0_259_add_4_17/CO
+cpu1/add_282_add_4_1/S0
+cpu1/add_282_add_4_1/CI
+ram_memory_0/ram_memory_0_2_1/DOB17
+ram_memory_0/ram_memory_0_2_1/DOB16
+ram_memory_0/ram_memory_0_2_1/DOB15
+ram_memory_0/ram_memory_0_2_1/DOB14
+ram_memory_0/ram_memory_0_2_1/DOB13
+ram_memory_0/ram_memory_0_2_1/DOB12
+ram_memory_0/ram_memory_0_2_1/DOB11
+ram_memory_0/ram_memory_0_2_1/DOB10
+ram_memory_0/ram_memory_0_2_1/DOB9
+ram_memory_0/ram_memory_0_2_1/DOB8
+ram_memory_0/ram_memory_0_2_1/DOB7
+ram_memory_0/ram_memory_0_2_1/DOB6
+ram_memory_0/ram_memory_0_2_1/DOB5
+ram_memory_0/ram_memory_0_2_1/DOB4
+ram_memory_0/ram_memory_0_2_1/DOB3
+ram_memory_0/ram_memory_0_2_1/DOB2
+ram_memory_0/ram_memory_0_2_1/DOB1
+ram_memory_0/ram_memory_0_2_1/DOB0
+ram_memory_0/ram_memory_0_2_1/DOA17
+ram_memory_0/ram_memory_0_2_1/DOA16
+ram_memory_0/ram_memory_0_2_1/DOA15
+ram_memory_0/ram_memory_0_2_1/DOA14
+ram_memory_0/ram_memory_0_2_1/DOA13
+ram_memory_0/ram_memory_0_2_1/DOA12
+ram_memory_0/ram_memory_0_2_1/DOA11
+ram_memory_0/ram_memory_0_2_1/DOA10
+ram_memory_0/ram_memory_0_2_1/DOA9
+ram_memory_0/ram_memory_0_2_1/DOA8
+ram_memory_0/ram_memory_0_2_1/DOA7
+ram_memory_0/ram_memory_0_2_1/DOA6
+ram_memory_0/ram_memory_0_2_1/DOA5
+ram_memory_0/ram_memory_0_2_1/DOA4
+ram_memory_0/ram_memory_0_0_3/DOB17
+ram_memory_0/ram_memory_0_0_3/DOB16
+ram_memory_0/ram_memory_0_0_3/DOB15
+ram_memory_0/ram_memory_0_0_3/DOB14
+ram_memory_0/ram_memory_0_0_3/DOB13
+ram_memory_0/ram_memory_0_0_3/DOB12
+ram_memory_0/ram_memory_0_0_3/DOB11
+ram_memory_0/ram_memory_0_0_3/DOB10
+ram_memory_0/ram_memory_0_0_3/DOB9
+ram_memory_0/ram_memory_0_0_3/DOB8
+ram_memory_0/ram_memory_0_0_3/DOB7
+ram_memory_0/ram_memory_0_0_3/DOB6
+ram_memory_0/ram_memory_0_0_3/DOB5
+ram_memory_0/ram_memory_0_0_3/DOB4
+ram_memory_0/ram_memory_0_0_3/DOB3
+ram_memory_0/ram_memory_0_0_3/DOB2
+ram_memory_0/ram_memory_0_0_3/DOB1
+ram_memory_0/ram_memory_0_0_3/DOB0
+ram_memory_0/ram_memory_0_0_3/DOA17
+ram_memory_0/ram_memory_0_0_3/DOA16
+ram_memory_0/ram_memory_0_0_3/DOA15
+ram_memory_0/ram_memory_0_0_3/DOA14
+ram_memory_0/ram_memory_0_0_3/DOA13
+ram_memory_0/ram_memory_0_0_3/DOA12
+ram_memory_0/ram_memory_0_0_3/DOA11
+ram_memory_0/ram_memory_0_0_3/DOA10
+ram_memory_0/ram_memory_0_0_3/DOA9
+ram_memory_0/ram_memory_0_0_3/DOA8
+ram_memory_0/ram_memory_0_0_3/DOA7
+ram_memory_0/ram_memory_0_0_3/DOA6
+ram_memory_0/ram_memory_0_0_3/DOA5
+ram_memory_0/ram_memory_0_0_3/DOA4
+ram_memory_0/ram_memory_0_1_2/DOB17
+ram_memory_0/ram_memory_0_1_2/DOB16
+ram_memory_0/ram_memory_0_1_2/DOB15
+ram_memory_0/ram_memory_0_1_2/DOB14
+ram_memory_0/ram_memory_0_1_2/DOB13
+ram_memory_0/ram_memory_0_1_2/DOB12
+ram_memory_0/ram_memory_0_1_2/DOB11
+ram_memory_0/ram_memory_0_1_2/DOB10
+ram_memory_0/ram_memory_0_1_2/DOB9
+ram_memory_0/ram_memory_0_1_2/DOB8
+ram_memory_0/ram_memory_0_1_2/DOB7
+ram_memory_0/ram_memory_0_1_2/DOB6
+ram_memory_0/ram_memory_0_1_2/DOB5
+ram_memory_0/ram_memory_0_1_2/DOB4
+ram_memory_0/ram_memory_0_1_2/DOB3
+ram_memory_0/ram_memory_0_1_2/DOB2
+ram_memory_0/ram_memory_0_1_2/DOB1
+ram_memory_0/ram_memory_0_1_2/DOB0
+ram_memory_0/ram_memory_0_1_2/DOA17
+ram_memory_0/ram_memory_0_1_2/DOA16
+ram_memory_0/ram_memory_0_1_2/DOA15
+ram_memory_0/ram_memory_0_1_2/DOA14
+ram_memory_0/ram_memory_0_1_2/DOA13
+ram_memory_0/ram_memory_0_1_2/DOA12
+ram_memory_0/ram_memory_0_1_2/DOA11
+ram_memory_0/ram_memory_0_1_2/DOA10
+ram_memory_0/ram_memory_0_1_2/DOA9
+ram_memory_0/ram_memory_0_1_2/DOA8
+ram_memory_0/ram_memory_0_1_2/DOA7
+ram_memory_0/ram_memory_0_1_2/DOA6
+ram_memory_0/ram_memory_0_1_2/DOA5
+ram_memory_0/ram_memory_0_1_2/DOA4
+ram_memory_0/ram_memory_0_3_0/DOB17
+ram_memory_0/ram_memory_0_3_0/DOB16
+ram_memory_0/ram_memory_0_3_0/DOB15
+ram_memory_0/ram_memory_0_3_0/DOB14
+ram_memory_0/ram_memory_0_3_0/DOB13
+ram_memory_0/ram_memory_0_3_0/DOB12
+ram_memory_0/ram_memory_0_3_0/DOB11
+ram_memory_0/ram_memory_0_3_0/DOB10
+ram_memory_0/ram_memory_0_3_0/DOB9
+ram_memory_0/ram_memory_0_3_0/DOB8
+ram_memory_0/ram_memory_0_3_0/DOB7
+ram_memory_0/ram_memory_0_3_0/DOB6
+ram_memory_0/ram_memory_0_3_0/DOB5
+ram_memory_0/ram_memory_0_3_0/DOB4
+ram_memory_0/ram_memory_0_3_0/DOB3
+ram_memory_0/ram_memory_0_3_0/DOB2
+ram_memory_0/ram_memory_0_3_0/DOB1
+ram_memory_0/ram_memory_0_3_0/DOB0
+ram_memory_0/ram_memory_0_3_0/DOA17
+ram_memory_0/ram_memory_0_3_0/DOA16
+ram_memory_0/ram_memory_0_3_0/DOA15
+ram_memory_0/ram_memory_0_3_0/DOA14
+ram_memory_0/ram_memory_0_3_0/DOA13
+ram_memory_0/ram_memory_0_3_0/DOA12
+ram_memory_0/ram_memory_0_3_0/DOA11
+ram_memory_0/ram_memory_0_3_0/DOA10
+ram_memory_0/ram_memory_0_3_0/DOA9
+ram_memory_0/ram_memory_0_3_0/DOA8
+ram_memory_0/ram_memory_0_3_0/DOA7
+ram_memory_0/ram_memory_0_3_0/DOA6
+ram_memory_0/ram_memory_0_3_0/DOA5
+ram_memory_0/ram_memory_0_3_0/DOA4
+uart1/add_180_add_4_17/S1
+uart1/add_180_add_4_17/CO
+uart1/add_182_add_4_1/S0
+uart1/add_182_add_4_1/CI
+uart1/add_182_add_4_17/S1
+uart1/add_182_add_4_17/CO
+uart1/add_180_add_4_1/S0
+uart1/add_180_add_4_1/CI
+r_stack9/DO2
+r_stack9/DO3
+r_stack9/DO1
+r_stack5/DO2
+r_stack5/DO3
+r_stack5/DO1
+n13160/DO2
+n13160/DO3
+n13160/DO1
+s_stack9/DO2
+s_stack9/DO3
+s_stack9/DO1
+s_stack5/DO2
+s_stack5/DO3
+s_stack5/DO1
+n14280/DO2
+n14280/DO3
+n14280/DO1
+n14310/DO2
+n14310/DO3
+n14310/DO1
+n13130/DO2
+n13130/DO3
+n13130/DO1
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.7.0.96.1 -- WARNING: Map write only section -- Sat Jun 11 13:28:45 2016
+
+SYSCONFIG DONE_OD=ON DONE_EX=OFF CONFIG_SECURE=OFF WAKE_UP=21 WAKE_ON_LOCK=OFF INBUF=ON MASTER_SPI_PORT=DISABLE SLAVE_SPI_PORT=DISABLE MY_ASSP=OFF ONE_TIME_PROGRAM=OFF ;
+LOCATE COMP "uart_o" SITE "109" ;
+LOCATE COMP "acknowledge_o" SITE "29" ;
+LOCATE COMP "aclk" SITE "21" ;
+LOCATE COMP "arst" SITE "19" ;
+LOCATE COMP "uart_i" SITE "110" ;
+FREQUENCY PORT "aclk" 50.000000 MHz ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

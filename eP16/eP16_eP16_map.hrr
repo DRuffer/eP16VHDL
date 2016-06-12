@@ -1,0 +1,50 @@
+---------------------------------------------------
+Report for cell ep32_chip
+   Instance path: ep32_chip
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     646.00        100.0
+                                  LUT4	     850.00        100.0
+                               DISTRAM	      72.00        100.0
+                                 IOBUF	         26        100.0
+                                PFUREG	        264        100.0
+                                RIPPLE	         54        100.0
+                                   EBR	          4        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                  uart	          1        15.6
+                            ram_memory	          1         0.0
+                                  gpio	          1         4.3
+                              ep16(16)	          1        52.5
+---------------------------------------------------
+Report for cell gpio
+   Instance path: ep32_chip/gpio1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      28.00         4.3
+                                  LUT4	      24.00         2.8
+                                PFUREG	         32        12.1
+---------------------------------------------------
+Report for cell uart
+   Instance path: ep32_chip/uart1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     100.58        15.6
+                                  LUT4	     114.67        13.5
+                                PFUREG	         92        34.8
+                                RIPPLE	         18        33.3
+---------------------------------------------------
+Report for cell ram_memory
+   Instance path: ep32_chip/ram_memory_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                   EBR	          4        100.0
+---------------------------------------------------
+Report for cell ep16(16)
+   Instance path: ep32_chip/cpu1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     339.25        52.5
+                                  LUT4	     530.33        62.4
+                                PFUREG	        108        40.9
+                                RIPPLE	         36        66.7
