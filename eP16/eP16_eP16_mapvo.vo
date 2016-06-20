@@ -1,8 +1,9 @@
 
-// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.7.0.96.1
-// ldbanno -n Verilog -o eP16_eP16_mapvo.vo -w -neg -gui eP16_eP16_map.ncd 
-// Netlist created on Sat Jun 11 13:28:43 2016
-// Netlist written on Sat Jun 11 13:28:52 2016
+// Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.7.1.502
+
+// ldbanno -n Verilog -o eP16_eP16_mapvo.vo -w -neg -gui -msgset C:/lscc/eP16VHDL/promote.xml eP16_eP16_map.ncd 
+// Netlist created on Sun Jun 19 19:47:02 2016
+// Netlist written on Sun Jun 19 19:47:09 2016
 // Design is for device LFXP2-5E
 // Design is for package TQFP144
 // Design is for performance grade 5
@@ -5184,7 +5185,7 @@ endmodule
 
 module interrupt_i_4_ ( output PADDI, input interrupti4 );
 
-  ec2iobuf0002 interrupt_i_pad_4( .Z(PADDI), .PAD(interrupti4));
+  ec2iobuf0003 interrupt_i_pad_4( .Z(PADDI), .PAD(interrupti4));
 
   specify
     (interrupti4 => PADDI) = (0:0:0,0:0:0);
@@ -5194,9 +5195,14 @@ module interrupt_i_4_ ( output PADDI, input interrupti4 );
 
 endmodule
 
+module ec2iobuf0003 ( output Z, input PAD );
+
+  IBPD INST1( .I(PAD), .O(Z));
+endmodule
+
 module interrupt_i_3_ ( output PADDI, input interrupti3 );
 
-  ec2iobuf0002 interrupt_i_pad_3( .Z(PADDI), .PAD(interrupti3));
+  ec2iobuf0003 interrupt_i_pad_3( .Z(PADDI), .PAD(interrupti3));
 
   specify
     (interrupti3 => PADDI) = (0:0:0,0:0:0);
@@ -5208,7 +5214,7 @@ endmodule
 
 module interrupt_i_2_ ( output PADDI, input interrupti2 );
 
-  ec2iobuf0002 interrupt_i_pad_2( .Z(PADDI), .PAD(interrupti2));
+  ec2iobuf0003 interrupt_i_pad_2( .Z(PADDI), .PAD(interrupti2));
 
   specify
     (interrupti2 => PADDI) = (0:0:0,0:0:0);
@@ -5220,7 +5226,7 @@ endmodule
 
 module interrupt_i_1_ ( output PADDI, input interrupti1 );
 
-  ec2iobuf0002 interrupt_i_pad_1( .Z(PADDI), .PAD(interrupti1));
+  ec2iobuf0003 interrupt_i_pad_1( .Z(PADDI), .PAD(interrupti1));
 
   specify
     (interrupti1 => PADDI) = (0:0:0,0:0:0);
@@ -5232,7 +5238,7 @@ endmodule
 
 module interrupt_i_0_ ( output PADDI, input interrupti0 );
 
-  ec2iobuf0002 interrupt_i_pad_0( .Z(PADDI), .PAD(interrupti0));
+  ec2iobuf0003 interrupt_i_pad_0( .Z(PADDI), .PAD(interrupti0));
 
   specify
     (interrupti0 => PADDI) = (0:0:0,0:0:0);
@@ -5516,7 +5522,7 @@ module ram_memory_0_ram_memory_0_1_2 ( input DIA3, DIA2, DIA1, DIA0, ADA13,
          ADA8_dly, ADA7_dly, ADA6_dly, ADA5_dly, ADA4_dly, ADA3_dly, ADA2_dly, 
          WEA_dly;
 
-  DP16KB0003 \ram_memory_0/ram_memory_0_1_2_DP16KB ( .CEA(VCCI), 
+  DP16KB0004 \ram_memory_0/ram_memory_0_1_2_DP16KB ( .CEA(VCCI), 
     .CLKA(MORCLKA_NOTIN), .WEA(WEA_dly), .CSA0(GNDI), .CSA1(GNDI), .CSA2(GNDI), 
     .RSTA(GNDI), .CEB(VCCI), .CLKB(GNDI), .WEB(GNDI), .CSB0(GNDI), .CSB1(GNDI), 
     .CSB2(GNDI), .RSTB(GNDI), .DIA0(DIA0_dly), .DIA1(DIA1_dly), 
@@ -5570,7 +5576,7 @@ module ram_memory_0_ram_memory_0_1_2 ( input DIA3, DIA2, DIA1, DIA0, ADA13,
 
 endmodule
 
-module DP16KB0003 ( input CEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, CLKB, 
+module DP16KB0004 ( input CEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, CLKB, 
     WEB, CSB0, CSB1, CSB2, RSTB, DIA0, DIA1, DIA2, DIA3, DIA4, DIA5, DIA6, 
     DIA7, DIA8, DIA9, DIA10, DIA11, DIA12, DIA13, DIA14, DIA15, DIA16, DIA17, 
     ADA0, ADA1, ADA2, ADA3, ADA4, ADA5, ADA6, ADA7, ADA8, ADA9, ADA10, ADA11, 
@@ -5753,7 +5759,7 @@ module ram_memory_0_ram_memory_0_0_3 ( input DIA3, DIA2, DIA1, DIA0, ADA13,
          ADA8_dly, ADA7_dly, ADA6_dly, ADA5_dly, ADA4_dly, ADA3_dly, ADA2_dly, 
          WEA_dly;
 
-  DP16KB0004 \ram_memory_0/ram_memory_0_0_3_DP16KB ( .CEA(VCCI), 
+  DP16KB0005 \ram_memory_0/ram_memory_0_0_3_DP16KB ( .CEA(VCCI), 
     .CLKA(MORCLKA_NOTIN), .WEA(WEA_dly), .CSA0(GNDI), .CSA1(GNDI), .CSA2(GNDI), 
     .RSTA(GNDI), .CEB(VCCI), .CLKB(GNDI), .WEB(GNDI), .CSB0(GNDI), .CSB1(GNDI), 
     .CSB2(GNDI), .RSTB(GNDI), .DIA0(DIA0_dly), .DIA1(DIA1_dly), 
@@ -5807,7 +5813,7 @@ module ram_memory_0_ram_memory_0_0_3 ( input DIA3, DIA2, DIA1, DIA0, ADA13,
 
 endmodule
 
-module DP16KB0004 ( input CEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, CLKB, 
+module DP16KB0005 ( input CEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, CLKB, 
     WEB, CSB0, CSB1, CSB2, RSTB, DIA0, DIA1, DIA2, DIA3, DIA4, DIA5, DIA6, 
     DIA7, DIA8, DIA9, DIA10, DIA11, DIA12, DIA13, DIA14, DIA15, DIA16, DIA17, 
     ADA0, ADA1, ADA2, ADA3, ADA4, ADA5, ADA6, ADA7, ADA8, ADA9, ADA10, ADA11, 
@@ -5990,7 +5996,7 @@ module ram_memory_0_ram_memory_0_2_1 ( input DIA3, DIA2, DIA1, DIA0, ADA13,
          ADA8_dly, ADA7_dly, ADA6_dly, ADA5_dly, ADA4_dly, ADA3_dly, ADA2_dly, 
          WEA_dly;
 
-  DP16KB0005 \ram_memory_0/ram_memory_0_2_1_DP16KB ( .CEA(VCCI), 
+  DP16KB0006 \ram_memory_0/ram_memory_0_2_1_DP16KB ( .CEA(VCCI), 
     .CLKA(MORCLKA_NOTIN), .WEA(WEA_dly), .CSA0(GNDI), .CSA1(GNDI), .CSA2(GNDI), 
     .RSTA(GNDI), .CEB(VCCI), .CLKB(GNDI), .WEB(GNDI), .CSB0(GNDI), .CSB1(GNDI), 
     .CSB2(GNDI), .RSTB(GNDI), .DIA0(DIA0_dly), .DIA1(DIA1_dly), 
@@ -6044,7 +6050,7 @@ module ram_memory_0_ram_memory_0_2_1 ( input DIA3, DIA2, DIA1, DIA0, ADA13,
 
 endmodule
 
-module DP16KB0005 ( input CEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, CLKB, 
+module DP16KB0006 ( input CEA, CLKA, WEA, CSA0, CSA1, CSA2, RSTA, CEB, CLKB, 
     WEB, CSB0, CSB1, CSB2, RSTB, DIA0, DIA1, DIA2, DIA3, DIA4, DIA5, DIA6, 
     DIA7, DIA8, DIA9, DIA10, DIA11, DIA12, DIA13, DIA14, DIA15, DIA16, DIA17, 
     ADA0, ADA1, ADA2, ADA3, ADA4, ADA5, ADA6, ADA7, ADA8, ADA9, ADA10, ADA11, 

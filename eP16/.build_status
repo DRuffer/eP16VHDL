@@ -5,22 +5,43 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1466390877"/>
         </Milestone>
-        <Milestone name="Map" build_result="0" build_time="0">
-            <Task name="Map" build_result="0" update_result="3" update_time="0"/>
-            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
-            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
-            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Map" build_result="2" build_time="1466390825">
+            <Task name="Map" build_result="2" update_result="0" update_time="1466390825"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1466390827"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1466390830"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1466390833"/>
         </Milestone>
-        <Milestone name="PAR" build_result="0" build_time="0">
-            <Task name="PAR" build_result="0" update_result="3" update_time="0"/>
-            <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
-            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="PAR" build_result="2" build_time="1466390863">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1466390863"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1466390866"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1466390873"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="0" build_time="0">
-            <Task name="Lattice_Synthesis" build_result="0" update_result="3" update_time="0"/>
-            <Task name="LSE_Compile" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1466390822">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1466390822"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1466390817"/>
         </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1465745569"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/eP16_eP16_map.vdb" last_build_time="1466390825" last_build_size="215133"/>
+        <Report name="eP16_eP16.bgn" last_build_time="1466390877" last_build_size="3647"/>
+        <Report name="eP16_eP16.ior" last_build_time="1466390872" last_build_size="4218"/>
+        <Report name="eP16_eP16.jed" last_build_time="1466390877" last_build_size="1268833"/>
+        <Report name="eP16_eP16.lsedata" last_build_time="1466390817" last_build_size="776751"/>
+        <Report name="eP16_eP16.ncd" last_build_time="1466390863" last_build_size="964362"/>
+        <Report name="eP16_eP16.ngd" last_build_time="1466390822" last_build_size="858391"/>
+        <Report name="eP16_eP16.tw1" last_build_time="1466390827" last_build_size="12488"/>
+        <Report name="eP16_eP16.twr" last_build_time="1466390866" last_build_size="79528"/>
+        <Report name="eP16_eP16_map.ncd" last_build_time="1466390823" last_build_size="603953"/>
+        <Report name="eP16_eP16_mapvho.sdf" last_build_time="1466390833" last_build_size="789427"/>
+        <Report name="eP16_eP16_mapvho.vho" last_build_time="1466390832" last_build_size="725216"/>
+        <Report name="eP16_eP16_mapvo.sdf" last_build_time="1466390830" last_build_size="789525"/>
+        <Report name="eP16_eP16_mapvo.vo" last_build_time="1466390829" last_build_size="406806"/>
     </Strategy>
 </BuildStatus>

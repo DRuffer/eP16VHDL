@@ -1,0 +1,5 @@
+#Start recording tcl command: 6/19/2016 17:05:10
+#Project Location: C:/lscc/eP16VHDL; Project name: eP16
+prj_project open "C:/lscc/eP16VHDL/eP16.ldf"
+prj_run Export -impl eP16 -task Bitgen -forceAll
+#Stop recording: 6/19/2016 17:17:57

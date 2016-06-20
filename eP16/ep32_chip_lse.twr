@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Sat Jun 11 13:28:42 2016
+Sun Jun 19 19:47:01 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -49,9 +49,9 @@ Error:  The following path violates requirements by 18.291ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.478             CK to Q              \cpu1/slot__i0 (from aclk_c)
 Route        18   e 1.698                                  slot[0]
-LUT4        ---     0.302              C to Z              i5_3_lut
-Route         1   e 0.020                                  n1_adj_912
-MUXL5       ---     0.123           ALUT to Z              i6
+LUT4        ---     0.302              B to Z              \cpu1/i3419_2_lut
+Route         1   e 0.020                                  n1
+MUXL5       ---     0.123           BLUT to Z              i6
 Route        26   e 1.671                                  n3
 LUT4        ---     0.302              A to Z              \cpu1/i1_2_lut_3_lut_adj_176
 Route        15   e 1.561                                  \cpu1/n6367
@@ -107,9 +107,9 @@ Error:  The following path violates requirements by 18.291ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.478             CK to Q              \cpu1/slot__i0 (from aclk_c)
 Route        18   e 1.698                                  slot[0]
-LUT4        ---     0.302              B to Z              \cpu1/i3419_2_lut
-Route         1   e 0.020                                  n1
-MUXL5       ---     0.123           BLUT to Z              i6
+LUT4        ---     0.302              C to Z              i5_3_lut
+Route         1   e 0.020                                  n1_adj_912
+MUXL5       ---     0.123           ALUT to Z              i6
 Route        26   e 1.671                                  n3
 LUT4        ---     0.302              A to Z              \cpu1/i1_2_lut_3_lut_adj_176
 Route        15   e 1.561                                  \cpu1/n6367
@@ -296,5 +296,5 @@ Timing errors: 4096  Score: 61573118
 Constraints cover  308361 paths, 1414 nets, and 4208 connections (92.9% coverage)
 
 
-Peak memory: 103907328 bytes, TRCE: 10010624 bytes, DLYMAN: 327680 bytes
+Peak memory: 103534592 bytes, TRCE: 9781248 bytes, DLYMAN: 327680 bytes
 CPU_TIME_REPORT: 0 secs 

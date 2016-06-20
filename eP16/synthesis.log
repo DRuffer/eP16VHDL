@@ -1,14 +1,14 @@
-synthesis:  version Diamond (64-bit) 3.7.0.96.1
+synthesis:  version Diamond (64-bit) 3.7.1.502
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun 11 13:28:36 2016
+Sun Jun 19 19:46:56 2016
 
 
-Command Line:  synthesis -f eP16_eP16_lattice.synproj -gui 
+Command Line:  synthesis -f eP16_eP16_lattice.synproj -gui -msgset C:/lscc/eP16VHDL/promote.xml 
 
 Synthesis options:
 The -a option is LatticeXP2.
@@ -213,8 +213,8 @@ clk0 [get_nets aclk_c]                  |  200.000 MHz|   42.935 MHz|    18 *
 1 constraints not met.
 
 
-Peak Memory Usage: 100.152  MB
+Peak Memory Usage: 99.867  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 5.922  secs
+Elapsed CPU time for LSE flow : 4.859  secs
 --------------------------------------------------------------

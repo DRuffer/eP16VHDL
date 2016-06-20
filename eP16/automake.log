@@ -1,16 +1,16 @@
 
 synthesis -f "eP16_eP16_lattice.synproj"
-synthesis:  version Diamond (64-bit) 3.7.0.96.1
+synthesis:  version Diamond (64-bit) 3.7.1.502
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun 11 13:28:36 2016
+Sun Jun 19 19:46:56 2016
 
 
-Command Line:  synthesis -f eP16_eP16_lattice.synproj -gui 
+Command Line:  synthesis -f eP16_eP16_lattice.synproj -gui -msgset C:/lscc/eP16VHDL/promote.xml 
 
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
@@ -226,14 +226,14 @@ clk0 [get_nets aclk_c]                  |  200.000 MHz|   42.935 MHz|    18 *
 1 constraints not met.
 
 
-Peak Memory Usage: 100.152  MB
+Peak Memory Usage: 99.867  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 5.922  secs
+Elapsed CPU time for LSE flow : 4.859  secs
 --------------------------------------------------------------
 
 map -a "LatticeXP2" -p LFXP2-5E -t TQFP144 -s 5 -oc Commercial   "eP16_eP16.ngd" -o "eP16_eP16_map.ncd" -pr "eP16_eP16.prf" -mp "eP16_eP16.mrp" -lpf "C:/lscc/eP16VHDL/eP16/eP16_eP16.lpf" -lpf "C:/lscc/eP16VHDL/eP16.lpf"             
-map:  version Diamond (64-bit) 3.7.0.96.1
+map:  version Diamond (64-bit) 3.7.1.502
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -253,33 +253,6 @@ Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
 
 Part used: LFXP2-5ETQFP144, Performance used: 5.
 
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(8): Semantic error in &quot;LOCATE COMP &quot;interrupt_i_0&quot; SITE &quot;58&quot; ;&quot;: " arg1="interrupt_i_0" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="8"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(9): Semantic error in &quot;LOCATE COMP &quot;interrupt_i_1&quot; SITE &quot;57&quot; ;&quot;: " arg1="interrupt_i_1" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="9"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(10): Semantic error in &quot;LOCATE COMP &quot;interrupt_i_2&quot; SITE &quot;56&quot; ;&quot;: " arg1="interrupt_i_2" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="10"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(11): Semantic error in &quot;LOCATE COMP &quot;interrupt_i_3&quot; SITE &quot;55&quot; ;&quot;: " arg1="interrupt_i_3" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="11"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(12): Semantic error in &quot;LOCATE COMP &quot;interrupt_i_4&quot; SITE &quot;54&quot; ;&quot;: " arg1="interrupt_i_4" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="12"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(13): Semantic error in &quot;LOCATE COMP &quot;ioport_7&quot; SITE &quot;37&quot; ;&quot;: " arg1="ioport_7" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="13"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(14): Semantic error in &quot;LOCATE COMP &quot;ioport_8&quot; SITE &quot;53&quot; ;&quot;: " arg1="ioport_8" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="14"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(15): Semantic error in &quot;LOCATE COMP &quot;ioport_9&quot; SITE &quot;52&quot; ;&quot;: " arg1="ioport_9" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="15"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(16): Semantic error in &quot;LOCATE COMP &quot;ioport_0&quot; SITE &quot;46&quot; ;&quot;: " arg1="ioport_0" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="16"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(17): Semantic error in &quot;LOCATE COMP &quot;ioport_1&quot; SITE &quot;45&quot; ;&quot;: " arg1="ioport_1" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="17"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(18): Semantic error in &quot;LOCATE COMP &quot;ioport_2&quot; SITE &quot;44&quot; ;&quot;: " arg1="ioport_2" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="18"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(19): Semantic error in &quot;LOCATE COMP &quot;ioport_3&quot; SITE &quot;43&quot; ;&quot;: " arg1="ioport_3" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="19"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(20): Semantic error in &quot;LOCATE COMP &quot;ioport_4&quot; SITE &quot;40&quot; ;&quot;: " arg1="ioport_4" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="20"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(21): Semantic error in &quot;LOCATE COMP &quot;ioport_5&quot; SITE &quot;39&quot; ;&quot;: " arg1="ioport_5" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="21"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(22): Semantic error in &quot;LOCATE COMP &quot;ioport_6&quot; SITE &quot;38&quot; ;&quot;: " arg1="ioport_6" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="22"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(23): Semantic error in &quot;LOCATE COMP &quot;ioport_10&quot; SITE &quot;50&quot; ;&quot;: " arg1="ioport_10" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="23"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(25): Semantic error in &quot;LOCATE COMP &quot;ioport_11&quot; SITE &quot;1&quot; ;&quot;: " arg1="ioport_11" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="25"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(26): Semantic error in &quot;LOCATE COMP &quot;ioport_12&quot; SITE &quot;2&quot; ;&quot;: " arg1="ioport_12" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="26"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(27): Semantic error in &quot;LOCATE COMP &quot;ioport_13&quot; SITE &quot;5&quot; ;&quot;: " arg1="ioport_13" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="27"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(28): Semantic error in &quot;LOCATE COMP &quot;ioport_14&quot; SITE &quot;6&quot; ;&quot;: " arg1="ioport_14" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="28"  />
-    <postMsg mid="1100679" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(29): Semantic error in &quot;LOCATE COMP &quot;ioport_15&quot; SITE &quot;7&quot; ;&quot;: " arg1="ioport_15" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="29"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(36): Semantic error in &quot;IOBUF PORT &quot;interrupt_i_0&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: " arg1="interrupt_i_0" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="36"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(37): Semantic error in &quot;IOBUF PORT &quot;interrupt_i_1&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: " arg1="interrupt_i_1" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="37"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(38): Semantic error in &quot;IOBUF PORT &quot;interrupt_i_2&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: " arg1="interrupt_i_2" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="38"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(39): Semantic error in &quot;IOBUF PORT &quot;interrupt_i_3&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: " arg1="interrupt_i_3" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="39"  />
-    <postMsg mid="1100644" type="Warning" dynamic="2" navigation="2" arg0="C:/lscc/eP16VHDL/eP16.lpf(40): Semantic error in &quot;IOBUF PORT &quot;interrupt_i_4&quot; IO_TYPE=LVCMOS33 PULLMODE=DOWN ;&quot;: " arg1="interrupt_i_4" arg2="C:/lscc/eP16VHDL/eP16.lpf" arg3="40"  />
-    <postMsg mid="1104062" type="Warning" dynamic="2" navigation="0" arg0="" arg1="26 semantic errors"  />
 Loading device for application map from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.7_x64/ispfpga.
 Package Status:                     Final          Version 1.42.
 
@@ -396,10 +369,9 @@ Design Summary:
      Net sp_1: 44 loads
      Net rp_1: 43 loads
      Net sp_2: 42 loads
-    <postMsg mid="51001230" type="Warning" dynamic="1" navigation="0" arg0="C:/lscc/eP16VHDL/eP16.lpf"  />
  
 
-   Number of warnings:  28
+   Number of warnings:  0
    Number of errors:    0
 
 
@@ -411,7 +383,7 @@ values will not be corrupted during wake-up state.
 
 
 Total CPU Time: 1 secs  
-Total REAL Time: 2 secs  
+Total REAL Time: 0 secs  
 Peak Memory Usage: 65 MB
 
 Dumping design to file eP16_eP16_map.ncd.
@@ -421,7 +393,7 @@ ncd2vdb "eP16_eP16_map.ncd" ".vdbs/eP16_eP16_map.vdb"
 Loading device for application ncd2vdb from file 'mg5a26x29.nph' in environment: C:/lscc/diamond/3.7_x64/ispfpga.
 
 trce -f "eP16_eP16.mt" -o "eP16_eP16.tw1" "eP16_eP16_map.ncd" "eP16_eP16.prf"
-trce:  version Diamond (64-bit) 3.7.0.96.1
+trce:  version Diamond (64-bit) 3.7.1.502
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -442,8 +414,8 @@ Performance Hardware Data Status:   Final          Version 11.5.
 Setup and Hold Report
 
 --------------------------------------------------------------------------------
-Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.0.96.1
-Sat Jun 11 13:28:47 2016
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.1.502
+Sun Jun 19 19:47:06 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -453,7 +425,7 @@ Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o eP16_eP16.tw1 -gui eP16_eP16_map.ncd eP16_eP16.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o eP16_eP16.tw1 -gui -msgset C:/lscc/eP16VHDL/promote.xml eP16_eP16_map.ncd eP16_eP16.prf 
 Design file:     ep16_ep16_map.ncd
 Preference file: ep16_ep16.prf
 Device,speed:    LFXP2-5E,5
@@ -476,8 +448,8 @@ Cumulative negative slack: 0
 Constraints cover 373664 paths, 25 nets, and 4941 connections (99.44% coverage)
 
 --------------------------------------------------------------------------------
-Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.0.96.1
-Sat Jun 11 13:28:48 2016
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.1.502
+Sun Jun 19 19:47:06 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -487,7 +459,7 @@ Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o eP16_eP16.tw1 -gui eP16_eP16_map.ncd eP16_eP16.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o eP16_eP16.tw1 -gui -msgset C:/lscc/eP16VHDL/promote.xml eP16_eP16_map.ncd eP16_eP16.prf 
 Design file:     ep16_ep16_map.ncd
 Preference file: ep16_ep16.prf
 Device,speed:    LFXP2-5E,M
@@ -521,10 +493,10 @@ Cumulative negative slack: 0 (0+0)
 
 --------------------------------------------------------------------------------
 
-Total time: 3 secs 
+Total time: 2 secs 
 
 ldbanno "eP16_eP16_map.ncd" -n Verilog -o "eP16_eP16_mapvo.vo" -w -neg
-ldbanno: version Diamond (64-bit) 3.7.0.96.1
+ldbanno: version Diamond (64-bit) 3.7.1.502
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
@@ -550,7 +522,7 @@ Writing SDF timing to file eP16_eP16_mapvo.sdf
     <postMsg mid="35400250" type="Info"    dynamic="1" navigation="0" arg0="0"  />
 
 ldbanno "eP16_eP16_map.ncd" -n VHDL -o "eP16_eP16_mapvho.vho" -w -neg
-ldbanno: version Diamond (64-bit) 3.7.0.96.1
+ldbanno: version Diamond (64-bit) 3.7.1.502
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
@@ -582,10 +554,10 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "eP16_eP16_map.ncd"
-Sat Jun 11 13:28:57 2016
+Sun Jun 19 19:47:13 2016
 
-PAR: Place And Route Diamond (64-bit) 3.7.0.96.1.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF eP16_eP16_map.ncd eP16_eP16.dir/5_1.ncd eP16_eP16.prf
+PAR: Place And Route Diamond (64-bit) 3.7.1.502.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/lscc/eP16VHDL/promote.xml -exp parUseNBR=1:parCDP=auto:parCDR=1:parPathBased=OFF eP16_eP16_map.ncd eP16_eP16.dir/5_1.ncd eP16_eP16.prf
 Preference file: eP16_eP16.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
@@ -619,7 +591,7 @@ Number of Signals: 1449
 Number of Connections: 4969
 
 Pin Constraint Summary:
-   5 out of 5 pins locked (100% locked).
+   26 out of 26 pins locked (100% locked).
 
 The following 1 signal is selected to use the primary clock routing resources:
     aclk_c (driver: aclk, clk load #: 213)
@@ -629,20 +601,19 @@ No signal is selected as DCS clock.
 No signal is selected as secondary clock.
 
 Signal arst_c is selected as Global Set/Reset.
-.
 Starting Placer Phase 0.
-..............
+...........
 Finished Placer Phase 0.  REAL time: 7 secs 
 
 Starting Placer Phase 1.
-.......................
-Placer score = 280254.
-Finished Placer Phase 1.  REAL time: 24 secs 
+......................
+Placer score = 318253.
+Finished Placer Phase 1.  REAL time: 19 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  277952
-Finished Placer Phase 2.  REAL time: 25 secs 
+Placer score =  311692
+Finished Placer Phase 2.  REAL time: 20 secs 
 
 
 ------------------ Clock Report ------------------
@@ -675,14 +646,14 @@ I/O Bank Usage Summary:
 +----------+----------------+------------+------------+------------+
 | I/O Bank | Usage          | Bank Vccio | Bank Vref1 | Bank Vref2 |
 +----------+----------------+------------+------------+------------+
-| 0        | 11 / 20 ( 55%) | 3.3V       | -          | -          |
-| 1        | 4 / 6 ( 66%)   | 3.3V       | -          | -          |
-| 2        | 3 / 18 ( 16%)  | 3.3V       | -          | -          |
+| 0        | 0 / 20 (  0%)  | -          | -          | -          |
+| 1        | 2 / 6 ( 33%)   | 3.3V       | -          | -          |
+| 2        | 0 / 18 (  0%)  | -          | -          | -          |
 | 3        | 0 / 4 (  0%)   | -          | -          | -          |
 | 4        | 0 / 8 (  0%)   | -          | -          | -          |
-| 5        | 5 / 18 ( 27%)  | -          | -          | -          |
+| 5        | 16 / 18 ( 88%) | 3.3V       | -          | -          |
 | 6        | 1 / 8 ( 12%)   | 3.3V       | -          | -          |
-| 7        | 2 / 18 ( 11%)  | -          | -          | -          |
+| 7        | 7 / 18 ( 38%)  | 3.3V       | -          | -          |
 +----------+----------------+------------+------------+------------+
 
 
@@ -698,16 +669,16 @@ DSP Block #:              1 2 3
 # of MULT9X9ADDSUBB            
 # of MULT9X9ADDSUBSUMB         
 
-Total placer CPU time: 25 secs 
+Total placer CPU time: 20 secs 
 
 Dumping design to file eP16_eP16.dir/5_1.ncd.
 
 0 connections routed; 4969 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 26 secs 
+Completed router resource preassignment. Real time: 21 secs 
 
-Start NBR router at 13:29:24 06/11/16
+Start NBR router at 19:47:34 06/19/16
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -722,62 +693,65 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 13:29:24 06/11/16
+Start NBR special constraint process at 19:47:35 06/19/16
 
-Start NBR section for initial routing at 13:29:24 06/11/16
+Start NBR section for initial routing at 19:47:35 06/19/16
 Level 1, iteration 1
-9(0.00%) conflicts; 4069(81.89%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.634ns/0.000ns; real time: 27 secs 
+10(0.00%) conflicts; 4071(81.93%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.182ns/0.000ns; real time: 22 secs 
 Level 2, iteration 1
-0(0.00%) conflict; 4075(82.01%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.302ns/0.000ns; real time: 28 secs 
+0(0.00%) conflict; 4078(82.07%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.182ns/0.000ns; real time: 22 secs 
 Level 3, iteration 1
-15(0.01%) conflicts; 3582(72.09%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.616ns/0.000ns; real time: 28 secs 
+14(0.01%) conflicts; 3537(71.18%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.182ns/0.000ns; real time: 23 secs 
 Level 4, iteration 1
-120(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.518ns/0.000ns; real time: 29 secs 
+145(0.06%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 24 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 13:29:26 06/11/16
+Start NBR section for normal routing at 19:47:37 06/19/16
 Level 1, iteration 1
-2(0.00%) conflicts; 198(3.98%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.518ns/0.000ns; real time: 29 secs 
+2(0.00%) conflicts; 214(4.31%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 24 secs 
 Level 2, iteration 1
-2(0.00%) conflicts; 198(3.98%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.518ns/0.000ns; real time: 29 secs 
+2(0.00%) conflicts; 214(4.31%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 24 secs 
 Level 3, iteration 1
-6(0.00%) conflicts; 193(3.88%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.518ns/0.000ns; real time: 29 secs 
+0(0.00%) conflict; 214(4.31%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 24 secs 
 Level 4, iteration 1
-61(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 30 secs 
+60(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
 Level 4, iteration 2
-23(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 30 secs 
+24(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
 Level 4, iteration 3
-11(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 30 secs 
-Level 4, iteration 4
 7(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 30 secs 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
+Level 4, iteration 4
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
 Level 4, iteration 5
-11(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 30 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
 Level 4, iteration 6
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
+Level 4, iteration 7
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 30 secs 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 25 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 13:29:27 06/11/16
+Start NBR section for setup/hold timing optimization with effort level 3 at 19:47:38 06/19/16
 
-Start NBR section for re-routing at 13:29:29 06/11/16
+Start NBR section for re-routing at 19:47:40 06/19/16
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 1.492ns/0.000ns; real time: 32 secs 
+Estimated worst slack/total negative slack<setup>: 1.174ns/0.000ns; real time: 27 secs 
 
-Start NBR section for post-routing at 13:29:29 06/11/16
+Start NBR section for post-routing at 19:47:40 06/19/16
 
 End NBR router with 0 unrouted connection
 
@@ -785,15 +759,15 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 1.492ns
+  Estimated worst slack<setup> : 1.174ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 34 secs 
-Total REAL time: 34 secs 
+Total CPU time 29 secs 
+Total REAL time: 30 secs 
 Completely routed.
 End of route.  4969 routed (100.00%); 0 unrouted.
 Checking DRC ... 
@@ -808,14 +782,14 @@ Dumping design to file eP16_eP16.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 1.492
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 1.174
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.157
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.147
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 34 secs 
-Total REAL time to completion: 34 secs 
+Total CPU  time to completion: 30 secs 
+Total REAL time to completion: 30 secs 
 
 par done!
 
@@ -828,7 +802,7 @@ Exiting par with exit code 0
 Exiting mpartrce with exit code 0
 
 trce -f "eP16_eP16.pt" -o "eP16_eP16.twr" "eP16_eP16.ncd" "eP16_eP16.prf"
-trce:  version Diamond (64-bit) 3.7.0.96.1
+trce:  version Diamond (64-bit) 3.7.1.502
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -849,8 +823,8 @@ Performance Hardware Data Status:   Final          Version 11.5.
 Setup and Hold Report
 
 --------------------------------------------------------------------------------
-Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.0.96.1
-Sat Jun 11 13:29:33 2016
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.1.502
+Sun Jun 19 19:47:45 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -860,7 +834,7 @@ Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o eP16_eP16.twr -gui eP16_eP16.ncd eP16_eP16.prf 
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o eP16_eP16.twr -gui -msgset C:/lscc/eP16VHDL/promote.xml eP16_eP16.ncd eP16_eP16.prf 
 Design file:     ep16_ep16.ncd
 Preference file: ep16_ep16.prf
 Device,speed:    LFXP2-5E,5
@@ -883,8 +857,8 @@ Cumulative negative slack: 0
 Constraints cover 373664 paths, 25 nets, and 4941 connections (99.44% coverage)
 
 --------------------------------------------------------------------------------
-Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.0.96.1
-Sat Jun 11 13:29:33 2016
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.1.502
+Sun Jun 19 19:47:46 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -894,7 +868,7 @@ Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o eP16_eP16.twr -gui eP16_eP16.ncd eP16_eP16.prf 
+Command line:    trce -v 10 -gt -sethld -sp 5 -sphld m -o eP16_eP16.twr -gui -msgset C:/lscc/eP16VHDL/promote.xml eP16_eP16.ncd eP16_eP16.prf 
 Design file:     ep16_ep16.ncd
 Preference file: ep16_ep16.prf
 Device,speed:    LFXP2-5E,m
@@ -928,11 +902,11 @@ Cumulative negative slack: 0 (0+0)
 
 --------------------------------------------------------------------------------
 
-Total time: 2 secs 
+Total time: 3 secs 
 
 iotiming  "eP16_eP16.ncd" "eP16_eP16.prf"
 I/O Timing Report:
-:  version Diamond (64-bit) 3.7.0.96.1
+:  version Diamond (64-bit) 3.7.1.502
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1005,7 +979,7 @@ Done.
 bitgen -f "eP16_eP16.t2b" -w "eP16_eP16.ncd" -jedec -e -s "C:/lscc/eP16VHDL/eP16.sec" -k "C:/lscc/eP16VHDL/eP16.bek" "eP16_eP16.prf"
 
 
-BITGEN: Bitstream Generator Diamond (64-bit) 3.7.0.96.1
+BITGEN: Bitstream Generator Diamond (64-bit) 3.7.1.502
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.

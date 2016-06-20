@@ -1,34 +1,34 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Sat Jun 11 13:29:44 2016 *
+NOTE DATE CREATED: Sun Jun 19 19:47:57 2016 *
 NOTE DESIGN NAME: ep32_chip *
 NOTE DEVICE NAME: LFXP2-5E-5TQFP144 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS ioport[15] : 92 : inout *
-NOTE PINS ioport[14] : 123 : inout *
-NOTE PINS ioport[13] : 122 : inout *
-NOTE PINS ioport[12] : 121 : inout *
-NOTE PINS ioport[11] : 125 : inout *
-NOTE PINS ioport[10] : 127 : inout *
-NOTE PINS ioport[9] : 91 : inout *
-NOTE PINS ioport[8] : 89 : inout *
-NOTE PINS ioport[7] : 131 : inout *
-NOTE PINS ioport[6] : 124 : inout *
-NOTE PINS ioport[5] : 132 : inout *
-NOTE PINS ioport[4] : 129 : inout *
-NOTE PINS ioport[3] : 116 : inout *
-NOTE PINS ioport[2] : 114 : inout *
-NOTE PINS ioport[1] : 120 : inout *
-NOTE PINS ioport[0] : 119 : inout *
+NOTE PINS ioport[15] : 7 : inout *
+NOTE PINS ioport[14] : 6 : inout *
+NOTE PINS ioport[13] : 5 : inout *
+NOTE PINS ioport[12] : 2 : inout *
+NOTE PINS ioport[11] : 1 : inout *
+NOTE PINS ioport[10] : 50 : inout *
+NOTE PINS ioport[9] : 52 : inout *
+NOTE PINS ioport[8] : 53 : inout *
+NOTE PINS ioport[7] : 37 : inout *
+NOTE PINS ioport[6] : 38 : inout *
+NOTE PINS ioport[5] : 39 : inout *
+NOTE PINS ioport[4] : 40 : inout *
+NOTE PINS ioport[3] : 43 : inout *
+NOTE PINS ioport[2] : 44 : inout *
+NOTE PINS ioport[1] : 45 : inout *
+NOTE PINS ioport[0] : 46 : inout *
 NOTE PINS uart_o : 109 : out *
 NOTE PINS acknowledge_o : 29 : out *
 NOTE PINS aclk : 21 : in *
 NOTE PINS arst : 19 : in *
-NOTE PINS interrupt_i[4] : 46 : in *
-NOTE PINS interrupt_i[3] : 47 : in *
-NOTE PINS interrupt_i[2] : 52 : in *
-NOTE PINS interrupt_i[1] : 50 : in *
-NOTE PINS interrupt_i[0] : 53 : in *
+NOTE PINS interrupt_i[4] : 54 : in *
+NOTE PINS interrupt_i[3] : 55 : in *
+NOTE PINS interrupt_i[2] : 56 : in *
+NOTE PINS interrupt_i[1] : 57 : in *
+NOTE PINS interrupt_i[0] : 58 : in *
 NOTE PINS uart_i : 110 : in *
 NOTE CONFIGURATION MODE: NONE *
 NOTE COMPRESSION: off *

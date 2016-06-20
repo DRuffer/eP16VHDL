@@ -1,11 +1,32 @@
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.7.0.96.1 -- WARNING: Map write only section -- Sat Jun 11 13:28:45 2016
+# map:  version Diamond (64-bit) 3.7.1.502 -- WARNING: Map write only section -- Sun Jun 19 19:47:03 2016
 
 SYSCONFIG DONE_OD=ON DONE_EX=OFF CONFIG_SECURE=OFF WAKE_UP=21 WAKE_ON_LOCK=OFF INBUF=ON MASTER_SPI_PORT=DISABLE SLAVE_SPI_PORT=DISABLE MY_ASSP=OFF ONE_TIME_PROGRAM=OFF ;
+LOCATE COMP "ioport[15]" SITE "7" ;
+LOCATE COMP "ioport[14]" SITE "6" ;
+LOCATE COMP "ioport[13]" SITE "5" ;
+LOCATE COMP "ioport[12]" SITE "2" ;
+LOCATE COMP "ioport[11]" SITE "1" ;
+LOCATE COMP "ioport[10]" SITE "50" ;
+LOCATE COMP "ioport[9]" SITE "52" ;
+LOCATE COMP "ioport[8]" SITE "53" ;
+LOCATE COMP "ioport[7]" SITE "37" ;
+LOCATE COMP "ioport[6]" SITE "38" ;
+LOCATE COMP "ioport[5]" SITE "39" ;
+LOCATE COMP "ioport[4]" SITE "40" ;
+LOCATE COMP "ioport[3]" SITE "43" ;
+LOCATE COMP "ioport[2]" SITE "44" ;
+LOCATE COMP "ioport[1]" SITE "45" ;
+LOCATE COMP "ioport[0]" SITE "46" ;
 LOCATE COMP "uart_o" SITE "109" ;
 LOCATE COMP "acknowledge_o" SITE "29" ;
 LOCATE COMP "aclk" SITE "21" ;
 LOCATE COMP "arst" SITE "19" ;
+LOCATE COMP "interrupt_i[4]" SITE "54" ;
+LOCATE COMP "interrupt_i[3]" SITE "55" ;
+LOCATE COMP "interrupt_i[2]" SITE "56" ;
+LOCATE COMP "interrupt_i[1]" SITE "57" ;
+LOCATE COMP "interrupt_i[0]" SITE "58" ;
 LOCATE COMP "uart_i" SITE "110" ;
 FREQUENCY PORT "aclk" 50.000000 MHz ;
 SCHEMATIC END ;

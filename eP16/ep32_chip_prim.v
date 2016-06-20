@@ -1,5 +1,5 @@
-// Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.7.0.96.1
-// Netlist written on Sat Jun 11 13:28:42 2016
+// Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.7.1.502
+// Netlist written on Sun Jun 19 19:47:01 2016
 //
 // Verilog Description of module ep32_chip
 //

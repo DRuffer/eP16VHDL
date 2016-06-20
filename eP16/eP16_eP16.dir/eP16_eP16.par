@@ -1,13 +1,13 @@
-PAR: Place And Route Diamond (64-bit) 3.7.0.96.1.
+PAR: Place And Route Diamond (64-bit) 3.7.1.502.
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Jun 11 13:28:57 2016
+Sun Jun 19 19:47:13 2016
 
 C:/lscc/diamond/3.7_x64/ispfpga\bin\nt64\par -f eP16_eP16.p2t eP16_eP16_map.ncd
-eP16_eP16.dir eP16_eP16.prf -gui
+eP16_eP16.dir eP16_eP16.prf -gui -msgset C:/lscc/eP16VHDL/promote.xml
 
 
 Preference file: eP16_eP16.prf.
@@ -15,11 +15,11 @@ Preference file: eP16_eP16.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            1.492        0            0.157        0            34           Complete
+5_1   *      0            1.174        0            0.147        0            30           Complete
 
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 34 secs 
+Total (real) run time for 1-seed: 30 secs 
 
 par done!

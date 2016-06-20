@@ -12,8 +12,8 @@ Report for cell ep32_chip
                                    EBR	          4        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                                  uart	          1        15.6
                             ram_memory	          1         0.0
+                                  uart	          1        15.6
                                   gpio	          1         4.3
                               ep16(16)	          1        52.5
 ---------------------------------------------------

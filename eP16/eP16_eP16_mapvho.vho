@@ -1,8 +1,9 @@
 
--- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.7.0.96.1
--- ldbanno -n VHDL -o eP16_eP16_mapvho.vho -w -neg -gui eP16_eP16_map.ncd 
--- Netlist created on Sat Jun 11 13:28:43 2016
--- Netlist written on Sat Jun 11 13:28:56 2016
+-- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.7.1.502
+
+-- ldbanno -n VHDL -o eP16_eP16_mapvho.vho -w -neg -gui -msgset C:/lscc/eP16VHDL/promote.xml eP16_eP16_map.ncd 
+-- Netlist created on Sun Jun 19 19:47:02 2016
+-- Netlist written on Sun Jun 19 19:47:12 2016
 -- Design is for device LFXP2-5E
 -- Design is for package TQFP144
 -- Design is for performance grade 5
@@ -2409,6 +2410,28 @@
 
   end Structure;
 
+-- entity ec2iobuf0003
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity ec2iobuf0003 is
+    port (Z: out Std_logic; PAD: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF ec2iobuf0003 : ENTITY IS TRUE;
+
+  end ec2iobuf0003;
+
+  architecture Structure of ec2iobuf0003 is
+    component IBPD
+      port (I: in Std_logic; O: out Std_logic);
+    end component;
+  begin
+    INST1: IBPD
+      port map (I=>PAD, O=>Z);
+  end Structure;
+
 -- entity interrupt_i_4_B
   library IEEE, vital2000, XP2;
   use IEEE.STD_LOGIC_1164.all;
@@ -2441,11 +2464,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal interrupti4_ipd 	: std_logic := 'X';
 
-    component ec2iobuf0002
+    component ec2iobuf0003
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    interrupt_i_pad_4: ec2iobuf0002
+    interrupt_i_pad_4: ec2iobuf0003
       port map (Z=>PADDI_out, PAD=>interrupti4_ipd);
 
     --  INPUT PATH DELAYs
@@ -2525,11 +2548,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal interrupti3_ipd 	: std_logic := 'X';
 
-    component ec2iobuf0002
+    component ec2iobuf0003
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    interrupt_i_pad_3: ec2iobuf0002
+    interrupt_i_pad_3: ec2iobuf0003
       port map (Z=>PADDI_out, PAD=>interrupti3_ipd);
 
     --  INPUT PATH DELAYs
@@ -2609,11 +2632,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal interrupti2_ipd 	: std_logic := 'X';
 
-    component ec2iobuf0002
+    component ec2iobuf0003
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    interrupt_i_pad_2: ec2iobuf0002
+    interrupt_i_pad_2: ec2iobuf0003
       port map (Z=>PADDI_out, PAD=>interrupti2_ipd);
 
     --  INPUT PATH DELAYs
@@ -2693,11 +2716,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal interrupti1_ipd 	: std_logic := 'X';
 
-    component ec2iobuf0002
+    component ec2iobuf0003
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    interrupt_i_pad_1: ec2iobuf0002
+    interrupt_i_pad_1: ec2iobuf0003
       port map (Z=>PADDI_out, PAD=>interrupti1_ipd);
 
     --  INPUT PATH DELAYs
@@ -2777,11 +2800,11 @@
     signal PADDI_out 	: std_logic := 'X';
     signal interrupti0_ipd 	: std_logic := 'X';
 
-    component ec2iobuf0002
+    component ec2iobuf0003
       port (Z: out Std_logic; PAD: in Std_logic);
     end component;
   begin
-    interrupt_i_pad_0: ec2iobuf0002
+    interrupt_i_pad_0: ec2iobuf0003
       port map (Z=>PADDI_out, PAD=>interrupti0_ipd);
 
     --  INPUT PATH DELAYs
@@ -3990,13 +4013,13 @@
 
   end Structure;
 
--- entity DP16KB0003
+-- entity DP16KB0004
   library IEEE, vital2000, XP2;
   use IEEE.STD_LOGIC_1164.all;
   use vital2000.vital_timing.all;
   use XP2.COMPONENTS.ALL;
 
-  entity DP16KB0003 is
+  entity DP16KB0004 is
     port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
           CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
           RSTA: in Std_logic; CEB: in Std_logic; CLKB: in Std_logic; 
@@ -4036,11 +4059,11 @@
           DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
           DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
 
-    ATTRIBUTE Vital_Level0 OF DP16KB0003 : ENTITY IS TRUE;
+    ATTRIBUTE Vital_Level0 OF DP16KB0004 : ENTITY IS TRUE;
 
-  end DP16KB0003;
+  end DP16KB0004;
 
-  architecture Structure of DP16KB0003 is
+  architecture Structure of DP16KB0004 is
     component DP16KB
       generic (CSDECODE_A: Std_logic_vector(2 downto 0); 
                CSDECODE_B: Std_logic_vector(2 downto 0); DATA_WIDTH_A: INTEGER; 
@@ -4431,980 +4454,6 @@
     component vcc
       port (PWR1: out Std_logic);
     end component;
-    component DP16KB0003
-      port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
-            CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
-            RSTA: in Std_logic; CEB: in Std_logic; CLKB: in Std_logic; 
-            WEB: in Std_logic; CSB0: in Std_logic; CSB1: in Std_logic; 
-            CSB2: in Std_logic; RSTB: in Std_logic; DIA0: in Std_logic; 
-            DIA1: in Std_logic; DIA2: in Std_logic; DIA3: in Std_logic; 
-            DIA4: in Std_logic; DIA5: in Std_logic; DIA6: in Std_logic; 
-            DIA7: in Std_logic; DIA8: in Std_logic; DIA9: in Std_logic; 
-            DIA10: in Std_logic; DIA11: in Std_logic; DIA12: in Std_logic; 
-            DIA13: in Std_logic; DIA14: in Std_logic; DIA15: in Std_logic; 
-            DIA16: in Std_logic; DIA17: in Std_logic; ADA0: in Std_logic; 
-            ADA1: in Std_logic; ADA2: in Std_logic; ADA3: in Std_logic; 
-            ADA4: in Std_logic; ADA5: in Std_logic; ADA6: in Std_logic; 
-            ADA7: in Std_logic; ADA8: in Std_logic; ADA9: in Std_logic; 
-            ADA10: in Std_logic; ADA11: in Std_logic; ADA12: in Std_logic; 
-            ADA13: in Std_logic; DIB0: in Std_logic; DIB1: in Std_logic; 
-            DIB2: in Std_logic; DIB3: in Std_logic; DIB4: in Std_logic; 
-            DIB5: in Std_logic; DIB6: in Std_logic; DIB7: in Std_logic; 
-            DIB8: in Std_logic; DIB9: in Std_logic; DIB10: in Std_logic; 
-            DIB11: in Std_logic; DIB12: in Std_logic; DIB13: in Std_logic; 
-            DIB14: in Std_logic; DIB15: in Std_logic; DIB16: in Std_logic; 
-            DIB17: in Std_logic; ADB0: in Std_logic; ADB1: in Std_logic; 
-            ADB2: in Std_logic; ADB3: in Std_logic; ADB4: in Std_logic; 
-            ADB5: in Std_logic; ADB6: in Std_logic; ADB7: in Std_logic; 
-            ADB8: in Std_logic; ADB9: in Std_logic; ADB10: in Std_logic; 
-            ADB11: in Std_logic; ADB12: in Std_logic; ADB13: in Std_logic; 
-            DOA0: out Std_logic; DOA1: out Std_logic; DOA2: out Std_logic; 
-            DOA3: out Std_logic; DOA4: out Std_logic; DOA5: out Std_logic; 
-            DOA6: out Std_logic; DOA7: out Std_logic; DOA8: out Std_logic; 
-            DOA9: out Std_logic; DOA10: out Std_logic; DOA11: out Std_logic; 
-            DOA12: out Std_logic; DOA13: out Std_logic; DOA14: out Std_logic; 
-            DOA15: out Std_logic; DOA16: out Std_logic; DOA17: out Std_logic; 
-            DOB0: out Std_logic; DOB1: out Std_logic; DOB2: out Std_logic; 
-            DOB3: out Std_logic; DOB4: out Std_logic; DOB5: out Std_logic; 
-            DOB6: out Std_logic; DOB7: out Std_logic; DOB8: out Std_logic; 
-            DOB9: out Std_logic; DOB10: out Std_logic; DOB11: out Std_logic; 
-            DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
-            DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
-    end component;
-  begin
-    ram_memory_0_ram_memory_0_1_2_DP16KB: DP16KB0003
-      port map (CEA=>VCCI, CLKA=>MORCLKA_NOTIN, WEA=>WEA_dly, CSA0=>GNDI, 
-                CSA1=>GNDI, CSA2=>GNDI, RSTA=>GNDI, CEB=>VCCI, CLKB=>GNDI, 
-                WEB=>GNDI, CSB0=>GNDI, CSB1=>GNDI, CSB2=>GNDI, RSTB=>GNDI, 
-                DIA0=>DIA0_dly, DIA1=>DIA1_dly, DIA2=>DIA2_dly, DIA3=>DIA3_dly, 
-                DIA4=>GNDI, DIA5=>GNDI, DIA6=>GNDI, DIA7=>GNDI, DIA8=>GNDI, 
-                DIA9=>GNDI, DIA10=>GNDI, DIA11=>GNDI, DIA12=>GNDI, DIA13=>GNDI, 
-                DIA14=>GNDI, DIA15=>GNDI, DIA16=>GNDI, DIA17=>GNDI, ADA0=>GNDI, 
-                ADA1=>GNDI, ADA2=>ADA2_dly, ADA3=>ADA3_dly, ADA4=>ADA4_dly, 
-                ADA5=>ADA5_dly, ADA6=>ADA6_dly, ADA7=>ADA7_dly, ADA8=>ADA8_dly, 
-                ADA9=>ADA9_dly, ADA10=>ADA10_dly, ADA11=>ADA11_dly, 
-                ADA12=>ADA12_dly, ADA13=>ADA13_dly, DIB0=>GNDI, DIB1=>GNDI, 
-                DIB2=>GNDI, DIB3=>GNDI, DIB4=>GNDI, DIB5=>GNDI, DIB6=>GNDI, 
-                DIB7=>GNDI, DIB8=>GNDI, DIB9=>GNDI, DIB10=>GNDI, DIB11=>GNDI, 
-                DIB12=>GNDI, DIB13=>GNDI, DIB14=>GNDI, DIB15=>GNDI, 
-                DIB16=>GNDI, DIB17=>GNDI, ADB0=>GNDI, ADB1=>GNDI, ADB2=>GNDI, 
-                ADB3=>GNDI, ADB4=>GNDI, ADB5=>GNDI, ADB6=>GNDI, ADB7=>GNDI, 
-                ADB8=>GNDI, ADB9=>GNDI, ADB10=>GNDI, ADB11=>GNDI, ADB12=>GNDI, 
-                ADB13=>GNDI, DOA0=>DOA0_out, DOA1=>DOA1_out, DOA2=>DOA2_out, 
-                DOA3=>DOA3_out, DOA4=>open, DOA5=>open, DOA6=>open, DOA7=>open, 
-                DOA8=>open, DOA9=>open, DOA10=>open, DOA11=>open, DOA12=>open, 
-                DOA13=>open, DOA14=>open, DOA15=>open, DOA16=>open, 
-                DOA17=>open, DOB0=>open, DOB1=>open, DOB2=>open, DOB3=>open, 
-                DOB4=>open, DOB5=>open, DOB6=>open, DOB7=>open, DOB8=>open, 
-                DOB9=>open, DOB10=>open, DOB11=>open, DOB12=>open, DOB13=>open, 
-                DOB14=>open, DOB15=>open, DOB16=>open, DOB17=>open);
-    DRIVEVCC: vcc
-      port map (PWR1=>VCCI);
-    MORCLKA_INVERTERIN: inverter
-      port map (I=>CLKA_dly, Z=>MORCLKA_NOTIN);
-    DRIVEGND: gnd
-      port map (PWR0=>GNDI);
-
-    --  INPUT PATH DELAYs
-    WireDelay : BLOCK
-    BEGIN
-      VitalWireDelay(DIA3_ipd, DIA3, tipd_DIA3);
-      VitalWireDelay(DIA2_ipd, DIA2, tipd_DIA2);
-      VitalWireDelay(DIA1_ipd, DIA1, tipd_DIA1);
-      VitalWireDelay(DIA0_ipd, DIA0, tipd_DIA0);
-      VitalWireDelay(ADA13_ipd, ADA13, tipd_ADA13);
-      VitalWireDelay(ADA12_ipd, ADA12, tipd_ADA12);
-      VitalWireDelay(ADA11_ipd, ADA11, tipd_ADA11);
-      VitalWireDelay(ADA10_ipd, ADA10, tipd_ADA10);
-      VitalWireDelay(ADA9_ipd, ADA9, tipd_ADA9);
-      VitalWireDelay(ADA8_ipd, ADA8, tipd_ADA8);
-      VitalWireDelay(ADA7_ipd, ADA7, tipd_ADA7);
-      VitalWireDelay(ADA6_ipd, ADA6, tipd_ADA6);
-      VitalWireDelay(ADA5_ipd, ADA5, tipd_ADA5);
-      VitalWireDelay(ADA4_ipd, ADA4, tipd_ADA4);
-      VitalWireDelay(ADA3_ipd, ADA3, tipd_ADA3);
-      VitalWireDelay(ADA2_ipd, ADA2, tipd_ADA2);
-      VitalWireDelay(WEA_ipd, WEA, tipd_WEA);
-      VitalWireDelay(CLKA_ipd, CLKA, tipd_CLKA);
-      VitalWireDelay(MORCLKA_ipd, MORCLKA, tipd_MORCLKA);
-    END BLOCK;
-
-    --  Setup and Hold DELAYs
-    SignalDelay : BLOCK
-    BEGIN
-      VitalSignalDelay(DIA3_dly, DIA3_ipd, tisd_DIA3_CLKA);
-      VitalSignalDelay(DIA2_dly, DIA2_ipd, tisd_DIA2_CLKA);
-      VitalSignalDelay(DIA1_dly, DIA1_ipd, tisd_DIA1_CLKA);
-      VitalSignalDelay(DIA0_dly, DIA0_ipd, tisd_DIA0_CLKA);
-      VitalSignalDelay(ADA13_dly, ADA13_ipd, tisd_ADA13_CLKA);
-      VitalSignalDelay(ADA12_dly, ADA12_ipd, tisd_ADA12_CLKA);
-      VitalSignalDelay(ADA11_dly, ADA11_ipd, tisd_ADA11_CLKA);
-      VitalSignalDelay(ADA10_dly, ADA10_ipd, tisd_ADA10_CLKA);
-      VitalSignalDelay(ADA9_dly, ADA9_ipd, tisd_ADA9_CLKA);
-      VitalSignalDelay(ADA8_dly, ADA8_ipd, tisd_ADA8_CLKA);
-      VitalSignalDelay(ADA7_dly, ADA7_ipd, tisd_ADA7_CLKA);
-      VitalSignalDelay(ADA6_dly, ADA6_ipd, tisd_ADA6_CLKA);
-      VitalSignalDelay(ADA5_dly, ADA5_ipd, tisd_ADA5_CLKA);
-      VitalSignalDelay(ADA4_dly, ADA4_ipd, tisd_ADA4_CLKA);
-      VitalSignalDelay(ADA3_dly, ADA3_ipd, tisd_ADA3_CLKA);
-      VitalSignalDelay(ADA2_dly, ADA2_ipd, tisd_ADA2_CLKA);
-      VitalSignalDelay(WEA_dly, WEA_ipd, tisd_WEA_CLKA);
-      VitalSignalDelay(CLKA_dly, CLKA_ipd, ticd_CLKA);
-    END BLOCK;
-
-    VitalBehavior : PROCESS (DIA3_dly, DIA2_dly, DIA1_dly, DIA0_dly, ADA13_dly, 
-      ADA12_dly, ADA11_dly, ADA10_dly, ADA9_dly, ADA8_dly, ADA7_dly, ADA6_dly, 
-      ADA5_dly, ADA4_dly, ADA3_dly, ADA2_dly, DOA3_out, DOA2_out, DOA1_out, 
-      DOA0_out, WEA_dly, CLKA_dly, MORCLKA_ipd)
-    VARIABLE DOA3_zd         	: std_logic := 'X';
-    VARIABLE DOA3_GlitchData 	: VitalGlitchDataType;
-    VARIABLE DOA2_zd         	: std_logic := 'X';
-    VARIABLE DOA2_GlitchData 	: VitalGlitchDataType;
-    VARIABLE DOA1_zd         	: std_logic := 'X';
-    VARIABLE DOA1_GlitchData 	: VitalGlitchDataType;
-    VARIABLE DOA0_zd         	: std_logic := 'X';
-    VARIABLE DOA0_GlitchData 	: VitalGlitchDataType;
-
-    VARIABLE tviol_DIA3_CLKA       	: x01 := '0';
-    VARIABLE DIA3_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_DIA2_CLKA       	: x01 := '0';
-    VARIABLE DIA2_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_DIA1_CLKA       	: x01 := '0';
-    VARIABLE DIA1_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_DIA0_CLKA       	: x01 := '0';
-    VARIABLE DIA0_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA13_CLKA       	: x01 := '0';
-    VARIABLE ADA13_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA12_CLKA       	: x01 := '0';
-    VARIABLE ADA12_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA11_CLKA       	: x01 := '0';
-    VARIABLE ADA11_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA10_CLKA       	: x01 := '0';
-    VARIABLE ADA10_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA9_CLKA       	: x01 := '0';
-    VARIABLE ADA9_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA8_CLKA       	: x01 := '0';
-    VARIABLE ADA8_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA7_CLKA       	: x01 := '0';
-    VARIABLE ADA7_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA6_CLKA       	: x01 := '0';
-    VARIABLE ADA6_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA5_CLKA       	: x01 := '0';
-    VARIABLE ADA5_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA4_CLKA       	: x01 := '0';
-    VARIABLE ADA4_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA3_CLKA       	: x01 := '0';
-    VARIABLE ADA3_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_ADA2_CLKA       	: x01 := '0';
-    VARIABLE ADA2_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_WEA_CLKA       	: x01 := '0';
-    VARIABLE WEA_CLKA_TimingDatash	: VitalTimingDataType;
-    VARIABLE tviol_CLKA_CLKA          	: x01 := '0';
-    VARIABLE periodcheckinfo_CLKA	: VitalPeriodDataType;
-
-    BEGIN
-
-    IF (TimingChecksOn) THEN
-      VitalSetupHoldCheck (
-        TestSignal => DIA3_dly,
-        TestSignalName => "DIA3",
-        TestDelay => tisd_DIA3_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_DIA3_CLKA_noedge_negedge,
-        SetupLow => tsetup_DIA3_CLKA_noedge_negedge,
-        HoldHigh => thold_DIA3_CLKA_noedge_negedge,
-        HoldLow => thold_DIA3_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => DIA3_CLKA_TimingDatash,
-        Violation => tviol_DIA3_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => DIA2_dly,
-        TestSignalName => "DIA2",
-        TestDelay => tisd_DIA2_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_DIA2_CLKA_noedge_negedge,
-        SetupLow => tsetup_DIA2_CLKA_noedge_negedge,
-        HoldHigh => thold_DIA2_CLKA_noedge_negedge,
-        HoldLow => thold_DIA2_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => DIA2_CLKA_TimingDatash,
-        Violation => tviol_DIA2_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => DIA1_dly,
-        TestSignalName => "DIA1",
-        TestDelay => tisd_DIA1_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_DIA1_CLKA_noedge_negedge,
-        SetupLow => tsetup_DIA1_CLKA_noedge_negedge,
-        HoldHigh => thold_DIA1_CLKA_noedge_negedge,
-        HoldLow => thold_DIA1_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => DIA1_CLKA_TimingDatash,
-        Violation => tviol_DIA1_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => DIA0_dly,
-        TestSignalName => "DIA0",
-        TestDelay => tisd_DIA0_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_DIA0_CLKA_noedge_negedge,
-        SetupLow => tsetup_DIA0_CLKA_noedge_negedge,
-        HoldHigh => thold_DIA0_CLKA_noedge_negedge,
-        HoldLow => thold_DIA0_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => DIA0_CLKA_TimingDatash,
-        Violation => tviol_DIA0_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA13_dly,
-        TestSignalName => "ADA13",
-        TestDelay => tisd_ADA13_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA13_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA13_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA13_CLKA_noedge_negedge,
-        HoldLow => thold_ADA13_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA13_CLKA_TimingDatash,
-        Violation => tviol_ADA13_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA12_dly,
-        TestSignalName => "ADA12",
-        TestDelay => tisd_ADA12_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA12_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA12_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA12_CLKA_noedge_negedge,
-        HoldLow => thold_ADA12_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA12_CLKA_TimingDatash,
-        Violation => tviol_ADA12_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA11_dly,
-        TestSignalName => "ADA11",
-        TestDelay => tisd_ADA11_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA11_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA11_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA11_CLKA_noedge_negedge,
-        HoldLow => thold_ADA11_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA11_CLKA_TimingDatash,
-        Violation => tviol_ADA11_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA10_dly,
-        TestSignalName => "ADA10",
-        TestDelay => tisd_ADA10_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA10_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA10_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA10_CLKA_noedge_negedge,
-        HoldLow => thold_ADA10_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA10_CLKA_TimingDatash,
-        Violation => tviol_ADA10_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA9_dly,
-        TestSignalName => "ADA9",
-        TestDelay => tisd_ADA9_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA9_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA9_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA9_CLKA_noedge_negedge,
-        HoldLow => thold_ADA9_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA9_CLKA_TimingDatash,
-        Violation => tviol_ADA9_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA8_dly,
-        TestSignalName => "ADA8",
-        TestDelay => tisd_ADA8_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA8_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA8_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA8_CLKA_noedge_negedge,
-        HoldLow => thold_ADA8_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA8_CLKA_TimingDatash,
-        Violation => tviol_ADA8_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA7_dly,
-        TestSignalName => "ADA7",
-        TestDelay => tisd_ADA7_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA7_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA7_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA7_CLKA_noedge_negedge,
-        HoldLow => thold_ADA7_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA7_CLKA_TimingDatash,
-        Violation => tviol_ADA7_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA6_dly,
-        TestSignalName => "ADA6",
-        TestDelay => tisd_ADA6_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA6_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA6_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA6_CLKA_noedge_negedge,
-        HoldLow => thold_ADA6_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA6_CLKA_TimingDatash,
-        Violation => tviol_ADA6_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA5_dly,
-        TestSignalName => "ADA5",
-        TestDelay => tisd_ADA5_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA5_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA5_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA5_CLKA_noedge_negedge,
-        HoldLow => thold_ADA5_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA5_CLKA_TimingDatash,
-        Violation => tviol_ADA5_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA4_dly,
-        TestSignalName => "ADA4",
-        TestDelay => tisd_ADA4_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA4_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA4_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA4_CLKA_noedge_negedge,
-        HoldLow => thold_ADA4_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA4_CLKA_TimingDatash,
-        Violation => tviol_ADA4_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA3_dly,
-        TestSignalName => "ADA3",
-        TestDelay => tisd_ADA3_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA3_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA3_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA3_CLKA_noedge_negedge,
-        HoldLow => thold_ADA3_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA3_CLKA_TimingDatash,
-        Violation => tviol_ADA3_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => ADA2_dly,
-        TestSignalName => "ADA2",
-        TestDelay => tisd_ADA2_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_ADA2_CLKA_noedge_negedge,
-        SetupLow => tsetup_ADA2_CLKA_noedge_negedge,
-        HoldHigh => thold_ADA2_CLKA_noedge_negedge,
-        HoldLow => thold_ADA2_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => ADA2_CLKA_TimingDatash,
-        Violation => tviol_ADA2_CLKA,
-        MsgSeverity => warning);
-      VitalSetupHoldCheck (
-        TestSignal => WEA_dly,
-        TestSignalName => "WEA",
-        TestDelay => tisd_WEA_CLKA,
-        RefSignal => CLKA_dly,
-        RefSignalName => "CLKA",
-        RefDelay => ticd_CLKA,
-        SetupHigh => tsetup_WEA_CLKA_noedge_negedge,
-        SetupLow => tsetup_WEA_CLKA_noedge_negedge,
-        HoldHigh => thold_WEA_CLKA_noedge_negedge,
-        HoldLow => thold_WEA_CLKA_noedge_negedge,
-        CheckEnabled => TRUE,
-        RefTransition => '\',
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        TimingData => WEA_CLKA_TimingDatash,
-        Violation => tviol_WEA_CLKA,
-        MsgSeverity => warning);
-      VitalPeriodPulseCheck (
-        TestSignal => CLKA_ipd,
-        TestSignalName => "CLKA",
-        Period => tperiod_CLKA,
-        PulseWidthHigh => tpw_CLKA_posedge,
-        PulseWidthLow => tpw_CLKA_negedge,
-        PeriodData => periodcheckinfo_CLKA,
-        Violation => tviol_CLKA_CLKA,
-        MsgOn => MsgOn, XOn => XOn,
-        HeaderMsg => InstancePath,
-        CheckEnabled => TRUE,
-        MsgSeverity => warning);
-
-    END IF;
-
-    DOA3_zd 	:= DOA3_out;
-    DOA2_zd 	:= DOA2_out;
-    DOA1_zd 	:= DOA1_out;
-    DOA0_zd 	:= DOA0_out;
-
-    VitalPathDelay01 (
-      OutSignal => DOA3, OutSignalName => "DOA3", OutTemp => DOA3_zd,
-      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
-                           PathDelay => tpd_CLKA_DOA3,
-                           PathCondition => TRUE)),
-      GlitchData => DOA3_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => DOA2, OutSignalName => "DOA2", OutTemp => DOA2_zd,
-      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
-                           PathDelay => tpd_CLKA_DOA2,
-                           PathCondition => TRUE)),
-      GlitchData => DOA2_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => DOA1, OutSignalName => "DOA1", OutTemp => DOA1_zd,
-      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
-                           PathDelay => tpd_CLKA_DOA1,
-                           PathCondition => TRUE)),
-      GlitchData => DOA1_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-    VitalPathDelay01 (
-      OutSignal => DOA0, OutSignalName => "DOA0", OutTemp => DOA0_zd,
-      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
-                           PathDelay => tpd_CLKA_DOA0,
-                           PathCondition => TRUE)),
-      GlitchData => DOA0_GlitchData,
-      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
-
-    END PROCESS;
-
-  end Structure;
-
--- entity DP16KB0004
-  library IEEE, vital2000, XP2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use XP2.COMPONENTS.ALL;
-
-  entity DP16KB0004 is
-    port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
-          CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
-          RSTA: in Std_logic; CEB: in Std_logic; CLKB: in Std_logic; 
-          WEB: in Std_logic; CSB0: in Std_logic; CSB1: in Std_logic; 
-          CSB2: in Std_logic; RSTB: in Std_logic; DIA0: in Std_logic; 
-          DIA1: in Std_logic; DIA2: in Std_logic; DIA3: in Std_logic; 
-          DIA4: in Std_logic; DIA5: in Std_logic; DIA6: in Std_logic; 
-          DIA7: in Std_logic; DIA8: in Std_logic; DIA9: in Std_logic; 
-          DIA10: in Std_logic; DIA11: in Std_logic; DIA12: in Std_logic; 
-          DIA13: in Std_logic; DIA14: in Std_logic; DIA15: in Std_logic; 
-          DIA16: in Std_logic; DIA17: in Std_logic; ADA0: in Std_logic; 
-          ADA1: in Std_logic; ADA2: in Std_logic; ADA3: in Std_logic; 
-          ADA4: in Std_logic; ADA5: in Std_logic; ADA6: in Std_logic; 
-          ADA7: in Std_logic; ADA8: in Std_logic; ADA9: in Std_logic; 
-          ADA10: in Std_logic; ADA11: in Std_logic; ADA12: in Std_logic; 
-          ADA13: in Std_logic; DIB0: in Std_logic; DIB1: in Std_logic; 
-          DIB2: in Std_logic; DIB3: in Std_logic; DIB4: in Std_logic; 
-          DIB5: in Std_logic; DIB6: in Std_logic; DIB7: in Std_logic; 
-          DIB8: in Std_logic; DIB9: in Std_logic; DIB10: in Std_logic; 
-          DIB11: in Std_logic; DIB12: in Std_logic; DIB13: in Std_logic; 
-          DIB14: in Std_logic; DIB15: in Std_logic; DIB16: in Std_logic; 
-          DIB17: in Std_logic; ADB0: in Std_logic; ADB1: in Std_logic; 
-          ADB2: in Std_logic; ADB3: in Std_logic; ADB4: in Std_logic; 
-          ADB5: in Std_logic; ADB6: in Std_logic; ADB7: in Std_logic; 
-          ADB8: in Std_logic; ADB9: in Std_logic; ADB10: in Std_logic; 
-          ADB11: in Std_logic; ADB12: in Std_logic; ADB13: in Std_logic; 
-          DOA0: out Std_logic; DOA1: out Std_logic; DOA2: out Std_logic; 
-          DOA3: out Std_logic; DOA4: out Std_logic; DOA5: out Std_logic; 
-          DOA6: out Std_logic; DOA7: out Std_logic; DOA8: out Std_logic; 
-          DOA9: out Std_logic; DOA10: out Std_logic; DOA11: out Std_logic; 
-          DOA12: out Std_logic; DOA13: out Std_logic; DOA14: out Std_logic; 
-          DOA15: out Std_logic; DOA16: out Std_logic; DOA17: out Std_logic; 
-          DOB0: out Std_logic; DOB1: out Std_logic; DOB2: out Std_logic; 
-          DOB3: out Std_logic; DOB4: out Std_logic; DOB5: out Std_logic; 
-          DOB6: out Std_logic; DOB7: out Std_logic; DOB8: out Std_logic; 
-          DOB9: out Std_logic; DOB10: out Std_logic; DOB11: out Std_logic; 
-          DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
-          DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF DP16KB0004 : ENTITY IS TRUE;
-
-  end DP16KB0004;
-
-  architecture Structure of DP16KB0004 is
-    component DP16KB
-      generic (CSDECODE_A: Std_logic_vector(2 downto 0); 
-               CSDECODE_B: Std_logic_vector(2 downto 0); DATA_WIDTH_A: INTEGER; 
-               DATA_WIDTH_B: INTEGER; GSR: String; INITVAL_00: String; 
-               INITVAL_01: String; INITVAL_02: String; INITVAL_03: String; 
-               INITVAL_04: String; INITVAL_05: String; INITVAL_06: String; 
-               INITVAL_07: String; INITVAL_08: String; INITVAL_09: String; 
-               INITVAL_0A: String; INITVAL_0B: String; INITVAL_0C: String; 
-               INITVAL_0D: String; INITVAL_0E: String; INITVAL_0F: String; 
-               INITVAL_10: String; INITVAL_11: String; INITVAL_12: String; 
-               INITVAL_13: String; INITVAL_14: String; INITVAL_15: String; 
-               INITVAL_16: String; INITVAL_17: String; INITVAL_18: String; 
-               INITVAL_19: String; INITVAL_1A: String; INITVAL_1B: String; 
-               INITVAL_1C: String; INITVAL_1D: String; INITVAL_1E: String; 
-               INITVAL_1F: String; INITVAL_20: String; INITVAL_21: String; 
-               INITVAL_22: String; INITVAL_23: String; INITVAL_24: String; 
-               INITVAL_25: String; INITVAL_26: String; INITVAL_27: String; 
-               INITVAL_28: String; INITVAL_29: String; INITVAL_2A: String; 
-               INITVAL_2B: String; INITVAL_2C: String; INITVAL_2D: String; 
-               INITVAL_2E: String; INITVAL_2F: String; INITVAL_30: String; 
-               INITVAL_31: String; INITVAL_32: String; INITVAL_33: String; 
-               INITVAL_34: String; INITVAL_35: String; INITVAL_36: String; 
-               INITVAL_37: String; INITVAL_38: String; INITVAL_39: String; 
-               INITVAL_3A: String; INITVAL_3B: String; INITVAL_3C: String; 
-               INITVAL_3D: String; INITVAL_3E: String; INITVAL_3F: String; 
-               REGMODE_A: String; REGMODE_B: String; RESETMODE: String; 
-               WRITEMODE_A: String; WRITEMODE_B: String);
-      port (DIA0: in Std_logic; DIA1: in Std_logic; DIA2: in Std_logic; 
-            DIA3: in Std_logic; DIA4: in Std_logic; DIA5: in Std_logic; 
-            DIA6: in Std_logic; DIA7: in Std_logic; DIA8: in Std_logic; 
-            DIA9: in Std_logic; DIA10: in Std_logic; DIA11: in Std_logic; 
-            DIA12: in Std_logic; DIA13: in Std_logic; DIA14: in Std_logic; 
-            DIA15: in Std_logic; DIA16: in Std_logic; DIA17: in Std_logic; 
-            ADA0: in Std_logic; ADA1: in Std_logic; ADA2: in Std_logic; 
-            ADA3: in Std_logic; ADA4: in Std_logic; ADA5: in Std_logic; 
-            ADA6: in Std_logic; ADA7: in Std_logic; ADA8: in Std_logic; 
-            ADA9: in Std_logic; ADA10: in Std_logic; ADA11: in Std_logic; 
-            ADA12: in Std_logic; ADA13: in Std_logic; CEA: in Std_logic; 
-            CLKA: in Std_logic; WEA: in Std_logic; CSA0: in Std_logic; 
-            CSA1: in Std_logic; CSA2: in Std_logic; RSTA: in Std_logic; 
-            DIB0: in Std_logic; DIB1: in Std_logic; DIB2: in Std_logic; 
-            DIB3: in Std_logic; DIB4: in Std_logic; DIB5: in Std_logic; 
-            DIB6: in Std_logic; DIB7: in Std_logic; DIB8: in Std_logic; 
-            DIB9: in Std_logic; DIB10: in Std_logic; DIB11: in Std_logic; 
-            DIB12: in Std_logic; DIB13: in Std_logic; DIB14: in Std_logic; 
-            DIB15: in Std_logic; DIB16: in Std_logic; DIB17: in Std_logic; 
-            ADB0: in Std_logic; ADB1: in Std_logic; ADB2: in Std_logic; 
-            ADB3: in Std_logic; ADB4: in Std_logic; ADB5: in Std_logic; 
-            ADB6: in Std_logic; ADB7: in Std_logic; ADB8: in Std_logic; 
-            ADB9: in Std_logic; ADB10: in Std_logic; ADB11: in Std_logic; 
-            ADB12: in Std_logic; ADB13: in Std_logic; CEB: in Std_logic; 
-            CLKB: in Std_logic; WEB: in Std_logic; CSB0: in Std_logic; 
-            CSB1: in Std_logic; CSB2: in Std_logic; RSTB: in Std_logic; 
-            DOA0: out Std_logic; DOA1: out Std_logic; DOA2: out Std_logic; 
-            DOA3: out Std_logic; DOA4: out Std_logic; DOA5: out Std_logic; 
-            DOA6: out Std_logic; DOA7: out Std_logic; DOA8: out Std_logic; 
-            DOA9: out Std_logic; DOA10: out Std_logic; DOA11: out Std_logic; 
-            DOA12: out Std_logic; DOA13: out Std_logic; DOA14: out Std_logic; 
-            DOA15: out Std_logic; DOA16: out Std_logic; DOA17: out Std_logic; 
-            DOB0: out Std_logic; DOB1: out Std_logic; DOB2: out Std_logic; 
-            DOB3: out Std_logic; DOB4: out Std_logic; DOB5: out Std_logic; 
-            DOB6: out Std_logic; DOB7: out Std_logic; DOB8: out Std_logic; 
-            DOB9: out Std_logic; DOB10: out Std_logic; DOB11: out Std_logic; 
-            DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
-            DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
-    end component;
-  begin
-    INST10: DP16KB
-      generic map (CSDECODE_A => "000", CSDECODE_B => "111", DATA_WIDTH_A => 4, 
-                   DATA_WIDTH_B => 4, GSR => "DISABLED", 
-                   INITVAL_00 => "0x000000000000000000000009000C991D2A0000000000000000000000000000000000000000F00001"
-                   , 
-                   INITVAL_01 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_02 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_03 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_04 => "0x1C46F1DC4B1C2DE02EE21C4301C27E122A008EE711CEE1C0441E2EE08AED06CFE1C8CE1841E03E50"
-                   , 
-                   INITVAL_05 => "0x11C1A1D0E819048198271C2FA0364D09CE31602B0A67E0569B092F111CFA1FAA81242E03C0A1F489"
-                   , 
-                   INITVAL_06 => "0x0B0E8122741BA681C6E1142C71D09619CE80C69C1189303CE8146E8182321D0E115C8E170481821E"
-                   , 
-                   INITVAL_07 => "0x0663007A3D1DCD11507E13CEC1D0EE09C1713C8E1FE581D03107C3F060E9182A60CC6601C810E8D4"
-                   , 
-                   INITVAL_08 => "0x0267E0F655092EF1CAC01FCFA02653030DF054E01D6EF1EA9E090EB1FC8F1D048194251D6191D233"
-                   , 
-                   INITVAL_09 => "0x1BC9C17E1A1625503A171B0C21D0E8192460361E030FA1A4E61AABE1C8BE0AA5510AE41723E0027B"
-                   , 
-                   INITVAL_0A => "0x13C0D064871A0170E69E1325E1D07E172E917CB11CE7103CAF04A1E0BCE4176011DA0E1A20A176B0"
-                   , 
-                   INITVAL_0B => "0x00EFE0860102E0E01AE20DCFD1DC8E128EE008E80647E1F85B038101FEA0168F40BC0F006281C0E8"
-                   , 
-                   INITVAL_0C => "0x02E8706E4A1780B0B6220AE5E07C00074E114E7A072E10E00F1326C1CAAD032570BC501AA3A1C49E"
-                   , 
-                   INITVAL_0D => "0x1048509CA01C6051DC5D1FC0E1FEEE102771D43E0346E0BA8A13C5D1BECF17CA802E081AEDE17E78"
-                   , 
-                   INITVAL_0E => "0x00000000011181A03CAB1840E15E301D4AD15C2207C811D4CB1BC59094EF01C3300CCE0B4E71C60E"
-                   , 
-                   INITVAL_0F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_10 => "0x1C0E11FC6719C8715C5B02CE60E4071C49E0DC17004071DC3E1CCE10E0CE0446E0DCCB0461E16439"
-                   , 
-                   INITVAL_11 => "0x02E0102E180E2CA0FC211C88E0E0EB1A2AB176CD1DC0A022EF1D01E0E0DE00E0A17EAD156F50407C"
-                   , 
-                   INITVAL_12 => "0x02E9B0A25F1D01E14A4F08AE803CA91D0100E0FA118EF1CA0E0BE52024B5030721A6D216EE302A1E"
-                   , 
-                   INITVAL_13 => "0x184EF1F4FE13EC91925E162A21E2AD09E8B074ED034DB1BA84128201D012162700F0DA05C9502A9E"
-                   , 
-                   INITVAL_14 => "0x0A66A1DEDE050401CE8E13A400882103EAE0260E150EA01EAA11C041108211C961CA150DC8C1DE79"
-                   , 
-                   INITVAL_15 => "0x0DCCB024220DEE015C220A2120143F020E704A581C2F108A861BC17004D20823F1C27000034118B4"
-                   , 
-                   INITVAL_16 => "0x050271D29D1E60E132D106EEE040EE1D2E0180FC17C0A136B4044491482215EE6100971DE250FCB2"
-                   , 
-                   INITVAL_17 => "0x1EE5E1C0591A69D02EF10F41602EBF18AF71C8B8026B7082E401A45088E80FC7013CEB118640DC2B"
-                   , 
-                   INITVAL_18 => "0x1AEFC1D08B1864E00A5610C80128BE0B2571BE19186631CEFC044EC072EE1DCE10B27E1C2CE1DAC0"
-                   , 
-                   INITVAL_19 => "0x15C581024E13ED119C611DCE107C6F116260B47E1A2201DCE115C8E014BB16A9D070671DE8617E78"
-                   , 
-                   INITVAL_1A => "0x01C930C28B0308F1CCEC1D0C914CED1CA110B4D211C211D28E0FC5B00A401D01E172EB1DC7B0DCD3"
-                   , 
-                   INITVAL_1B => "0x1BADD1BADD006241D4FE1CEE317C6E048F513CD71BC0F03CEA172A710C05160E200A3C1CE6E1F4C2"
-                   , 
-                   INITVAL_1C => "0x106A21AEE201A3F0364F0182A07A4B1642E03A1A01C611DEEA080040A85E05C0E0E2ED1C2E01DADD"
-                   , 
-                   INITVAL_1D => "0x0000000000000000007E11E6F14EFF142BB1087F0C8EA0587B0FC1A0C488110880F6CE048540DC4F"
-                   , 
-                   INITVAL_1E => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_1F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_20 => "0x15C1A19AC01A08D03C441C4FE1FCC01C20E06A480D0A51F8051FEA107C1107C181DC800BC5F0F28F"
-                   , 
-                   INITVAL_21 => "0x12A561E2430CCE604C281FCE810EDE0CC06104641E81E1200E0748B01C8B01CDA012D0060A01C21E"
-                   , 
-                   INITVAL_22 => "0x0FCE01C0180BEEE01C0604CEE01CA90EADE1C0EA13C541DC0E1485419C0E1DCF3062B8140E809AEA"
-                   , 
-                   INITVAL_23 => "0x11C2205C5E1423E0446E0BCA117C2204CFE102C80B2E11D0401CCE814AC411C8015C6301C6908A56"
-                   , 
-                   INITVAL_24 => "0x0B2E80421C1161E07E451DCEE1D44107E8A1DC0E06A29030FE1C25E14A120CEE61105F098EE0BCA1"
-                   , 
-                   INITVAL_25 => "0x100740E2C2042E91002C030E2122160220E0868716248080EF100D412AD9142591C23E05E3B036E6"
-                   , 
-                   INITVAL_26 => "0x1D2DF06AE0004201C2A117C7104C0E184110362C1E2D209C170A25601CF31BC1803E45042D20C8CE"
-                   , 
-                   INITVAL_27 => "0x00000000000000000000000E40BC651DE311DC3C1C02411C53042CE1EADE1602803A120228C0084B"
-                   , 
-                   INITVAL_28 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_29 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_2A => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_2B => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_2C => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_2D => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_2E => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_2F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_30 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_31 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_32 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_33 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_34 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_35 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_36 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_37 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_38 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_39 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_3A => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_3B => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_3C => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_3D => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_3E => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , 
-                   INITVAL_3F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
-                   , REGMODE_A => "NOREG", REGMODE_B => "NOREG", 
-                   RESETMODE => "SYNC", WRITEMODE_A => "NORMAL", 
-                   WRITEMODE_B => "NORMAL")
-      port map (DIA0=>DIA0, DIA1=>DIA1, DIA2=>DIA2, DIA3=>DIA3, DIA4=>DIA4, 
-                DIA5=>DIA5, DIA6=>DIA6, DIA7=>DIA7, DIA8=>DIA8, DIA9=>DIA9, 
-                DIA10=>DIA10, DIA11=>DIA11, DIA12=>DIA12, DIA13=>DIA13, 
-                DIA14=>DIA14, DIA15=>DIA15, DIA16=>DIA16, DIA17=>DIA17, 
-                ADA0=>ADA0, ADA1=>ADA1, ADA2=>ADA2, ADA3=>ADA3, ADA4=>ADA4, 
-                ADA5=>ADA5, ADA6=>ADA6, ADA7=>ADA7, ADA8=>ADA8, ADA9=>ADA9, 
-                ADA10=>ADA10, ADA11=>ADA11, ADA12=>ADA12, ADA13=>ADA13, 
-                CEA=>CEA, CLKA=>CLKA, WEA=>WEA, CSA0=>CSA0, CSA1=>CSA1, 
-                CSA2=>CSA2, RSTA=>RSTA, DIB0=>DIB0, DIB1=>DIB1, DIB2=>DIB2, 
-                DIB3=>DIB3, DIB4=>DIB4, DIB5=>DIB5, DIB6=>DIB6, DIB7=>DIB7, 
-                DIB8=>DIB8, DIB9=>DIB9, DIB10=>DIB10, DIB11=>DIB11, 
-                DIB12=>DIB12, DIB13=>DIB13, DIB14=>DIB14, DIB15=>DIB15, 
-                DIB16=>DIB16, DIB17=>DIB17, ADB0=>ADB0, ADB1=>ADB1, ADB2=>ADB2, 
-                ADB3=>ADB3, ADB4=>ADB4, ADB5=>ADB5, ADB6=>ADB6, ADB7=>ADB7, 
-                ADB8=>ADB8, ADB9=>ADB9, ADB10=>ADB10, ADB11=>ADB11, 
-                ADB12=>ADB12, ADB13=>ADB13, CEB=>CEB, CLKB=>CLKB, WEB=>WEB, 
-                CSB0=>CSB0, CSB1=>CSB1, CSB2=>CSB2, RSTB=>RSTB, DOA0=>DOA0, 
-                DOA1=>DOA1, DOA2=>DOA2, DOA3=>DOA3, DOA4=>DOA4, DOA5=>DOA5, 
-                DOA6=>DOA6, DOA7=>DOA7, DOA8=>DOA8, DOA9=>DOA9, DOA10=>DOA10, 
-                DOA11=>DOA11, DOA12=>DOA12, DOA13=>DOA13, DOA14=>DOA14, 
-                DOA15=>DOA15, DOA16=>DOA16, DOA17=>DOA17, DOB0=>DOB0, 
-                DOB1=>DOB1, DOB2=>DOB2, DOB3=>DOB3, DOB4=>DOB4, DOB5=>DOB5, 
-                DOB6=>DOB6, DOB7=>DOB7, DOB8=>DOB8, DOB9=>DOB9, DOB10=>DOB10, 
-                DOB11=>DOB11, DOB12=>DOB12, DOB13=>DOB13, DOB14=>DOB14, 
-                DOB15=>DOB15, DOB16=>DOB16, DOB17=>DOB17);
-  end Structure;
-
--- entity ram_memory_0_ram_memory_0_0_3
-  library IEEE, vital2000, XP2;
-  use IEEE.STD_LOGIC_1164.all;
-  use vital2000.vital_timing.all;
-  use XP2.COMPONENTS.ALL;
-
-  entity ram_memory_0_ram_memory_0_0_3 is
-    -- miscellaneous vital GENERICs
-    GENERIC (
-      TimingChecksOn	: boolean := TRUE;
-      XOn           	: boolean := FALSE;
-      MsgOn         	: boolean := TRUE;
-      InstancePath  	: string := "ram_memory_0_ram_memory_0_0_3";
-
-      tipd_DIA3  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_DIA2  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_DIA1  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_DIA0  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA13  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA12  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA11  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA10  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA9  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA8  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA7  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA6  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA5  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA4  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA3  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_ADA2  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_WEA  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_CLKA  	: VitalDelayType01 := (0 ns, 0 ns);
-      tipd_MORCLKA  	: VitalDelayType01 := (0 ns, 0 ns);
-      tpd_CLKA_DOA3	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_CLKA_DOA2	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_CLKA_DOA1	 : VitalDelayType01 := (0 ns, 0 ns);
-      tpd_CLKA_DOA0	 : VitalDelayType01 := (0 ns, 0 ns);
-      tperiod_CLKA 	: VitalDelayType := 0 ns;
-      tpw_CLKA_posedge	: VitalDelayType := 0 ns;
-      tpw_CLKA_negedge	: VitalDelayType := 0 ns;
-      ticd_CLKA	: VitalDelayType := 0 ns;
-      tisd_DIA3_CLKA	: VitalDelayType := 0 ns;
-      tsetup_DIA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_DIA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_DIA2_CLKA	: VitalDelayType := 0 ns;
-      tsetup_DIA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_DIA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_DIA1_CLKA	: VitalDelayType := 0 ns;
-      tsetup_DIA1_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_DIA1_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_DIA0_CLKA	: VitalDelayType := 0 ns;
-      tsetup_DIA0_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_DIA0_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA13_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA13_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA13_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA12_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA12_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA12_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA11_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA11_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA11_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA10_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA10_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA10_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA9_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA9_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA9_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA8_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA8_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA8_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA7_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA7_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA7_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA6_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA6_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA6_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA5_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA5_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA5_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA4_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA4_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA4_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA3_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_ADA2_CLKA	: VitalDelayType := 0 ns;
-      tsetup_ADA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_ADA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      tisd_WEA_CLKA	: VitalDelayType := 0 ns;
-      tsetup_WEA_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
-      thold_WEA_CLKA_noedge_negedge	: VitalDelayType := 0 ns);
-
-    port (DIA3: in Std_logic; DIA2: in Std_logic; DIA1: in Std_logic; 
-          DIA0: in Std_logic; ADA13: in Std_logic; ADA12: in Std_logic; 
-          ADA11: in Std_logic; ADA10: in Std_logic; ADA9: in Std_logic; 
-          ADA8: in Std_logic; ADA7: in Std_logic; ADA6: in Std_logic; 
-          ADA5: in Std_logic; ADA4: in Std_logic; ADA3: in Std_logic; 
-          ADA2: in Std_logic; DOA3: out Std_logic; DOA2: out Std_logic; 
-          DOA1: out Std_logic; DOA0: out Std_logic; WEA: in Std_logic; 
-          CLKA: in Std_logic; MORCLKA: in Std_logic);
-
-    ATTRIBUTE Vital_Level0 OF ram_memory_0_ram_memory_0_0_3 : ENTITY IS TRUE;
-
-  end ram_memory_0_ram_memory_0_0_3;
-
-  architecture Structure of ram_memory_0_ram_memory_0_0_3 is
-    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
-
-    signal DIA3_ipd 	: std_logic := 'X';
-    signal DIA3_dly 	: std_logic := 'X';
-    signal DIA2_ipd 	: std_logic := 'X';
-    signal DIA2_dly 	: std_logic := 'X';
-    signal DIA1_ipd 	: std_logic := 'X';
-    signal DIA1_dly 	: std_logic := 'X';
-    signal DIA0_ipd 	: std_logic := 'X';
-    signal DIA0_dly 	: std_logic := 'X';
-    signal ADA13_ipd 	: std_logic := 'X';
-    signal ADA13_dly 	: std_logic := 'X';
-    signal ADA12_ipd 	: std_logic := 'X';
-    signal ADA12_dly 	: std_logic := 'X';
-    signal ADA11_ipd 	: std_logic := 'X';
-    signal ADA11_dly 	: std_logic := 'X';
-    signal ADA10_ipd 	: std_logic := 'X';
-    signal ADA10_dly 	: std_logic := 'X';
-    signal ADA9_ipd 	: std_logic := 'X';
-    signal ADA9_dly 	: std_logic := 'X';
-    signal ADA8_ipd 	: std_logic := 'X';
-    signal ADA8_dly 	: std_logic := 'X';
-    signal ADA7_ipd 	: std_logic := 'X';
-    signal ADA7_dly 	: std_logic := 'X';
-    signal ADA6_ipd 	: std_logic := 'X';
-    signal ADA6_dly 	: std_logic := 'X';
-    signal ADA5_ipd 	: std_logic := 'X';
-    signal ADA5_dly 	: std_logic := 'X';
-    signal ADA4_ipd 	: std_logic := 'X';
-    signal ADA4_dly 	: std_logic := 'X';
-    signal ADA3_ipd 	: std_logic := 'X';
-    signal ADA3_dly 	: std_logic := 'X';
-    signal ADA2_ipd 	: std_logic := 'X';
-    signal ADA2_dly 	: std_logic := 'X';
-    signal DOA3_out 	: std_logic := 'X';
-    signal DOA2_out 	: std_logic := 'X';
-    signal DOA1_out 	: std_logic := 'X';
-    signal DOA0_out 	: std_logic := 'X';
-    signal WEA_ipd 	: std_logic := 'X';
-    signal WEA_dly 	: std_logic := 'X';
-    signal CLKA_ipd 	: std_logic := 'X';
-    signal CLKA_dly 	: std_logic := 'X';
-    signal MORCLKA_ipd 	: std_logic := 'X';
-
-    signal VCCI: Std_logic;
-    signal MORCLKA_NOTIN: Std_logic;
-    signal GNDI: Std_logic;
-    component inverter
-      port (I: in Std_logic; Z: out Std_logic);
-    end component;
-    component gnd
-      port (PWR0: out Std_logic);
-    end component;
-    component vcc
-      port (PWR1: out Std_logic);
-    end component;
     component DP16KB0004
       port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
             CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
@@ -5446,7 +4495,7 @@
             DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
     end component;
   begin
-    ram_memory_0_ram_memory_0_0_3_DP16KB: DP16KB0004
+    ram_memory_0_ram_memory_0_1_2_DP16KB: DP16KB0004
       port map (CEA=>VCCI, CLKA=>MORCLKA_NOTIN, WEA=>WEA_dly, CSA0=>GNDI, 
                 CSA1=>GNDI, CSA2=>GNDI, RSTA=>GNDI, CEB=>VCCI, CLKB=>GNDI, 
                 WEB=>GNDI, CSB0=>GNDI, CSB1=>GNDI, CSB2=>GNDI, RSTB=>GNDI, 
@@ -6059,6 +5108,980 @@
     INST10: DP16KB
       generic map (CSDECODE_A => "000", CSDECODE_B => "111", DATA_WIDTH_A => 4, 
                    DATA_WIDTH_B => 4, GSR => "DISABLED", 
+                   INITVAL_00 => "0x000000000000000000000009000C991D2A0000000000000000000000000000000000000000F00001"
+                   , 
+                   INITVAL_01 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_02 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_03 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_04 => "0x1C46F1DC4B1C2DE02EE21C4301C27E122A008EE711CEE1C0441E2EE08AED06CFE1C8CE1841E03E50"
+                   , 
+                   INITVAL_05 => "0x11C1A1D0E819048198271C2FA0364D09CE31602B0A67E0569B092F111CFA1FAA81242E03C0A1F489"
+                   , 
+                   INITVAL_06 => "0x0B0E8122741BA681C6E1142C71D09619CE80C69C1189303CE8146E8182321D0E115C8E170481821E"
+                   , 
+                   INITVAL_07 => "0x0663007A3D1DCD11507E13CEC1D0EE09C1713C8E1FE581D03107C3F060E9182A60CC6601C810E8D4"
+                   , 
+                   INITVAL_08 => "0x0267E0F655092EF1CAC01FCFA02653030DF054E01D6EF1EA9E090EB1FC8F1D048194251D6191D233"
+                   , 
+                   INITVAL_09 => "0x1BC9C17E1A1625503A171B0C21D0E8192460361E030FA1A4E61AABE1C8BE0AA5510AE41723E0027B"
+                   , 
+                   INITVAL_0A => "0x13C0D064871A0170E69E1325E1D07E172E917CB11CE7103CAF04A1E0BCE4176011DA0E1A20A176B0"
+                   , 
+                   INITVAL_0B => "0x00EFE0860102E0E01AE20DCFD1DC8E128EE008E80647E1F85B038101FEA0168F40BC0F006281C0E8"
+                   , 
+                   INITVAL_0C => "0x02E8706E4A1780B0B6220AE5E07C00074E114E7A072E10E00F1326C1CAAD032570BC501AA3A1C49E"
+                   , 
+                   INITVAL_0D => "0x1048509CA01C6051DC5D1FC0E1FEEE102771D43E0346E0BA8A13C5D1BECF17CA802E081AEDE17E78"
+                   , 
+                   INITVAL_0E => "0x00000000011181A03CAB1840E15E301D4AD15C2207C811D4CB1BC59094EF01C3300CCE0B4E71C60E"
+                   , 
+                   INITVAL_0F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_10 => "0x1C0E11FC6719C8715C5B02CE60E4071C49E0DC17004071DC3E1CCE10E0CE0446E0DCCB0461E16439"
+                   , 
+                   INITVAL_11 => "0x02E0102E180E2CA0FC211C88E0E0EB1A2AB176CD1DC0A022EF1D01E0E0DE00E0A17EAD156F50407C"
+                   , 
+                   INITVAL_12 => "0x02E9B0A25F1D01E14A4F08AE803CA91D0100E0FA118EF1CA0E0BE52024B5030721A6D216EE302A1E"
+                   , 
+                   INITVAL_13 => "0x184EF1F4FE13EC91925E162A21E2AD09E8B074ED034DB1BA84128201D012162700F0DA05C9502A9E"
+                   , 
+                   INITVAL_14 => "0x0A66A1DEDE050401CE8E13A400882103EAE0260E150EA01EAA11C041108211C961CA150DC8C1DE79"
+                   , 
+                   INITVAL_15 => "0x0DCCB024220DEE015C220A2120143F020E704A581C2F108A861BC17004D20823F1C27000034118B4"
+                   , 
+                   INITVAL_16 => "0x050271D29D1E60E132D106EEE040EE1D2E0180FC17C0A136B4044491482215EE6100971DE250FCB2"
+                   , 
+                   INITVAL_17 => "0x1EE5E1C0591A69D02EF10F41602EBF18AF71C8B8026B7082E401A45088E80FC7013CEB118640DC2B"
+                   , 
+                   INITVAL_18 => "0x1AEFC1D08B1864E00A5610C80128BE0B2571BE19186631CEFC044EC072EE1DCE10B27E1C2CE1DAC0"
+                   , 
+                   INITVAL_19 => "0x15C581024E13ED119C611DCE107C6F116260B47E1A2201DCE115C8E014BB16A9D070671DE8617E78"
+                   , 
+                   INITVAL_1A => "0x01C930C28B0308F1CCEC1D0C914CED1CA110B4D211C211D28E0FC5B00A401D01E172EB1DC7B0DCD3"
+                   , 
+                   INITVAL_1B => "0x1BADD1BADD006241D4FE1CEE317C6E048F513CD71BC0F03CEA172A710C05160E200A3C1CE6E1F4C2"
+                   , 
+                   INITVAL_1C => "0x106A21AEE201A3F0364F0182A07A4B1642E03A1A01C611DEEA080040A85E05C0E0E2ED1C2E01DADD"
+                   , 
+                   INITVAL_1D => "0x0000000000000000007E11E6F14EFF142BB1087F0C8EA0587B0FC1A0C488110880F6CE048540DC4F"
+                   , 
+                   INITVAL_1E => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_1F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_20 => "0x15C1A19AC01A08D03C441C4FE1FCC01C20E06A480D0A51F8051FEA107C1107C181DC800BC5F0F28F"
+                   , 
+                   INITVAL_21 => "0x12A561E2430CCE604C281FCE810EDE0CC06104641E81E1200E0748B01C8B01CDA012D0060A01C21E"
+                   , 
+                   INITVAL_22 => "0x0FCE01C0180BEEE01C0604CEE01CA90EADE1C0EA13C541DC0E1485419C0E1DCF3062B8140E809AEA"
+                   , 
+                   INITVAL_23 => "0x11C2205C5E1423E0446E0BCA117C2204CFE102C80B2E11D0401CCE814AC411C8015C6301C6908A56"
+                   , 
+                   INITVAL_24 => "0x0B2E80421C1161E07E451DCEE1D44107E8A1DC0E06A29030FE1C25E14A120CEE61105F098EE0BCA1"
+                   , 
+                   INITVAL_25 => "0x100740E2C2042E91002C030E2122160220E0868716248080EF100D412AD9142591C23E05E3B036E6"
+                   , 
+                   INITVAL_26 => "0x1D2DF06AE0004201C2A117C7104C0E184110362C1E2D209C170A25601CF31BC1803E45042D20C8CE"
+                   , 
+                   INITVAL_27 => "0x00000000000000000000000E40BC651DE311DC3C1C02411C53042CE1EADE1602803A120228C0084B"
+                   , 
+                   INITVAL_28 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_29 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_2A => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_2B => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_2C => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_2D => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_2E => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_2F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_30 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_31 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_32 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_33 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_34 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_35 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_36 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_37 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_38 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_39 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_3A => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_3B => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_3C => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_3D => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_3E => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , 
+                   INITVAL_3F => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
+                   , REGMODE_A => "NOREG", REGMODE_B => "NOREG", 
+                   RESETMODE => "SYNC", WRITEMODE_A => "NORMAL", 
+                   WRITEMODE_B => "NORMAL")
+      port map (DIA0=>DIA0, DIA1=>DIA1, DIA2=>DIA2, DIA3=>DIA3, DIA4=>DIA4, 
+                DIA5=>DIA5, DIA6=>DIA6, DIA7=>DIA7, DIA8=>DIA8, DIA9=>DIA9, 
+                DIA10=>DIA10, DIA11=>DIA11, DIA12=>DIA12, DIA13=>DIA13, 
+                DIA14=>DIA14, DIA15=>DIA15, DIA16=>DIA16, DIA17=>DIA17, 
+                ADA0=>ADA0, ADA1=>ADA1, ADA2=>ADA2, ADA3=>ADA3, ADA4=>ADA4, 
+                ADA5=>ADA5, ADA6=>ADA6, ADA7=>ADA7, ADA8=>ADA8, ADA9=>ADA9, 
+                ADA10=>ADA10, ADA11=>ADA11, ADA12=>ADA12, ADA13=>ADA13, 
+                CEA=>CEA, CLKA=>CLKA, WEA=>WEA, CSA0=>CSA0, CSA1=>CSA1, 
+                CSA2=>CSA2, RSTA=>RSTA, DIB0=>DIB0, DIB1=>DIB1, DIB2=>DIB2, 
+                DIB3=>DIB3, DIB4=>DIB4, DIB5=>DIB5, DIB6=>DIB6, DIB7=>DIB7, 
+                DIB8=>DIB8, DIB9=>DIB9, DIB10=>DIB10, DIB11=>DIB11, 
+                DIB12=>DIB12, DIB13=>DIB13, DIB14=>DIB14, DIB15=>DIB15, 
+                DIB16=>DIB16, DIB17=>DIB17, ADB0=>ADB0, ADB1=>ADB1, ADB2=>ADB2, 
+                ADB3=>ADB3, ADB4=>ADB4, ADB5=>ADB5, ADB6=>ADB6, ADB7=>ADB7, 
+                ADB8=>ADB8, ADB9=>ADB9, ADB10=>ADB10, ADB11=>ADB11, 
+                ADB12=>ADB12, ADB13=>ADB13, CEB=>CEB, CLKB=>CLKB, WEB=>WEB, 
+                CSB0=>CSB0, CSB1=>CSB1, CSB2=>CSB2, RSTB=>RSTB, DOA0=>DOA0, 
+                DOA1=>DOA1, DOA2=>DOA2, DOA3=>DOA3, DOA4=>DOA4, DOA5=>DOA5, 
+                DOA6=>DOA6, DOA7=>DOA7, DOA8=>DOA8, DOA9=>DOA9, DOA10=>DOA10, 
+                DOA11=>DOA11, DOA12=>DOA12, DOA13=>DOA13, DOA14=>DOA14, 
+                DOA15=>DOA15, DOA16=>DOA16, DOA17=>DOA17, DOB0=>DOB0, 
+                DOB1=>DOB1, DOB2=>DOB2, DOB3=>DOB3, DOB4=>DOB4, DOB5=>DOB5, 
+                DOB6=>DOB6, DOB7=>DOB7, DOB8=>DOB8, DOB9=>DOB9, DOB10=>DOB10, 
+                DOB11=>DOB11, DOB12=>DOB12, DOB13=>DOB13, DOB14=>DOB14, 
+                DOB15=>DOB15, DOB16=>DOB16, DOB17=>DOB17);
+  end Structure;
+
+-- entity ram_memory_0_ram_memory_0_0_3
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity ram_memory_0_ram_memory_0_0_3 is
+    -- miscellaneous vital GENERICs
+    GENERIC (
+      TimingChecksOn	: boolean := TRUE;
+      XOn           	: boolean := FALSE;
+      MsgOn         	: boolean := TRUE;
+      InstancePath  	: string := "ram_memory_0_ram_memory_0_0_3";
+
+      tipd_DIA3  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_DIA2  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_DIA1  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_DIA0  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA13  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA12  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA11  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA10  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA9  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA8  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA7  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA6  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA5  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA4  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA3  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_ADA2  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_WEA  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_CLKA  	: VitalDelayType01 := (0 ns, 0 ns);
+      tipd_MORCLKA  	: VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLKA_DOA3	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLKA_DOA2	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLKA_DOA1	 : VitalDelayType01 := (0 ns, 0 ns);
+      tpd_CLKA_DOA0	 : VitalDelayType01 := (0 ns, 0 ns);
+      tperiod_CLKA 	: VitalDelayType := 0 ns;
+      tpw_CLKA_posedge	: VitalDelayType := 0 ns;
+      tpw_CLKA_negedge	: VitalDelayType := 0 ns;
+      ticd_CLKA	: VitalDelayType := 0 ns;
+      tisd_DIA3_CLKA	: VitalDelayType := 0 ns;
+      tsetup_DIA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_DIA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_DIA2_CLKA	: VitalDelayType := 0 ns;
+      tsetup_DIA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_DIA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_DIA1_CLKA	: VitalDelayType := 0 ns;
+      tsetup_DIA1_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_DIA1_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_DIA0_CLKA	: VitalDelayType := 0 ns;
+      tsetup_DIA0_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_DIA0_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA13_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA13_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA13_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA12_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA12_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA12_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA11_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA11_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA11_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA10_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA10_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA10_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA9_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA9_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA9_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA8_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA8_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA8_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA7_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA7_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA7_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA6_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA6_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA6_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA5_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA5_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA5_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA4_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA4_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA4_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA3_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA3_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_ADA2_CLKA	: VitalDelayType := 0 ns;
+      tsetup_ADA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_ADA2_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      tisd_WEA_CLKA	: VitalDelayType := 0 ns;
+      tsetup_WEA_CLKA_noedge_negedge	: VitalDelayType := 0 ns;
+      thold_WEA_CLKA_noedge_negedge	: VitalDelayType := 0 ns);
+
+    port (DIA3: in Std_logic; DIA2: in Std_logic; DIA1: in Std_logic; 
+          DIA0: in Std_logic; ADA13: in Std_logic; ADA12: in Std_logic; 
+          ADA11: in Std_logic; ADA10: in Std_logic; ADA9: in Std_logic; 
+          ADA8: in Std_logic; ADA7: in Std_logic; ADA6: in Std_logic; 
+          ADA5: in Std_logic; ADA4: in Std_logic; ADA3: in Std_logic; 
+          ADA2: in Std_logic; DOA3: out Std_logic; DOA2: out Std_logic; 
+          DOA1: out Std_logic; DOA0: out Std_logic; WEA: in Std_logic; 
+          CLKA: in Std_logic; MORCLKA: in Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF ram_memory_0_ram_memory_0_0_3 : ENTITY IS TRUE;
+
+  end ram_memory_0_ram_memory_0_0_3;
+
+  architecture Structure of ram_memory_0_ram_memory_0_0_3 is
+    ATTRIBUTE Vital_Level0 OF Structure : ARCHITECTURE IS TRUE;
+
+    signal DIA3_ipd 	: std_logic := 'X';
+    signal DIA3_dly 	: std_logic := 'X';
+    signal DIA2_ipd 	: std_logic := 'X';
+    signal DIA2_dly 	: std_logic := 'X';
+    signal DIA1_ipd 	: std_logic := 'X';
+    signal DIA1_dly 	: std_logic := 'X';
+    signal DIA0_ipd 	: std_logic := 'X';
+    signal DIA0_dly 	: std_logic := 'X';
+    signal ADA13_ipd 	: std_logic := 'X';
+    signal ADA13_dly 	: std_logic := 'X';
+    signal ADA12_ipd 	: std_logic := 'X';
+    signal ADA12_dly 	: std_logic := 'X';
+    signal ADA11_ipd 	: std_logic := 'X';
+    signal ADA11_dly 	: std_logic := 'X';
+    signal ADA10_ipd 	: std_logic := 'X';
+    signal ADA10_dly 	: std_logic := 'X';
+    signal ADA9_ipd 	: std_logic := 'X';
+    signal ADA9_dly 	: std_logic := 'X';
+    signal ADA8_ipd 	: std_logic := 'X';
+    signal ADA8_dly 	: std_logic := 'X';
+    signal ADA7_ipd 	: std_logic := 'X';
+    signal ADA7_dly 	: std_logic := 'X';
+    signal ADA6_ipd 	: std_logic := 'X';
+    signal ADA6_dly 	: std_logic := 'X';
+    signal ADA5_ipd 	: std_logic := 'X';
+    signal ADA5_dly 	: std_logic := 'X';
+    signal ADA4_ipd 	: std_logic := 'X';
+    signal ADA4_dly 	: std_logic := 'X';
+    signal ADA3_ipd 	: std_logic := 'X';
+    signal ADA3_dly 	: std_logic := 'X';
+    signal ADA2_ipd 	: std_logic := 'X';
+    signal ADA2_dly 	: std_logic := 'X';
+    signal DOA3_out 	: std_logic := 'X';
+    signal DOA2_out 	: std_logic := 'X';
+    signal DOA1_out 	: std_logic := 'X';
+    signal DOA0_out 	: std_logic := 'X';
+    signal WEA_ipd 	: std_logic := 'X';
+    signal WEA_dly 	: std_logic := 'X';
+    signal CLKA_ipd 	: std_logic := 'X';
+    signal CLKA_dly 	: std_logic := 'X';
+    signal MORCLKA_ipd 	: std_logic := 'X';
+
+    signal VCCI: Std_logic;
+    signal MORCLKA_NOTIN: Std_logic;
+    signal GNDI: Std_logic;
+    component inverter
+      port (I: in Std_logic; Z: out Std_logic);
+    end component;
+    component gnd
+      port (PWR0: out Std_logic);
+    end component;
+    component vcc
+      port (PWR1: out Std_logic);
+    end component;
+    component DP16KB0005
+      port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
+            CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
+            RSTA: in Std_logic; CEB: in Std_logic; CLKB: in Std_logic; 
+            WEB: in Std_logic; CSB0: in Std_logic; CSB1: in Std_logic; 
+            CSB2: in Std_logic; RSTB: in Std_logic; DIA0: in Std_logic; 
+            DIA1: in Std_logic; DIA2: in Std_logic; DIA3: in Std_logic; 
+            DIA4: in Std_logic; DIA5: in Std_logic; DIA6: in Std_logic; 
+            DIA7: in Std_logic; DIA8: in Std_logic; DIA9: in Std_logic; 
+            DIA10: in Std_logic; DIA11: in Std_logic; DIA12: in Std_logic; 
+            DIA13: in Std_logic; DIA14: in Std_logic; DIA15: in Std_logic; 
+            DIA16: in Std_logic; DIA17: in Std_logic; ADA0: in Std_logic; 
+            ADA1: in Std_logic; ADA2: in Std_logic; ADA3: in Std_logic; 
+            ADA4: in Std_logic; ADA5: in Std_logic; ADA6: in Std_logic; 
+            ADA7: in Std_logic; ADA8: in Std_logic; ADA9: in Std_logic; 
+            ADA10: in Std_logic; ADA11: in Std_logic; ADA12: in Std_logic; 
+            ADA13: in Std_logic; DIB0: in Std_logic; DIB1: in Std_logic; 
+            DIB2: in Std_logic; DIB3: in Std_logic; DIB4: in Std_logic; 
+            DIB5: in Std_logic; DIB6: in Std_logic; DIB7: in Std_logic; 
+            DIB8: in Std_logic; DIB9: in Std_logic; DIB10: in Std_logic; 
+            DIB11: in Std_logic; DIB12: in Std_logic; DIB13: in Std_logic; 
+            DIB14: in Std_logic; DIB15: in Std_logic; DIB16: in Std_logic; 
+            DIB17: in Std_logic; ADB0: in Std_logic; ADB1: in Std_logic; 
+            ADB2: in Std_logic; ADB3: in Std_logic; ADB4: in Std_logic; 
+            ADB5: in Std_logic; ADB6: in Std_logic; ADB7: in Std_logic; 
+            ADB8: in Std_logic; ADB9: in Std_logic; ADB10: in Std_logic; 
+            ADB11: in Std_logic; ADB12: in Std_logic; ADB13: in Std_logic; 
+            DOA0: out Std_logic; DOA1: out Std_logic; DOA2: out Std_logic; 
+            DOA3: out Std_logic; DOA4: out Std_logic; DOA5: out Std_logic; 
+            DOA6: out Std_logic; DOA7: out Std_logic; DOA8: out Std_logic; 
+            DOA9: out Std_logic; DOA10: out Std_logic; DOA11: out Std_logic; 
+            DOA12: out Std_logic; DOA13: out Std_logic; DOA14: out Std_logic; 
+            DOA15: out Std_logic; DOA16: out Std_logic; DOA17: out Std_logic; 
+            DOB0: out Std_logic; DOB1: out Std_logic; DOB2: out Std_logic; 
+            DOB3: out Std_logic; DOB4: out Std_logic; DOB5: out Std_logic; 
+            DOB6: out Std_logic; DOB7: out Std_logic; DOB8: out Std_logic; 
+            DOB9: out Std_logic; DOB10: out Std_logic; DOB11: out Std_logic; 
+            DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
+            DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
+    end component;
+  begin
+    ram_memory_0_ram_memory_0_0_3_DP16KB: DP16KB0005
+      port map (CEA=>VCCI, CLKA=>MORCLKA_NOTIN, WEA=>WEA_dly, CSA0=>GNDI, 
+                CSA1=>GNDI, CSA2=>GNDI, RSTA=>GNDI, CEB=>VCCI, CLKB=>GNDI, 
+                WEB=>GNDI, CSB0=>GNDI, CSB1=>GNDI, CSB2=>GNDI, RSTB=>GNDI, 
+                DIA0=>DIA0_dly, DIA1=>DIA1_dly, DIA2=>DIA2_dly, DIA3=>DIA3_dly, 
+                DIA4=>GNDI, DIA5=>GNDI, DIA6=>GNDI, DIA7=>GNDI, DIA8=>GNDI, 
+                DIA9=>GNDI, DIA10=>GNDI, DIA11=>GNDI, DIA12=>GNDI, DIA13=>GNDI, 
+                DIA14=>GNDI, DIA15=>GNDI, DIA16=>GNDI, DIA17=>GNDI, ADA0=>GNDI, 
+                ADA1=>GNDI, ADA2=>ADA2_dly, ADA3=>ADA3_dly, ADA4=>ADA4_dly, 
+                ADA5=>ADA5_dly, ADA6=>ADA6_dly, ADA7=>ADA7_dly, ADA8=>ADA8_dly, 
+                ADA9=>ADA9_dly, ADA10=>ADA10_dly, ADA11=>ADA11_dly, 
+                ADA12=>ADA12_dly, ADA13=>ADA13_dly, DIB0=>GNDI, DIB1=>GNDI, 
+                DIB2=>GNDI, DIB3=>GNDI, DIB4=>GNDI, DIB5=>GNDI, DIB6=>GNDI, 
+                DIB7=>GNDI, DIB8=>GNDI, DIB9=>GNDI, DIB10=>GNDI, DIB11=>GNDI, 
+                DIB12=>GNDI, DIB13=>GNDI, DIB14=>GNDI, DIB15=>GNDI, 
+                DIB16=>GNDI, DIB17=>GNDI, ADB0=>GNDI, ADB1=>GNDI, ADB2=>GNDI, 
+                ADB3=>GNDI, ADB4=>GNDI, ADB5=>GNDI, ADB6=>GNDI, ADB7=>GNDI, 
+                ADB8=>GNDI, ADB9=>GNDI, ADB10=>GNDI, ADB11=>GNDI, ADB12=>GNDI, 
+                ADB13=>GNDI, DOA0=>DOA0_out, DOA1=>DOA1_out, DOA2=>DOA2_out, 
+                DOA3=>DOA3_out, DOA4=>open, DOA5=>open, DOA6=>open, DOA7=>open, 
+                DOA8=>open, DOA9=>open, DOA10=>open, DOA11=>open, DOA12=>open, 
+                DOA13=>open, DOA14=>open, DOA15=>open, DOA16=>open, 
+                DOA17=>open, DOB0=>open, DOB1=>open, DOB2=>open, DOB3=>open, 
+                DOB4=>open, DOB5=>open, DOB6=>open, DOB7=>open, DOB8=>open, 
+                DOB9=>open, DOB10=>open, DOB11=>open, DOB12=>open, DOB13=>open, 
+                DOB14=>open, DOB15=>open, DOB16=>open, DOB17=>open);
+    DRIVEVCC: vcc
+      port map (PWR1=>VCCI);
+    MORCLKA_INVERTERIN: inverter
+      port map (I=>CLKA_dly, Z=>MORCLKA_NOTIN);
+    DRIVEGND: gnd
+      port map (PWR0=>GNDI);
+
+    --  INPUT PATH DELAYs
+    WireDelay : BLOCK
+    BEGIN
+      VitalWireDelay(DIA3_ipd, DIA3, tipd_DIA3);
+      VitalWireDelay(DIA2_ipd, DIA2, tipd_DIA2);
+      VitalWireDelay(DIA1_ipd, DIA1, tipd_DIA1);
+      VitalWireDelay(DIA0_ipd, DIA0, tipd_DIA0);
+      VitalWireDelay(ADA13_ipd, ADA13, tipd_ADA13);
+      VitalWireDelay(ADA12_ipd, ADA12, tipd_ADA12);
+      VitalWireDelay(ADA11_ipd, ADA11, tipd_ADA11);
+      VitalWireDelay(ADA10_ipd, ADA10, tipd_ADA10);
+      VitalWireDelay(ADA9_ipd, ADA9, tipd_ADA9);
+      VitalWireDelay(ADA8_ipd, ADA8, tipd_ADA8);
+      VitalWireDelay(ADA7_ipd, ADA7, tipd_ADA7);
+      VitalWireDelay(ADA6_ipd, ADA6, tipd_ADA6);
+      VitalWireDelay(ADA5_ipd, ADA5, tipd_ADA5);
+      VitalWireDelay(ADA4_ipd, ADA4, tipd_ADA4);
+      VitalWireDelay(ADA3_ipd, ADA3, tipd_ADA3);
+      VitalWireDelay(ADA2_ipd, ADA2, tipd_ADA2);
+      VitalWireDelay(WEA_ipd, WEA, tipd_WEA);
+      VitalWireDelay(CLKA_ipd, CLKA, tipd_CLKA);
+      VitalWireDelay(MORCLKA_ipd, MORCLKA, tipd_MORCLKA);
+    END BLOCK;
+
+    --  Setup and Hold DELAYs
+    SignalDelay : BLOCK
+    BEGIN
+      VitalSignalDelay(DIA3_dly, DIA3_ipd, tisd_DIA3_CLKA);
+      VitalSignalDelay(DIA2_dly, DIA2_ipd, tisd_DIA2_CLKA);
+      VitalSignalDelay(DIA1_dly, DIA1_ipd, tisd_DIA1_CLKA);
+      VitalSignalDelay(DIA0_dly, DIA0_ipd, tisd_DIA0_CLKA);
+      VitalSignalDelay(ADA13_dly, ADA13_ipd, tisd_ADA13_CLKA);
+      VitalSignalDelay(ADA12_dly, ADA12_ipd, tisd_ADA12_CLKA);
+      VitalSignalDelay(ADA11_dly, ADA11_ipd, tisd_ADA11_CLKA);
+      VitalSignalDelay(ADA10_dly, ADA10_ipd, tisd_ADA10_CLKA);
+      VitalSignalDelay(ADA9_dly, ADA9_ipd, tisd_ADA9_CLKA);
+      VitalSignalDelay(ADA8_dly, ADA8_ipd, tisd_ADA8_CLKA);
+      VitalSignalDelay(ADA7_dly, ADA7_ipd, tisd_ADA7_CLKA);
+      VitalSignalDelay(ADA6_dly, ADA6_ipd, tisd_ADA6_CLKA);
+      VitalSignalDelay(ADA5_dly, ADA5_ipd, tisd_ADA5_CLKA);
+      VitalSignalDelay(ADA4_dly, ADA4_ipd, tisd_ADA4_CLKA);
+      VitalSignalDelay(ADA3_dly, ADA3_ipd, tisd_ADA3_CLKA);
+      VitalSignalDelay(ADA2_dly, ADA2_ipd, tisd_ADA2_CLKA);
+      VitalSignalDelay(WEA_dly, WEA_ipd, tisd_WEA_CLKA);
+      VitalSignalDelay(CLKA_dly, CLKA_ipd, ticd_CLKA);
+    END BLOCK;
+
+    VitalBehavior : PROCESS (DIA3_dly, DIA2_dly, DIA1_dly, DIA0_dly, ADA13_dly, 
+      ADA12_dly, ADA11_dly, ADA10_dly, ADA9_dly, ADA8_dly, ADA7_dly, ADA6_dly, 
+      ADA5_dly, ADA4_dly, ADA3_dly, ADA2_dly, DOA3_out, DOA2_out, DOA1_out, 
+      DOA0_out, WEA_dly, CLKA_dly, MORCLKA_ipd)
+    VARIABLE DOA3_zd         	: std_logic := 'X';
+    VARIABLE DOA3_GlitchData 	: VitalGlitchDataType;
+    VARIABLE DOA2_zd         	: std_logic := 'X';
+    VARIABLE DOA2_GlitchData 	: VitalGlitchDataType;
+    VARIABLE DOA1_zd         	: std_logic := 'X';
+    VARIABLE DOA1_GlitchData 	: VitalGlitchDataType;
+    VARIABLE DOA0_zd         	: std_logic := 'X';
+    VARIABLE DOA0_GlitchData 	: VitalGlitchDataType;
+
+    VARIABLE tviol_DIA3_CLKA       	: x01 := '0';
+    VARIABLE DIA3_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_DIA2_CLKA       	: x01 := '0';
+    VARIABLE DIA2_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_DIA1_CLKA       	: x01 := '0';
+    VARIABLE DIA1_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_DIA0_CLKA       	: x01 := '0';
+    VARIABLE DIA0_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA13_CLKA       	: x01 := '0';
+    VARIABLE ADA13_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA12_CLKA       	: x01 := '0';
+    VARIABLE ADA12_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA11_CLKA       	: x01 := '0';
+    VARIABLE ADA11_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA10_CLKA       	: x01 := '0';
+    VARIABLE ADA10_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA9_CLKA       	: x01 := '0';
+    VARIABLE ADA9_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA8_CLKA       	: x01 := '0';
+    VARIABLE ADA8_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA7_CLKA       	: x01 := '0';
+    VARIABLE ADA7_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA6_CLKA       	: x01 := '0';
+    VARIABLE ADA6_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA5_CLKA       	: x01 := '0';
+    VARIABLE ADA5_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA4_CLKA       	: x01 := '0';
+    VARIABLE ADA4_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA3_CLKA       	: x01 := '0';
+    VARIABLE ADA3_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_ADA2_CLKA       	: x01 := '0';
+    VARIABLE ADA2_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_WEA_CLKA       	: x01 := '0';
+    VARIABLE WEA_CLKA_TimingDatash	: VitalTimingDataType;
+    VARIABLE tviol_CLKA_CLKA          	: x01 := '0';
+    VARIABLE periodcheckinfo_CLKA	: VitalPeriodDataType;
+
+    BEGIN
+
+    IF (TimingChecksOn) THEN
+      VitalSetupHoldCheck (
+        TestSignal => DIA3_dly,
+        TestSignalName => "DIA3",
+        TestDelay => tisd_DIA3_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_DIA3_CLKA_noedge_negedge,
+        SetupLow => tsetup_DIA3_CLKA_noedge_negedge,
+        HoldHigh => thold_DIA3_CLKA_noedge_negedge,
+        HoldLow => thold_DIA3_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DIA3_CLKA_TimingDatash,
+        Violation => tviol_DIA3_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => DIA2_dly,
+        TestSignalName => "DIA2",
+        TestDelay => tisd_DIA2_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_DIA2_CLKA_noedge_negedge,
+        SetupLow => tsetup_DIA2_CLKA_noedge_negedge,
+        HoldHigh => thold_DIA2_CLKA_noedge_negedge,
+        HoldLow => thold_DIA2_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DIA2_CLKA_TimingDatash,
+        Violation => tviol_DIA2_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => DIA1_dly,
+        TestSignalName => "DIA1",
+        TestDelay => tisd_DIA1_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_DIA1_CLKA_noedge_negedge,
+        SetupLow => tsetup_DIA1_CLKA_noedge_negedge,
+        HoldHigh => thold_DIA1_CLKA_noedge_negedge,
+        HoldLow => thold_DIA1_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DIA1_CLKA_TimingDatash,
+        Violation => tviol_DIA1_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => DIA0_dly,
+        TestSignalName => "DIA0",
+        TestDelay => tisd_DIA0_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_DIA0_CLKA_noedge_negedge,
+        SetupLow => tsetup_DIA0_CLKA_noedge_negedge,
+        HoldHigh => thold_DIA0_CLKA_noedge_negedge,
+        HoldLow => thold_DIA0_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => DIA0_CLKA_TimingDatash,
+        Violation => tviol_DIA0_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA13_dly,
+        TestSignalName => "ADA13",
+        TestDelay => tisd_ADA13_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA13_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA13_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA13_CLKA_noedge_negedge,
+        HoldLow => thold_ADA13_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA13_CLKA_TimingDatash,
+        Violation => tviol_ADA13_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA12_dly,
+        TestSignalName => "ADA12",
+        TestDelay => tisd_ADA12_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA12_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA12_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA12_CLKA_noedge_negedge,
+        HoldLow => thold_ADA12_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA12_CLKA_TimingDatash,
+        Violation => tviol_ADA12_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA11_dly,
+        TestSignalName => "ADA11",
+        TestDelay => tisd_ADA11_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA11_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA11_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA11_CLKA_noedge_negedge,
+        HoldLow => thold_ADA11_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA11_CLKA_TimingDatash,
+        Violation => tviol_ADA11_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA10_dly,
+        TestSignalName => "ADA10",
+        TestDelay => tisd_ADA10_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA10_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA10_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA10_CLKA_noedge_negedge,
+        HoldLow => thold_ADA10_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA10_CLKA_TimingDatash,
+        Violation => tviol_ADA10_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA9_dly,
+        TestSignalName => "ADA9",
+        TestDelay => tisd_ADA9_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA9_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA9_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA9_CLKA_noedge_negedge,
+        HoldLow => thold_ADA9_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA9_CLKA_TimingDatash,
+        Violation => tviol_ADA9_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA8_dly,
+        TestSignalName => "ADA8",
+        TestDelay => tisd_ADA8_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA8_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA8_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA8_CLKA_noedge_negedge,
+        HoldLow => thold_ADA8_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA8_CLKA_TimingDatash,
+        Violation => tviol_ADA8_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA7_dly,
+        TestSignalName => "ADA7",
+        TestDelay => tisd_ADA7_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA7_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA7_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA7_CLKA_noedge_negedge,
+        HoldLow => thold_ADA7_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA7_CLKA_TimingDatash,
+        Violation => tviol_ADA7_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA6_dly,
+        TestSignalName => "ADA6",
+        TestDelay => tisd_ADA6_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA6_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA6_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA6_CLKA_noedge_negedge,
+        HoldLow => thold_ADA6_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA6_CLKA_TimingDatash,
+        Violation => tviol_ADA6_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA5_dly,
+        TestSignalName => "ADA5",
+        TestDelay => tisd_ADA5_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA5_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA5_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA5_CLKA_noedge_negedge,
+        HoldLow => thold_ADA5_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA5_CLKA_TimingDatash,
+        Violation => tviol_ADA5_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA4_dly,
+        TestSignalName => "ADA4",
+        TestDelay => tisd_ADA4_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA4_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA4_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA4_CLKA_noedge_negedge,
+        HoldLow => thold_ADA4_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA4_CLKA_TimingDatash,
+        Violation => tviol_ADA4_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA3_dly,
+        TestSignalName => "ADA3",
+        TestDelay => tisd_ADA3_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA3_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA3_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA3_CLKA_noedge_negedge,
+        HoldLow => thold_ADA3_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA3_CLKA_TimingDatash,
+        Violation => tviol_ADA3_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => ADA2_dly,
+        TestSignalName => "ADA2",
+        TestDelay => tisd_ADA2_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_ADA2_CLKA_noedge_negedge,
+        SetupLow => tsetup_ADA2_CLKA_noedge_negedge,
+        HoldHigh => thold_ADA2_CLKA_noedge_negedge,
+        HoldLow => thold_ADA2_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => ADA2_CLKA_TimingDatash,
+        Violation => tviol_ADA2_CLKA,
+        MsgSeverity => warning);
+      VitalSetupHoldCheck (
+        TestSignal => WEA_dly,
+        TestSignalName => "WEA",
+        TestDelay => tisd_WEA_CLKA,
+        RefSignal => CLKA_dly,
+        RefSignalName => "CLKA",
+        RefDelay => ticd_CLKA,
+        SetupHigh => tsetup_WEA_CLKA_noedge_negedge,
+        SetupLow => tsetup_WEA_CLKA_noedge_negedge,
+        HoldHigh => thold_WEA_CLKA_noedge_negedge,
+        HoldLow => thold_WEA_CLKA_noedge_negedge,
+        CheckEnabled => TRUE,
+        RefTransition => '\',
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        TimingData => WEA_CLKA_TimingDatash,
+        Violation => tviol_WEA_CLKA,
+        MsgSeverity => warning);
+      VitalPeriodPulseCheck (
+        TestSignal => CLKA_ipd,
+        TestSignalName => "CLKA",
+        Period => tperiod_CLKA,
+        PulseWidthHigh => tpw_CLKA_posedge,
+        PulseWidthLow => tpw_CLKA_negedge,
+        PeriodData => periodcheckinfo_CLKA,
+        Violation => tviol_CLKA_CLKA,
+        MsgOn => MsgOn, XOn => XOn,
+        HeaderMsg => InstancePath,
+        CheckEnabled => TRUE,
+        MsgSeverity => warning);
+
+    END IF;
+
+    DOA3_zd 	:= DOA3_out;
+    DOA2_zd 	:= DOA2_out;
+    DOA1_zd 	:= DOA1_out;
+    DOA0_zd 	:= DOA0_out;
+
+    VitalPathDelay01 (
+      OutSignal => DOA3, OutSignalName => "DOA3", OutTemp => DOA3_zd,
+      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
+                           PathDelay => tpd_CLKA_DOA3,
+                           PathCondition => TRUE)),
+      GlitchData => DOA3_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => DOA2, OutSignalName => "DOA2", OutTemp => DOA2_zd,
+      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
+                           PathDelay => tpd_CLKA_DOA2,
+                           PathCondition => TRUE)),
+      GlitchData => DOA2_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => DOA1, OutSignalName => "DOA1", OutTemp => DOA1_zd,
+      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
+                           PathDelay => tpd_CLKA_DOA1,
+                           PathCondition => TRUE)),
+      GlitchData => DOA1_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+    VitalPathDelay01 (
+      OutSignal => DOA0, OutSignalName => "DOA0", OutTemp => DOA0_zd,
+      Paths      => (0 => (InputChangeTime => CLKA_dly'last_event,
+                           PathDelay => tpd_CLKA_DOA0,
+                           PathCondition => TRUE)),
+      GlitchData => DOA0_GlitchData,
+      Mode       => ondetect, XOn => XOn, MsgOn => MsgOn);
+
+    END PROCESS;
+
+  end Structure;
+
+-- entity DP16KB0006
+  library IEEE, vital2000, XP2;
+  use IEEE.STD_LOGIC_1164.all;
+  use vital2000.vital_timing.all;
+  use XP2.COMPONENTS.ALL;
+
+  entity DP16KB0006 is
+    port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
+          CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
+          RSTA: in Std_logic; CEB: in Std_logic; CLKB: in Std_logic; 
+          WEB: in Std_logic; CSB0: in Std_logic; CSB1: in Std_logic; 
+          CSB2: in Std_logic; RSTB: in Std_logic; DIA0: in Std_logic; 
+          DIA1: in Std_logic; DIA2: in Std_logic; DIA3: in Std_logic; 
+          DIA4: in Std_logic; DIA5: in Std_logic; DIA6: in Std_logic; 
+          DIA7: in Std_logic; DIA8: in Std_logic; DIA9: in Std_logic; 
+          DIA10: in Std_logic; DIA11: in Std_logic; DIA12: in Std_logic; 
+          DIA13: in Std_logic; DIA14: in Std_logic; DIA15: in Std_logic; 
+          DIA16: in Std_logic; DIA17: in Std_logic; ADA0: in Std_logic; 
+          ADA1: in Std_logic; ADA2: in Std_logic; ADA3: in Std_logic; 
+          ADA4: in Std_logic; ADA5: in Std_logic; ADA6: in Std_logic; 
+          ADA7: in Std_logic; ADA8: in Std_logic; ADA9: in Std_logic; 
+          ADA10: in Std_logic; ADA11: in Std_logic; ADA12: in Std_logic; 
+          ADA13: in Std_logic; DIB0: in Std_logic; DIB1: in Std_logic; 
+          DIB2: in Std_logic; DIB3: in Std_logic; DIB4: in Std_logic; 
+          DIB5: in Std_logic; DIB6: in Std_logic; DIB7: in Std_logic; 
+          DIB8: in Std_logic; DIB9: in Std_logic; DIB10: in Std_logic; 
+          DIB11: in Std_logic; DIB12: in Std_logic; DIB13: in Std_logic; 
+          DIB14: in Std_logic; DIB15: in Std_logic; DIB16: in Std_logic; 
+          DIB17: in Std_logic; ADB0: in Std_logic; ADB1: in Std_logic; 
+          ADB2: in Std_logic; ADB3: in Std_logic; ADB4: in Std_logic; 
+          ADB5: in Std_logic; ADB6: in Std_logic; ADB7: in Std_logic; 
+          ADB8: in Std_logic; ADB9: in Std_logic; ADB10: in Std_logic; 
+          ADB11: in Std_logic; ADB12: in Std_logic; ADB13: in Std_logic; 
+          DOA0: out Std_logic; DOA1: out Std_logic; DOA2: out Std_logic; 
+          DOA3: out Std_logic; DOA4: out Std_logic; DOA5: out Std_logic; 
+          DOA6: out Std_logic; DOA7: out Std_logic; DOA8: out Std_logic; 
+          DOA9: out Std_logic; DOA10: out Std_logic; DOA11: out Std_logic; 
+          DOA12: out Std_logic; DOA13: out Std_logic; DOA14: out Std_logic; 
+          DOA15: out Std_logic; DOA16: out Std_logic; DOA17: out Std_logic; 
+          DOB0: out Std_logic; DOB1: out Std_logic; DOB2: out Std_logic; 
+          DOB3: out Std_logic; DOB4: out Std_logic; DOB5: out Std_logic; 
+          DOB6: out Std_logic; DOB7: out Std_logic; DOB8: out Std_logic; 
+          DOB9: out Std_logic; DOB10: out Std_logic; DOB11: out Std_logic; 
+          DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
+          DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
+
+    ATTRIBUTE Vital_Level0 OF DP16KB0006 : ENTITY IS TRUE;
+
+  end DP16KB0006;
+
+  architecture Structure of DP16KB0006 is
+    component DP16KB
+      generic (CSDECODE_A: Std_logic_vector(2 downto 0); 
+               CSDECODE_B: Std_logic_vector(2 downto 0); DATA_WIDTH_A: INTEGER; 
+               DATA_WIDTH_B: INTEGER; GSR: String; INITVAL_00: String; 
+               INITVAL_01: String; INITVAL_02: String; INITVAL_03: String; 
+               INITVAL_04: String; INITVAL_05: String; INITVAL_06: String; 
+               INITVAL_07: String; INITVAL_08: String; INITVAL_09: String; 
+               INITVAL_0A: String; INITVAL_0B: String; INITVAL_0C: String; 
+               INITVAL_0D: String; INITVAL_0E: String; INITVAL_0F: String; 
+               INITVAL_10: String; INITVAL_11: String; INITVAL_12: String; 
+               INITVAL_13: String; INITVAL_14: String; INITVAL_15: String; 
+               INITVAL_16: String; INITVAL_17: String; INITVAL_18: String; 
+               INITVAL_19: String; INITVAL_1A: String; INITVAL_1B: String; 
+               INITVAL_1C: String; INITVAL_1D: String; INITVAL_1E: String; 
+               INITVAL_1F: String; INITVAL_20: String; INITVAL_21: String; 
+               INITVAL_22: String; INITVAL_23: String; INITVAL_24: String; 
+               INITVAL_25: String; INITVAL_26: String; INITVAL_27: String; 
+               INITVAL_28: String; INITVAL_29: String; INITVAL_2A: String; 
+               INITVAL_2B: String; INITVAL_2C: String; INITVAL_2D: String; 
+               INITVAL_2E: String; INITVAL_2F: String; INITVAL_30: String; 
+               INITVAL_31: String; INITVAL_32: String; INITVAL_33: String; 
+               INITVAL_34: String; INITVAL_35: String; INITVAL_36: String; 
+               INITVAL_37: String; INITVAL_38: String; INITVAL_39: String; 
+               INITVAL_3A: String; INITVAL_3B: String; INITVAL_3C: String; 
+               INITVAL_3D: String; INITVAL_3E: String; INITVAL_3F: String; 
+               REGMODE_A: String; REGMODE_B: String; RESETMODE: String; 
+               WRITEMODE_A: String; WRITEMODE_B: String);
+      port (DIA0: in Std_logic; DIA1: in Std_logic; DIA2: in Std_logic; 
+            DIA3: in Std_logic; DIA4: in Std_logic; DIA5: in Std_logic; 
+            DIA6: in Std_logic; DIA7: in Std_logic; DIA8: in Std_logic; 
+            DIA9: in Std_logic; DIA10: in Std_logic; DIA11: in Std_logic; 
+            DIA12: in Std_logic; DIA13: in Std_logic; DIA14: in Std_logic; 
+            DIA15: in Std_logic; DIA16: in Std_logic; DIA17: in Std_logic; 
+            ADA0: in Std_logic; ADA1: in Std_logic; ADA2: in Std_logic; 
+            ADA3: in Std_logic; ADA4: in Std_logic; ADA5: in Std_logic; 
+            ADA6: in Std_logic; ADA7: in Std_logic; ADA8: in Std_logic; 
+            ADA9: in Std_logic; ADA10: in Std_logic; ADA11: in Std_logic; 
+            ADA12: in Std_logic; ADA13: in Std_logic; CEA: in Std_logic; 
+            CLKA: in Std_logic; WEA: in Std_logic; CSA0: in Std_logic; 
+            CSA1: in Std_logic; CSA2: in Std_logic; RSTA: in Std_logic; 
+            DIB0: in Std_logic; DIB1: in Std_logic; DIB2: in Std_logic; 
+            DIB3: in Std_logic; DIB4: in Std_logic; DIB5: in Std_logic; 
+            DIB6: in Std_logic; DIB7: in Std_logic; DIB8: in Std_logic; 
+            DIB9: in Std_logic; DIB10: in Std_logic; DIB11: in Std_logic; 
+            DIB12: in Std_logic; DIB13: in Std_logic; DIB14: in Std_logic; 
+            DIB15: in Std_logic; DIB16: in Std_logic; DIB17: in Std_logic; 
+            ADB0: in Std_logic; ADB1: in Std_logic; ADB2: in Std_logic; 
+            ADB3: in Std_logic; ADB4: in Std_logic; ADB5: in Std_logic; 
+            ADB6: in Std_logic; ADB7: in Std_logic; ADB8: in Std_logic; 
+            ADB9: in Std_logic; ADB10: in Std_logic; ADB11: in Std_logic; 
+            ADB12: in Std_logic; ADB13: in Std_logic; CEB: in Std_logic; 
+            CLKB: in Std_logic; WEB: in Std_logic; CSB0: in Std_logic; 
+            CSB1: in Std_logic; CSB2: in Std_logic; RSTB: in Std_logic; 
+            DOA0: out Std_logic; DOA1: out Std_logic; DOA2: out Std_logic; 
+            DOA3: out Std_logic; DOA4: out Std_logic; DOA5: out Std_logic; 
+            DOA6: out Std_logic; DOA7: out Std_logic; DOA8: out Std_logic; 
+            DOA9: out Std_logic; DOA10: out Std_logic; DOA11: out Std_logic; 
+            DOA12: out Std_logic; DOA13: out Std_logic; DOA14: out Std_logic; 
+            DOA15: out Std_logic; DOA16: out Std_logic; DOA17: out Std_logic; 
+            DOB0: out Std_logic; DOB1: out Std_logic; DOB2: out Std_logic; 
+            DOB3: out Std_logic; DOB4: out Std_logic; DOB5: out Std_logic; 
+            DOB6: out Std_logic; DOB7: out Std_logic; DOB8: out Std_logic; 
+            DOB9: out Std_logic; DOB10: out Std_logic; DOB11: out Std_logic; 
+            DOB12: out Std_logic; DOB13: out Std_logic; DOB14: out Std_logic; 
+            DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
+    end component;
+  begin
+    INST10: DP16KB
+      generic map (CSDECODE_A => "000", CSDECODE_B => "111", DATA_WIDTH_A => 4, 
+                   DATA_WIDTH_B => 4, GSR => "DISABLED", 
                    INITVAL_00 => "0x000000000000000000000009000A5913200000000000000000000000000000000000000000400008"
                    , 
                    INITVAL_01 => "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000"
@@ -6379,7 +6402,7 @@
     component vcc
       port (PWR1: out Std_logic);
     end component;
-    component DP16KB0005
+    component DP16KB0006
       port (CEA: in Std_logic; CLKA: in Std_logic; WEA: in Std_logic; 
             CSA0: in Std_logic; CSA1: in Std_logic; CSA2: in Std_logic; 
             RSTA: in Std_logic; CEB: in Std_logic; CLKB: in Std_logic; 
@@ -6420,7 +6443,7 @@
             DOB15: out Std_logic; DOB16: out Std_logic; DOB17: out Std_logic);
     end component;
   begin
-    ram_memory_0_ram_memory_0_2_1_DP16KB: DP16KB0005
+    ram_memory_0_ram_memory_0_2_1_DP16KB: DP16KB0006
       port map (CEA=>VCCI, CLKA=>MORCLKA_NOTIN, WEA=>WEA_dly, CSA0=>GNDI, 
                 CSA1=>GNDI, CSA2=>GNDI, RSTA=>GNDI, CEB=>VCCI, CLKB=>GNDI, 
                 WEB=>GNDI, CSB0=>GNDI, CSB1=>GNDI, CSB2=>GNDI, RSTB=>GNDI, 
